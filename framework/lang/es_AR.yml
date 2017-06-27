@@ -1,0 +1,111 @@
+es_AR:
+  AssetTableField:
+    CREATED: "Agregado por primera vez"
+    LASTEDIT: "Modificado por última vez"
+    SIZE: Tamaño
+    TYPE: Tipo
+  BasicAuth:
+    ENTERINFO: "Por favor ingresa tu nombre de usuario y contraseña."
+    ERRORNOTADMIN: "El usuario no es administrador."
+    ERRORNOTREC: "No se reconoce el nombre de usuario / contraseña"
+  Boolean:
+    ANY: Cualquiera
+  ChangePasswordEmail_ss:
+    CHANGEPASSWORDTEXT1: "Haz cambiado tu contraseña por"
+    HELLO: Hola
+  ConfirmedPasswordField:
+    SHOWONCLICKTITLE: "Cambiar Contraseña"
+  DateField:
+    NOTSET: "no especificada"
+    TODAY: hoy
+  DropdownField:
+    CHOOSE: (Selecciona)
+  Enum:
+    ANY: Cualquiera
+  ForgotPasswordEmail_ss:
+    HELLO: Hola
+    TEXT1: "Aquí esta tu"
+    TEXT2: "vínculo para restablecer la contraseña"
+    TEXT3: para
+  Form:
+    VALIDATIONPASSWORDSDONTMATCH: "Las contraseñas no son iguales"
+    VALIDATIONPASSWORDSNOTEMPTY: "Las contraseñas no pueden estar vacías"
+    VALIDATOR: Verificador
+  FormField:
+    NONE: ninguna
+  Group:
+    Code: "Código de Grupo"
+    DefaultGroupTitleAdministrators: Administradores
+    DefaultGroupTitleContentAuthors: "Autores de contenido"
+    Description: Descripción
+    Locked: ¿Bloqueado?
+    Parent: "Grupo Superior"
+    RolesAddEditLink: "Agregar/Editar roles"
+    Sort: Ordenar
+    has_many_Permissions: Permisos
+    many_many_Members: Miembros
+  LoginAttempt:
+    Email: "Dirección Email"
+    IP: "Dirección IP"
+    Status: Estado
+  Member:
+    BUTTONCHANGEPASSWORD: "Cambiar Contraseña"
+    BUTTONLOGIN: Acceder
+    BUTTONLOGINOTHER: "Ingresar como otra persona"
+    BUTTONLOSTPASSWORD: "He perdido mi contraseña"
+    CONFIRMNEWPASSWORD: "Confirmar Nueva Contraseña"
+    CONFIRMPASSWORD: "Confirmar Contraseña"
+    DefaultAdminFirstname: "Administrador por defecto"
+    EMAIL: "Dirección Email"
+    EMPTYNEWPASSWORD: "La nueva contraseña no puede estar vacía, por favor inténtelo nuevamente"
+    ENTEREMAIL: "Por favor ingrese una dirección email para obtener un enlace de renovación de la contraseña"
+    ERRORNEWPASSWORD: "Ingresó su nueva contraseña en forma diferente, inténtelo otra vez"
+    ERRORPASSWORDNOTMATCH: "Tu contraseña actual no coincide, por favor intenta de nuevo"
+    FIRSTNAME: "Primer Nombre"
+    INTERFACELANG: "Idioma de la interfaz"
+    NEWPASSWORD: "Nueva contraseña"
+    PASSWORD: Contraseña
+    SUBJECTPASSWORDCHANGED: "Tu contraseña ha sido cambiada"
+    SUBJECTPASSWORDRESET: "Enlace para renovar tu contraseña"
+    SURNAME: Apellido
+    YOUROLDPASSWORD: "Contraseña anterior"
+    belongs_many_many_Groups: Grupos
+    db_Locale: "Interface de Localidad"
+    db_LockedOutUntil: "Bloqueado hasta"
+    db_Password: Contraseña
+    db_PasswordExpiry: "Fecha Vencimiento de Contraseña"
+  MemberAuthenticator:
+    TITLE: "Email  &amp; Contraseña"
+  MoneyField:
+    FIELDLABELAMOUNT: Cantidad
+    FIELDLABELCURRENCY: Moneda
+  NullableField:
+    IsNullLabel: "Es nulo"
+  Permission:
+    AdminGroup: Administrador
+    FULLADMINRIGHTS: "Privilegios administrativos completos"
+  PermissionCheckboxSetField:
+    FromRoleOnGroup: "heredado desde el rol \"%s\" en el grupo \"%s\""
+  PhoneNumberField:
+    VALIDATION: "Por favor ingresa un número telefónico válido"
+  Security:
+    ALREADYLOGGEDIN: "Ud no tiene acceso a esta página. Si tiene otra cuenta que puede acceder a esa página, entonces puede iniciar sesión nuevamente."
+    BUTTONSEND: "Envíame el enlace para restablecer mi contraseña"
+    CHANGEPASSWORDBELOW: "Puedes cambiar tu contraseña abajo."
+    CHANGEPASSWORDHEADER: "Cambia tu contraseña"
+    ENTERNEWPASSWORD: "Por favor incorpora la nueva contraseña"
+    ERRORPASSWORDPERMISSION: "¡Debes haber ingresado al sitio para cambiar la contraseña!"
+    LOGIN: Acceso
+    NOTEPAGESECURED: "Esta página está protegida. Ingresa tus credenciales abajo y en seguida te enviaremos una autorización."
+    NOTERESETPASSWORD: "Ingresa tu dirección email y te enviaremos un enlace con el cual podrás restablecer la contraseña"
+  SecurityAdmin:
+    GROUPNAME: "Nombre de grupo"
+    MEMBERS: Miembros
+    NEWGROUP: "Nuevo Grupo"
+    PERMISSIONS: Permisos
+    ROLES: roles
+    ROLESDESCRIPTION: "Esta sección le permite agregar roles a este grupo. Los roles son agrupaciones lógicas de permisos, que se pueden editar en la pestaña Roles."
+  SiteTree:
+    TABMAIN: Principal
+  TableListField:
+    CSVEXPORT: "Exportar a CSV"

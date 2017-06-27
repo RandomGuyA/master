@@ -1,0 +1,162 @@
+es_MX:
+  AssetTableField:
+    CREATED: "Agregado por primera vez"
+    LASTEDIT: "Modificado por última vez"
+    SIZE: Tamaño
+    TYPE: Tipo
+  BasicAuth:
+    ENTERINFO: "Por favor ingresa tu nombre de usuario y contraseña."
+    ERRORNOTADMIN: "El usuario no es administrador."
+    ERRORNOTREC: "No se reconoce el nombre de usuario / contraseña"
+  Boolean:
+    ANY: Cualquiera
+  ChangePasswordEmail_ss:
+    CHANGEPASSWORDTEXT1: "Usted ha cambiado su contraseña"
+    HELLO: Hey
+  ConfirmedPasswordField:
+    SHOWONCLICKTITLE: "Cambiar contraseña"
+  Date:
+    TIMEDIFFAGO: "{difference} atrás"
+    TIMEDIFFIN: "en {difference}"
+  DateField:
+    NOTSET: "no especificada"
+    TODAY: ahora
+    VALIDDATEFORMAT2: "Por favor ingresar un formato válido de fecha ({format})"
+    VALIDDATEMAXDATE: "Tu fecha tiene que ser más antigua o al menos coincidir con la fecha mínima permitida ({date})"
+    VALIDDATEMINDATE: "Tu fecha tiene que ser nueva o al menos coincidir con la fecha mínima permitida ({date})"
+  Director:
+    INVALID_REQUEST: "Solicitud no válida"
+  DropdownField:
+    CHOOSE: (Seleccione)
+  Enum:
+    ANY: Cualquiera
+  ForgotPasswordEmail_ss:
+    HELLO: Hey
+    TEXT1: "Estás aquí"
+    TEXT2: "vínculo para restablecer la contraseña"
+    TEXT3: para
+  Form:
+    VALIDATIONPASSWORDSDONTMATCH: "Las contraeñas no son iguales"
+    VALIDATIONPASSWORDSNOTEMPTY: "Las contraseñas no pueden estar vacías"
+    VALIDATOR: Verificador
+  FormField:
+    NONE: Ninguno
+  GridAction:
+    Delete: Eliminar
+    UnlinkRelation: Desvincular
+  GridField:
+    Add: "Agregar {name}"
+    Filter: Filtro
+    FilterBy: "Filtrar por"
+    Find: Buscar
+    LinkExisting: "Enlazar existente"
+    NewRecord: "Nuevo %s"
+    NoItemsFound: "No hay ítems encontrados"
+    PRINTEDAT: "Impreso en"
+    PRINTEDBY: "Imprimir por"
+    PlaceHolder: "Buscar {type}"
+    PlaceHolderWithLabels: "Buscar {type} por {name}"
+    RelationSearch: "Buscar relación"
+    ResetFilter: Resetear
+  GridFieldAction_Delete:
+    DeletePermissionsFailure: "No borrar permisos"
+  Group:
+    Code: "Código del grupo"
+    DefaultGroupTitleAdministrators: Administradores
+    DefaultGroupTitleContentAuthors: "Autores de Contenido"
+    Description: Descripción
+    Locked: ¿Bloqueado?
+    NoRoles: "No se encontraron roles"
+    Parent: "Grupo ascendente"
+    RolesAddEditLink: "Agregar/modificar roles"
+    Sort: "Orden de Clasificación"
+    has_many_Permissions: Permisos
+    many_many_Members: Miembros
+  LoginAttempt:
+    Email: "Dirección de Correo Electrónico"
+    IP: "Dirección IP"
+    Status: Estado
+  Member:
+    ADDGROUP: "Agregar grupo"
+    BUTTONCHANGEPASSWORD: "Cambiar Contraseña"
+    BUTTONLOGIN: Ingresar
+    BUTTONLOGINOTHER: "Ingresar como alguien más"
+    BUTTONLOSTPASSWORD: "Olvidé mi contraseña"
+    CONFIRMNEWPASSWORD: "Confirmar Nueva Contraseña"
+    CONFIRMPASSWORD: "Confirmar contraseña"
+    DefaultAdminFirstname: "Administrador Predeterminado"
+    EMAIL: "Correo electrónico"
+    EMPTYNEWPASSWORD: "La nueva contraseña no puede estar vacía, por favor, inténtelo de nuevo"
+    ENTEREMAIL: "Por favor ingresa una dirección de correo electrónico para conseguir una contraseña y reiniciar el enlace."
+    ERRORNEWPASSWORD: "Usted ha ingresado su nueva contraseña diferentemente, intenta de nuevo"
+    ERRORPASSWORDNOTMATCH: "Tu contraseña actual no encaja, por favor inténtalo de nuevo"
+    FIRSTNAME: "Primer Nombre"
+    INTERFACELANG: "Lenguaje de la interfaz"
+    LOGGEDINAS: "Conectado como {name}."
+    NEWPASSWORD: "Nueva contraseña"
+    PASSWORD: Contraseña
+    SUBJECTPASSWORDCHANGED: "Su contraseña se ha cambiado"
+    SUBJECTPASSWORDRESET: "Enlace para reasignar su contraseña"
+    SURNAME: Apellido
+    ValidationIdentifierFailed: "No se puede sobreescribir el miembro existente  #{id} con el identificador idéntico ({name} = {value}))"
+    WELCOMEBACK: "Bienvenido nuevamente, {firstname}"
+    YOUROLDPASSWORD: "Contraseña anterior"
+    belongs_many_many_Groups: Grupos
+    db_Locale: "Interfaz Local"
+    db_LockedOutUntil: "Bloqueado hasta"
+    db_Password: Contraseña
+    db_PasswordExpiry: "Fecha en que expira la contraseña"
+  MemberAuthenticator:
+    TITLE: "Correo-e y Contraseña"
+  MemberDatetimeOptionsetField:
+    Custom: "A medida"
+    DATEFORMATBAD: "El formato de fecha es invalido"
+    DAYNOLEADING: "Dia del mes sin cero a la izquierda"
+    DIGITSDECFRACTIONSECOND: "Uno o más dígitos representando una fracción decimal de un segundo"
+    FOURDIGITYEAR: "Año de 4 dígitos"
+    MINUTENOLEADING: "Minuto sin cero a la izquierda"
+    MONTHNOLEADING: "Dígito del mes  sin cero"
+    Preview: Previo
+    TWODIGITDAY: "Dia del mes de dos dígitos"
+    TWODIGITYEAR: "Año en 2 dígitos"
+  MoneyField:
+    FIELDLABELAMOUNT: Importe
+    FIELDLABELCURRENCY: Moneda
+  NullableField:
+    IsNullLabel: "Es Nulo"
+  NumericField:
+    VALIDATION: "'{value}' no es un número, solo números son aceptados por este campo"
+  Permission:
+    AdminGroup: Administrador
+    FULLADMINRIGHTS: "Privilegios administrativos completos"
+    FULLADMINRIGHTS_HELP: "Implica y anula todos los demás permisos asignados."
+  PermissionCheckboxSetField:
+    FromRoleOnGroup: "heredado del rol \"%s\" en el grupo \"%s\""
+  PhoneNumberField:
+    VALIDATION: "Por favor ingresa un número telefónico válido"
+  Security:
+    ALREADYLOGGEDIN: "Usted no tiene acceso a esta página. Si tiene otra cuenta que pueda tener acceso a ésta página, puede abrir una sesión abajo."
+    BUTTONSEND: "Envíame enlace para restablecer contraseña"
+    CHANGEPASSWORDBELOW: "Puedes cambiar tu contraseña abajo."
+    CHANGEPASSWORDHEADER: "Cambia tu contraseña"
+    ENTERNEWPASSWORD: "Por favor incorpora la nueva contraseña"
+    ERRORPASSWORDPERMISSION: "¡Debes haber firmado para cambiar la contraseña!"
+    LOGIN: Ingresar
+    NOTEPAGESECURED: "Se ha asegurado la página. Ingresa tus credenciales abajo y en seguida enviaremos tu autorización."
+    NOTERESETPASSWORD: "Ingresa tu dirección de correo-e y te enviaremos un enlace con el cual podrás restablecer la contraseña"
+  SecurityAdmin:
+    GROUPNAME: "Nombre de grupo"
+    MEMBERS: Miembros
+    NEWGROUP: "Nuevo grupo"
+    PERMISSIONS: Permisos
+  SiteTree:
+    TABMAIN: Principal
+  TableListField:
+    CSVEXPORT: "Exportar a CSV"
+  TimeField:
+    VALIDATEFORMAT: "Por favor ingresar un formato válido de fecha ({format})"
+  UploadField:
+    Dimensions: Dimensiones
+    EDITINFO: "Editar este archivo"
+    FIELDNOTSET: "Información acerca del archivo no encontrada"
+    REMOVE: Remover

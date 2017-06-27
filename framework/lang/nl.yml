@@ -1,0 +1,258 @@
+nl:
+  AssetTableField:
+    CREATED: "Eerste upload"
+    HEIGHT: Hoogte
+    LASTEDIT: "Laatste wijziging"
+    SIZE: Grootte
+    TYPE: Type
+    URL: URL
+    WIDTH: Breedte
+  BasicAuth:
+    ENTERINFO: "Voer een gebruikersnaam en wachtwoord in."
+    ERRORNOTADMIN: "Die gebruiker is geen beheerder."
+    ERRORNOTREC: "De gebruikersnaam en/of het wachtwoord wordt niet herkend"
+  Boolean:
+    ANY: Elke
+    NOANSWER: Nee
+    YESANSWER: Ja
+  CMSMemberLoginForm:
+    BUTTONFORGOTPASSWORD: "Wachtwoord vergeten?"
+    BUTTONLOGIN: "Opnieuw inloggen"
+    BUTTONLOGOUT: Uitloggen
+    PASSWORDEXPIRED: "<p>Uw wachtwoord is verlopen. <a target=\"_top\" href=\"{link}\">Kies een nieuw wachtwoord.</a></p>"
+  CMSSecurity:
+    INVALIDUSER: "<p>Ongeldige gebruiker <a target=\"_top\" href=\"{link}\">Log hier opnieuw in</a> om verder te gaan.</p>"
+    LoginMessage: "<p>U kunt verder met wat u aan het doen was, door opnieuw in te loggen.</p>"
+    SUCCESS: Succes
+    SUCCESSCONTENT: "<p>U bent ingelogd. <a target=\"_top\" href=\"{link}\">Klik hier</a> als u niet automatisch wordt doorgestuurd.</p>"
+    TimedOutTitleAnonymous: "Sessie is verlopen"
+    TimedOutTitleMember: "Hallo {name}!<br />Uw sessie is verlopen."
+  ChangePasswordEmail_ss:
+    CHANGEPASSWORDFOREMAIL: "Het wachtwoord voor het account met e-mailadres {email} is aangepast. Indien u uw wachtwoord niet heeft aangepast kunt u dat doen met onderstaande link."
+    CHANGEPASSWORDTEXT1: "U heeft het wachtwoord veranderd voor"
+    CHANGEPASSWORDTEXT3: "Wachtwoord veranderen"
+    HELLO: Hallo
+  CheckboxField:
+    NOANSWER: Nee
+    YESANSWER: Ja
+  CheckboxSetField_ss:
+    NOOPTIONSAVAILABLE: "Geen keuze mogelijk"
+  ConfirmedPasswordField:
+    ATLEAST: "Een wachtwoord moet tenminste {min} karakters hebben."
+    BETWEEN: "Een wachtwoord moet tussen de {min} en {max} karakters hebben"
+    CURRENT_PASSWORD_ERROR: "Het wachtwoord dat u heeft ingevoerd is niet juist."
+    MAXIMUM: "Een wachtwoord mag maximaal {max} karakters hebben."
+    SHOWONCLICKTITLE: "Verander wachtwoord"
+  CurrencyField:
+    CURRENCYSYMBOL: $
+  Date:
+    LessThanMinuteAgo: "minder dan één minuut"
+    TIMEDIFFAGO: "{difference} geleden"
+    TIMEDIFFIN: "in {difference}"
+  DateField:
+    NOTSET: "niet ingesteld"
+    TODAY: vandaag
+    VALIDDATEFORMAT2: "Vul een geldig datumformaat in ({format})"
+    VALIDDATEMAXDATE: "De datum moet ouder of gelijk zijn aan de maximale datum ({date})"
+    VALIDDATEMINDATE: "De datum moet nieuwer of gelijk zijn aan de minimale datum ({date})"
+  Director:
+    INVALID_REQUEST: "Fout bij verwerken"
+  DropdownField:
+    CHOOSE: (Kies)
+    SOURCE_VALIDATION: "Selecteer een optie uit de lijst. {value} is geen geldige keuze."
+  EmailField:
+    VALIDATION: "Gelieve een e-mailadres in te voeren."
+  Enum:
+    ANY: Elke
+  ForgotPasswordEmail_ss:
+    HELLO: Hallo
+    TEXT1: "Hier is uw"
+    TEXT2: "wachtwoord reset link"
+    TEXT3: voor
+  Form:
+    CSRF_EXPIRED_MESSAGE: "Uw sessie is verlopen. Verzend het formulier opnieuw."
+    CSRF_FAILED_MESSAGE: "Er lijkt een technisch probleem te zijn. Klik op de knop terug, vernieuw uw browser, en probeer het opnieuw."
+    VALIDATIONPASSWORDSDONTMATCH: "Wachtwoorden komen niet overeen"
+    VALIDATIONPASSWORDSNOTEMPTY: "Wachtwoorden mogen niet leeg zijn"
+    VALIDATIONSTRONGPASSWORD: "Wachtwoorden moeten bestaan uit minstens één cijfer en één alfanumeriek karakter."
+    VALIDATOR: Validator
+    VALIDCURRENCY: "Vul een geldige munteenheid in"
+  FormField:
+    NONE: geen
+  GridAction:
+    DELETE_DESCRIPTION: Verwijderen
+    Delete: Verwijder
+    UnlinkRelation: Ontkoppelen
+  GridField:
+    Add: "{name} toevoegen"
+    Filter: Filter
+    FilterBy: Filteren
+    Find: Zoeken
+    LinkExisting: "Koppel een bestaand item"
+    NewRecord: "Nieuw %s"
+    NoItemsFound: "Geen items gevonden."
+    PRINTEDAT: "Geprint op"
+    PRINTEDBY: "Geprint door"
+    PlaceHolder: "Zoek {type}"
+    PlaceHolderWithLabels: "Zoek {type} op {name}"
+    RelationSearch: "Zoek relatie"
+    ResetFilter: Resetten
+  GridFieldAction_Delete:
+    DeletePermissionsFailure: "Onvoldoende rechten om te verwijderen"
+    EditPermissionsFailure: "Geen toelating om te ontkoppelen"
+  GridFieldDetailForm:
+    CancelBtn: Annuleren
+    Create: Aanmaken
+    Delete: Verwijderen
+    DeletePermissionsFailure: "Onvoldoende rechten om te verwijderen"
+    Deleted: "%s %s verwijderd"
+    Save: Opslaan
+  GridFieldEditButton_ss:
+    EDIT: Bewerken
+  Group:
+    AddRole: "Voeg een rol toe aan deze groep"
+    Code: "Groep code"
+    DefaultGroupTitleAdministrators: Beheerders
+    DefaultGroupTitleContentAuthors: "Inhoud Auteurs"
+    Description: "Omschrijving "
+    GroupReminder: "Als u de bovenliggende groep selecteert, neemt deze groep alle rollen over"
+    HierarchyPermsError: "U moet (ADMIN) rechten hebben om de bovenliggende groep \"%s\" toe te kennen"
+    Locked: Gesloten?
+    NoRoles: "Geen rollen gevonden"
+    Parent: "Bovenliggende groep"
+    RolesAddEditLink: "Rollen beheren"
+    Sort: Sorteer-richting
+    has_many_Permissions: Rechten
+    many_many_Members: Leden
+  HTMLEditorField:
+    EMAIL: E-mailadres
+    LINKEMAIL: "Link naar een e-mailadres"
+    SUBJECT: E-mailonderwerp
+  Hierarchy:
+    InfiniteLoopNotAllowed: "Oneindige lus gevonden in \"{type}\" hiërarchie. Wijzig het hogere niveau om dit op te lossen"
+  LoginAttempt:
+    Email: "E-mailadres "
+    IP: "IP adres"
+    Status: Status
+  Member:
+    ADDGROUP: "Groep toevoegen"
+    BUTTONCHANGEPASSWORD: "Wachtwoord veranderen"
+    BUTTONLOGIN: Inloggen
+    BUTTONLOGINOTHER: "Als iemand anders inloggen"
+    BUTTONLOSTPASSWORD: "Ik ben mijn wachtwoord vergeten"
+    CONFIRMNEWPASSWORD: "Bevestig het nieuwe wachtwoord"
+    CONFIRMPASSWORD: "Bevestig wachtwoord"
+    DefaultAdminFirstname: "Standaard Beheerder"
+    EMAIL: E-mail
+    EMPTYNEWPASSWORD: "Het nieuwe wachtwoord mag niet leeg zijn, probeer opnieuw"
+    ENTEREMAIL: "Typ uw e-mailadres om een link te ontvangen waarmee u uw wachtwoord kunt resetten."
+    ERRORLOCKEDOUT2: "Uw account is tijdelijk uitgeschakeld als gevolg van te veel mislukte pogingen om in te loggen. Probeer het over {count} minuten opnieuw."
+    ERRORNEWPASSWORD: "Het nieuwe wachtwoord komt niet overeen, probeer het nogmaals"
+    ERRORPASSWORDNOTMATCH: "Uw huidige wachtwoord kom niet overeen, probeer het nogmaals"
+    ERRORWRONGCRED: "De ingevulde gegevens lijken niet correct. Probeer het nog een keer."
+    FIRSTNAME: Voornaam
+    INTERFACELANG: "Interface taal"
+    LOGGEDINAS: "U bent ingelogd als {name}."
+    NEWPASSWORD: "Nieuw wachtwoord"
+    NoPassword: "Er is geen wachtwoord voor deze gebruiker."
+    PASSWORD: Wachtwoord
+    PASSWORDEXPIRED: "Uw wachtwoord is verlopen. Kies een nieuw wachtwoord."
+    SUBJECTPASSWORDCHANGED: "Uw wachtwoord is veranderd"
+    SUBJECTPASSWORDRESET: "Link om uw wachtwoord opnieuw aan te maken"
+    SURNAME: Achternaam
+    ValidationIdentifierFailed: "Een bestaande gebruiker #{id} kan niet dezelfde unieke velden hebben ({name} = {value}))"
+    WELCOMEBACK: "Welkom terug, {firstname}"
+    YOUROLDPASSWORD: "Uw oude wachtwoord"
+    belongs_many_many_Groups: Groepen
+    db_Locale: "Interface taal"
+    db_LockedOutUntil: "Gesloten tot"
+    db_Password: Wachtwoord
+    db_PasswordExpiry: "Wachtwoord vervaldatum"
+  MemberAuthenticator:
+    TITLE: "Email &amp; Wachtwoord"
+  MemberDatetimeOptionsetField:
+    Custom: Aangepast
+    DATEFORMATBAD: "Datum is niet correct opgegeven"
+    DAYNOLEADING: "Dag van de maand zonder voorloopnul"
+    DIGITSDECFRACTIONSECOND: "Een of meer cijfers die een decimale fractie van een seconde voorstellen"
+    FOURDIGITYEAR: "4-cijfers jaar"
+    MINUTENOLEADING: "Minuut zonder voorloopnul"
+    MONTHNOLEADING: "Dag van de maand zonder voorloopnul"
+    Preview: Voorbeeld
+    TWODIGITDAY: "Dag van de maand (met voorloopnul)"
+    TWODIGITYEAR: "2-cijfers jaar"
+    Toggle: "Toon opmaak hulp"
+  MoneyField:
+    FIELDLABELAMOUNT: Aantal
+    FIELDLABELCURRENCY: Munteenheid
+  NullableField:
+    IsNullLabel: "Is null"
+  NumericField:
+    VALIDATION: "'{value}' is geen getal, enkel getallen worden door dit veld geaccepteerd"
+  Pagination:
+    Page: Pagina
+    View: Bekijk
+  PasswordValidator:
+    LOWCHARSTRENGTH: "Maak a.u.b. uw wachtwoord sterker door enkele van de volgende karakters te gebruiken: %s"
+    PREVPASSWORD: "U heeft dit wachtwoord in het verleden al gebruikt, kies a.u.b. een nieuw wachtwoord."
+    TOOSHORT: "Het wachtwoord is te kort, het moet minimaal %s karakters hebben"
+  Permission:
+    AdminGroup: Beheerder
+    FULLADMINRIGHTS: "Volledige admin rechten"
+    FULLADMINRIGHTS_HELP: "Impliceert en overstemt alle andere toegewezen rechten."
+  PermissionCheckboxSetField:
+    AssignedTo: "toegewezen aan \"{title}\""
+    FromGroup: "geërfd van de groep \"{title}\""
+    FromRole: "geërfd van de rol \"{title}\""
+    FromRoleOnGroup: "geërfd van rol \"%s\" in groep \"%s\""
+  PermissionRole:
+    OnlyAdminCanApply: "Alleen admin kan doorvoeren"
+    Title: Titel
+  PermissionRoleCode:
+    PermsError: "U moet (ADMIN) rechten hebben om de code \"%s\" toe te kennen"
+  Permissions:
+    UserPermissionsIntro: "Groepen aan deze gebruiker toewijzen zullen diens permissies aanpassen. Zie de sectie Groepen voor meer informatie over machtigingen voor afzonderlijke groepen."
+  PhoneNumberField:
+    VALIDATION: "Voer een geldig telefoonnummer in"
+  Security:
+    ALREADYLOGGEDIN: "U hebt geen toegang tot deze pagina.  Als u een andere account met de nodige rechten hebt, kan u hieronder opnieuw inloggen."
+    BUTTONSEND: "Nieuw wachtwoord aanmaken"
+    CHANGEPASSWORDBELOW: "U kunt uw wachtwoord hieronder veranderen."
+    CHANGEPASSWORDHEADER: "Verander uw wachtwoord"
+    ENTERNEWPASSWORD: "Voer een nieuw wachtwoord in."
+    ERRORPASSWORDPERMISSION: "U moet ingelogd zijn om uw wachtwoord te kunnen veranderen!"
+    LOGIN: "Meld aan"
+    LOSTPASSWORDHEADER: "Wachtwoord vergeten"
+    NOTEPAGESECURED: "Deze pagina is beveiligd. Voer uw gegevens in en u wordt automatisch doorgestuurd."
+    NOTERESETLINKINVALID: "<p>De link om uw wachtwoord te kunnen wijzigen is niet meer geldig.</p><p>U kunt <a href=\"{link1}\">een nieuwe link aanvragen</a> of uw wachtwoord aanpassen door <a href=\"{link2}\">in te loggen</a>.</p>"
+    NOTERESETPASSWORD: "Voer uw e-mailadres in en we sturen een link waarmee u een nieuw wachtwoord kunt instellen."
+    PASSWORDSENTHEADER: "Wachtwoord herstel link verzonden naar {email}"
+    PASSWORDSENTTEXT: "Bedankt! Er is een link verstuurd naar {email} om uw wachtwoord opnieuw in te stellen, in de veronderstelling dat er een account bestaat voor dit e-mailadres."
+  SecurityAdmin:
+    GROUPNAME: "Groep naam"
+    MEMBERS: Leden
+    NEWGROUP: "Nieuwe Groep"
+    PERMISSIONS: Rechten
+    ROLES: Rollen
+    ROLESDESCRIPTION: "In deze sectie kunt u rollen toevoegen aan deze groep. Rollen zijn logische groeperingen van rechten die in het Rollen tabblad gewijzigd kunnen worden."
+  SilverStripe\Security\PermissionRole:
+    PLURALNAME: Rollen
+    SINGULARNAME: Rol
+  SiteTree:
+    TABMAIN: Hoofdgedeelte
+  TableListField:
+    CSVEXPORT: "Exporteer naar CSV"
+    CSVIMPORT: "CSV importeren"
+    Print: Afdrukken
+  TableListField_PageControls_ss:
+    OF: van
+  TimeField:
+    VALIDATEFORMAT: "Vul een geldig datumformaat in ({format})"
+  UploadField:
+    Dimensions: Afmetingen
+    EDIT: Bewerken
+    EDITINFO: "Bewerk dit bestand"
+    FIELDNOTSET: "Bestandsinformatie niet gevonden"
+    REMOVE: Verwijder
+  ValidationException:
+    DEFAULT_ERROR: Validatiefout

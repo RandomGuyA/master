@@ -1,0 +1,220 @@
+pl:
+  AssetTableField:
+    CREATED: "Po raz pierwszy wgrany"
+    LASTEDIT: "Ostatnio zmieniony"
+    SIZE: "Rozmiar pliku"
+    TYPE: "Typ pliku"
+    URL: "Adres URL"
+  BasicAuth:
+    ENTERINFO: "Wprowadź username i hasło"
+    ERRORNOTADMIN: "Ten użytkownik nie jest administratorem"
+    ERRORNOTREC: "Nie istnieje taki username/hasło"
+  Boolean:
+    ANY: Jakikolwiek
+  ChangePasswordEmail_ss:
+    CHANGEPASSWORDTEXT1: "Zmieniłeś hasło na"
+    HELLO: Cześć
+  ConfirmedPasswordField:
+    ATLEAST: "Hasła muszą mieć przynajmniej {min} znaków."
+    BETWEEN: "Hasła muszą mieć długość pomiędzy {min} a {max} znaków."
+    MAXIMUM: "Hasła mogą mieć co najwyżej {max} znaków."
+    SHOWONCLICKTITLE: "Zmiana Hasła"
+  CurrencyField:
+    CURRENCYSYMBOL: $
+  Date:
+    LessThanMinuteAgo: "mniej niż minuta"
+    TIMEDIFFAGO: "{difference} temu"
+    TIMEDIFFIN: "w {difference}"
+  DateField:
+    NOTSET: "nie ustawiono"
+    TODAY: dzisiaj
+    VALIDDATEFORMAT2: "Proszę wprowadź prawidłowy format daty ({format})"
+    VALIDDATEMAXDATE: "Twoja data musi być wcześniejsza lub taka sama, jak maksymalna dozwolona data ({date})"
+    VALIDDATEMINDATE: "Twoja data musi być późniejsza lub taka sama, jak minimalna dozwolona data ({date})"
+  Director:
+    INVALID_REQUEST: "Nieprawidłowe żądanie"
+  DropdownField:
+    CHOOSE: (wybierz)
+  EmailField:
+    VALIDATION: "Proszę podaj adres e-mail"
+  Enum:
+    ANY: Jakikolwiek
+  ForgotPasswordEmail_ss:
+    HELLO: Cześć
+    TEXT1: "Oto twój"
+    TEXT2: "link zmiany hasła"
+    TEXT3: dla
+  Form:
+    VALIDATIONPASSWORDSDONTMATCH: "Hasła nie są takie same"
+    VALIDATIONPASSWORDSNOTEMPTY: "Hasło nie może być puste"
+    VALIDATIONSTRONGPASSWORD: "Hasła muszą mieć przynajmniej jedną cyfrę oraz jeden znak alfanumeryczny."
+    VALIDATOR: Walidator
+    VALIDCURRENCY: "Proszę podaj prawidłową walutę"
+  FormField:
+    NONE: brak
+  GridAction:
+    DELETE_DESCRIPTION: Usuń
+    Delete: Usuń
+    UnlinkRelation: "Usuń łącze"
+  GridField:
+    Add: "Dodaj {name}"
+    Filter: Filtr
+    FilterBy: "Filtruj wg"
+    Find: Wyszukaj
+    LinkExisting: "Linkuj istniejący"
+    NewRecord: "Nowy %s"
+    NoItemsFound: "Nie znaleziono elementów"
+    PRINTEDAT: "Wydrukowane na"
+    PRINTEDBY: "Wydrukowane przez"
+    PlaceHolder: "Znajdź {type}"
+    PlaceHolderWithLabels: "Znajdź {type} wg {name}"
+    RelationSearch: "Wyszukiwanie powiązań"
+    ResetFilter: Resetuj
+  GridFieldAction_Delete:
+    DeletePermissionsFailure: "Brak uprawnień do usuwania"
+    EditPermissionsFailure: "Nie masz uprawnień, aby odłączyć rekord"
+  GridFieldDetailForm:
+    CancelBtn: Anuluj
+    Create: Stwórz
+    Delete: Usuń
+    DeletePermissionsFailure: "Brak uprawnień do usuwania"
+    Deleted: "Usunięto %s %s"
+    Save: Zapisz
+  GridFieldEditButton_ss:
+    EDIT: Edytuj
+  Group:
+    AddRole: "Dodaj rolę dla tej grupy"
+    Code: "Kod Grupy"
+    DefaultGroupTitleAdministrators: Administratorzy
+    DefaultGroupTitleContentAuthors: "Autor treści"
+    Description: Opis
+    GroupReminder: "Jeśli wybierzesz nadrzędną grupę, obecna grupa otrzyma wszystkie jej role"
+    HierarchyPermsError: "Nie można przyporządkować uprzywilejowanej grupy \"%s\" (wymagane uprawnienie ADMIN)"
+    Locked: Zablokowana?
+    NoRoles: "Nie znaleziono ról"
+    Parent: "Grupa nadrzędna"
+    RolesAddEditLink: "Zarządzaj rolami"
+    Sort: "Kolejność Sortowania"
+    has_many_Permissions: Zezwolenia
+    many_many_Members: Użytkownicy
+  Hierarchy:
+    InfiniteLoopNotAllowed: "Znaleziono nieskończoną pętlę wewnątrz hierarchii \"{type}\". Proszę zmień rodzica by to rozwiązać."
+  LoginAttempt:
+    Email: "Adres E-mail"
+    IP: "Adres IP"
+    Status: Status
+  Member:
+    ADDGROUP: "Dodaj grupę"
+    BUTTONCHANGEPASSWORD: "Zmień hasło"
+    BUTTONLOGIN: Zaloguj
+    BUTTONLOGINOTHER: "Zaloguj jako ktoś inny"
+    BUTTONLOSTPASSWORD: "Zgubiłem hasło"
+    CONFIRMNEWPASSWORD: "Potwierdź nowe hasło"
+    CONFIRMPASSWORD: "Potwierdź hasło"
+    DefaultAdminFirstname: "Domyślny administrator"
+    EMAIL: E-mail
+    EMPTYNEWPASSWORD: "Nowe hasło nie może być puste, spróbuj ponownie."
+    ENTEREMAIL: "Wpisz adres e-mail aby otrzymać link do zmiany hasła."
+    ERRORLOCKEDOUT2: "Twoje konto zostało tymczasowo zablokowane z powodu zbyt wielu błędnych prób logowania. Spróbuj ponownie za {count} minut."
+    ERRORNEWPASSWORD: "Wprowadziłeś niepoprawnie nowe hasło, spróbuj ponownie"
+    ERRORPASSWORDNOTMATCH: "Twoje hasło nie zgadza się, spróbuj ponownie"
+    ERRORWRONGCRED: "Podane dane są niepoprawne. Proszę spróbować ponownie."
+    FIRSTNAME: Imię
+    INTERFACELANG: "Język interfejsu"
+    LOGGEDINAS: "Zostałeś zalogowany jako {name}."
+    NEWPASSWORD: "Nowe hasło"
+    NoPassword: "Hasło nie zostało skonfigurowane dla tego użytkownika."
+    PASSWORD: Hasło
+    SUBJECTPASSWORDCHANGED: "Twoje hasło zostało zmienione"
+    SUBJECTPASSWORDRESET: "Twój link do zmiany hasła"
+    SURNAME: Nazwisko
+    ValidationIdentifierFailed: "Nie można nadpisać istniejącego użytkownika #{id} o identycznym identyfikatorze ({name} = {value})"
+    WELCOMEBACK: "Witaj ponownie, {firstname}"
+    YOUROLDPASSWORD: "Twoje stare hasło"
+    belongs_many_many_Groups: Grupy
+    db_Locale: "Język Interfejsu"
+    db_LockedOutUntil: "Zablokowany do"
+    db_Password: Hasło
+    db_PasswordExpiry: "Data wygaśnięcia hasła"
+  MemberAuthenticator:
+    TITLE: "E-mail i Hasło"
+  MemberDatetimeOptionsetField:
+    Custom: Własny
+    DATEFORMATBAD: "Nieprawidłowy format daty"
+    DAYNOLEADING: "Dzień miesiąca bez wiodącego zera"
+    DIGITSDECFRACTIONSECOND: "Jedna lub więcej cyfr reprezentujących ułamek sekundy"
+    FOURDIGITYEAR: "Czterocyfrowy rok"
+    MINUTENOLEADING: "Minuta bez wiodącego zera"
+    MONTHNOLEADING: "Miesiąc bez wiodącego zera"
+    Preview: Podgląd
+    TWODIGITDAY: "Dwucyfrowy dzień miesiąca"
+    TWODIGITYEAR: "Dwucyfrowy rok"
+    Toggle: "Pokaż pomoc formatowania"
+  MoneyField:
+    FIELDLABELAMOUNT: Ilość
+    FIELDLABELCURRENCY: waluta
+  NullableField:
+    IsNullLabel: "Jest Pusty"
+  NumericField:
+    VALIDATION: "'{value}' nie jest liczbą, to pole przyjmuje tylko liczby"
+  Pagination:
+    Page: Strona
+    View: Widok
+  PasswordValidator:
+    LOWCHARSTRENGTH: "Proszę zwiększyć siłę hasła, dodając niektóre z następujących znaków: % s"
+    PREVPASSWORD: "Użyłeś już tego hasła wcześniej, proszę wybrać nowe"
+    TOOSHORT: "Hasło jest za krótkie, proszę podać %s znaków lub więcej"
+  Permission:
+    AdminGroup: Administrator
+    FULLADMINRIGHTS: "Pełne prawa administracyjne"
+    FULLADMINRIGHTS_HELP: "Zatwierdza i nadpisuje wszystkie istniejące uprawnienia"
+  PermissionCheckboxSetField:
+    AssignedTo: "przypisany do \"{title}\""
+    FromGroup: "odziedziczone z grupy \"{title}\""
+    FromRole: "odziedziczone z roli \"{title}\""
+    FromRoleOnGroup: "odziedziczone z roli \"%s\" w grupie \"%s\""
+  PermissionRole:
+    OnlyAdminCanApply: "Tylko administrator może to zastosować"
+    Title: Tytuł
+  PermissionRoleCode:
+    PermsError: "Nie można przyporządkować uprzywilejowanego uprawnienia \"%s\" (wymagane uprawnienie ADMIN)"
+  Permissions:
+    UserPermissionsIntro: "Przydzielenie grup temu użytkownikowi spowoduje zmianę jego uprawnień. Odwołaj się do sekcji Grupy aby dowiedzieć się więcej o uprawnieniach grupowych."
+  PhoneNumberField:
+    VALIDATION: "Wprowadź poprawny numer telefonu"
+  Security:
+    ALREADYLOGGEDIN: "Nie masz dostępu do tej strony. Jeśli posiadasz inne konto, które umożliwi Ci dostęp do tej strony, możesz się zalogować poniżej"
+    BUTTONSEND: "Wyślij mi link do zresetowania hasła"
+    CHANGEPASSWORDBELOW: "Możesz zmienić swoje hasło poniżej"
+    CHANGEPASSWORDHEADER: "Zmień swoje hasło"
+    ENTERNEWPASSWORD: "Proszę wprowadż nowe hasło"
+    ERRORPASSWORDPERMISSION: "Musisz być zalogowany aby zmienić hasło"
+    LOGIN: Logowanie
+    LOSTPASSWORDHEADER: "Nie pamiętam hasła"
+    NOTEPAGESECURED: "Ta strona jest zabezpieczona. Wpisz swoje dane a my wyślemy Ci potwierdzenie niebawem"
+    NOTERESETLINKINVALID: "<p>Link resetujący hasło wygasł lub jest nieprawidłowy.</p><p>Możesz poprosić o nowy <a href=\"{link1}\">tutaj</a> lub zmień swoje hasło po <a href=\"{link2}\">zalogowaniu się</a>.</p>"
+    NOTERESETPASSWORD: "Wpisz adres e-mail, na który mamy wysłać link gdzie możesz zresetować swoje hasło"
+    PASSWORDSENTHEADER: "Link resetujący hasła został wysłany do '{email}'"
+    PASSWORDSENTTEXT: "Dziękujemy! Link resetujący hasło został wysłany do '{email}', o ile konto użytkownika dla takiego e-maila istnieje."
+  SecurityAdmin:
+    GROUPNAME: "Nazwa Grupy"
+    MEMBERS: Użytkownicy
+    NEWGROUP: "Nowa grupa"
+    PERMISSIONS: Zezwolenia
+    ROLES: Role
+    ROLESDESCRIPTION: "Sekcja umożliwia dodanie ról do grupy. Role są logicznie uporządkowanymi uprawnieniami, które można edytować w zakładce Role"
+  SiteTree:
+    TABMAIN: Główny
+  TableListField:
+    CSVEXPORT: "Eksportuj do CSV"
+    Print: Drukuj
+  TableListField_PageControls_ss:
+    OF: z
+  TimeField:
+    VALIDATEFORMAT: "Proszę wprowadź prawidłowy format czasu ({format})"
+  UploadField:
+    Dimensions: Rozmiar
+    EDIT: Edytuj
+    EDITINFO: "Edytuj plik"
+    FIELDNOTSET: "Nie znaleziono informacji o pliku"
+    REMOVE: Usuń

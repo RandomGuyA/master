@@ -1,0 +1,62 @@
+
+
+		SILVERSTRIPE
+		*****************
+
+		AIM
+
+		To make ultimate SILVERSTRIPE template
+
+				"silverstripe-australia/gridfieldextensions": "1.*@dev",
+				"silverstripe/translatable": "2.2.*@dev"
+
+		Add bulk upload
+		Add ordering
+		Add multi language support
+
+		Add the logging system to the config
+
+
+		Add component framework to mysite
+		add bare bones custom theme
+		include bare bones css theme
+		add image pre loader
+
+
+		Ajax plugin
+
+			fix the nested injector
+			fix the footer issues
+			fix menu selection problem
+
+		Components
+
+			Text
+			Image
+			Gallery
+			Video
+			Quotations
+			Reference
+			Audio
+			Conversation
+
+
+		Images
+
+			size
+			location
+			caption
+			alt
+			download capability
+			enlarge/oom capability
+			pre loading mechanism
+
+
+
+
+		Quotations
+
+			Quote size
+			Text
+			Italic
+			bold

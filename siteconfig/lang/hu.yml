@@ -1,0 +1,5 @@
+hu:
+  SiteConfig:
+    SITENAMEDEFAULT: "Az oldal neve"
+    SITETITLE: "Oldal címe"
+    TABACCESS: Hozzáférés

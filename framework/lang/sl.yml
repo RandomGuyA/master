@@ -1,0 +1,201 @@
+sl:
+  AssetTableField:
+    CREATED: "Naloženo na začetku"
+    LASTEDIT: "Zadnje naloženo"
+    SIZE: "Velikost datoteke"
+    TYPE: Tip
+    URL: URL
+  BasicAuth:
+    ENTERINFO: "Vpišite uporabniško ime in geslo."
+    ERRORNOTADMIN: "Uporabnik ni administrator tega spletnega mesta."
+    ERRORNOTREC: "Ne prepoznam uporabniškega imena ali gesla"
+  Boolean:
+    ANY: Katerikoli
+  ChangePasswordEmail_ss:
+    CHANGEPASSWORDTEXT1: "Geslo ste spremenili v"
+    HELLO: "Pozdravljeni,"
+  ConfirmedPasswordField:
+    ATLEAST: "Geslo mora vsebovati vsaj {min} znakov."
+    BETWEEN: "Geslo mora biti dolgo od {min} do {max} znakov."
+    MAXIMUM: "Geslo je lahko dolgo največ {max} znakov."
+    SHOWONCLICKTITLE: "Spremeni geslo"
+  Date:
+    LessThanMinuteAgo: "manj kot minuta"
+    TIMEDIFFAGO: "pred {difference}"
+    TIMEDIFFIN: "v {difference}"
+  DateField:
+    NOTSET: "ni nastavljeno"
+    TODAY: danes
+    VALIDDATEFORMAT2: "Prosim, vnesite ustrezno obliko datuma ({format})"
+    VALIDDATEMAXDATE: "Datum mora biti starejši ali enak največjemu dovoljenemu datumu ({date})"
+    VALIDDATEMINDATE: "Datum mora biti novejši ali enak najmanjšemu dovoljenemu datumu ({date})"
+  Director:
+    INVALID_REQUEST: "Napačna zahteva"
+  DropdownField:
+    CHOOSE: (Izberi)
+  EmailField:
+    VALIDATION: "Prosim, vpišite e-naslov."
+  Enum:
+    ANY: Katerikoli
+  ForgotPasswordEmail_ss:
+    HELLO: "Pozdravljeni,"
+    TEXT1: "Tukaj je vaša"
+    TEXT2: "povezava za ponastavitev gesla"
+    TEXT3: za
+  Form:
+    CSRF_EXPIRED_MESSAGE: "Vaša seja je potekla. Prosimo ponovno oddajte obrazec "
+    VALIDATIONPASSWORDSDONTMATCH: "Vpisani gesli se ne ujemata"
+    VALIDATIONPASSWORDSNOTEMPTY: "Vpišite geslo (dvakrat) v za to predvideni polji"
+    VALIDATIONSTRONGPASSWORD: "Geslo naj vsebuje vsaj eno črko in vsaj eno številko."
+    VALIDATOR: Preverjanje
+    VALIDCURRENCY: "Prosim, vnesite pravo valuto."
+  FormField:
+    NONE: brez
+  GridAction:
+    DELETE_DESCRIPTION: Izbriši
+    Delete: Izbriši
+    UnlinkRelation: "Odstrani povezavo"
+  GridField:
+    Add: "Dodaj {name}"
+    Filter: Filter
+    FilterBy: "Filtriraj po"
+    Find: Poišči
+    LinkExisting: "Poveži na"
+    NewRecord: "Novih %s"
+    NoItemsFound: "Ni rezultatov"
+    PRINTEDAT: "Tiskano pri"
+    PRINTEDBY: Natisnil
+    PlaceHolder: "Poišči {type} "
+    PlaceHolderWithLabels: "Poišči {type} glede na {name}"
+    RelationSearch: "Povezano iskanje"
+    ResetFilter: Ponastavi
+  GridFieldAction_Delete:
+    DeletePermissionsFailure: "Ni dovoljenja za brisanje"
+  GridFieldDetailForm:
+    CancelBtn: Prekliči
+    Create: Ustvari
+    Delete: Izbriši
+    DeletePermissionsFailure: "Ni dovoljenja za brisanje"
+    Deleted: "Izbrisanih %s %s"
+    Save: Shrani
+  GridFieldEditButton_ss:
+    EDIT: Uredi
+  Group:
+    AddRole: "Skupinam pripiši vloge"
+    Code: "Koda skupine"
+    DefaultGroupTitleAdministrators: Administratorji
+    DefaultGroupTitleContentAuthors: "Avtorji vsebine"
+    Description: Opis
+    GroupReminder: "Če izberete nadrejeno skupino, bo ta skupina prevzela vse njene vloge"
+    Locked: "Zaklenjeno za urejanje?"
+    NoRoles: "Ni najdenih vlog"
+    Parent: "Nadrejena skupina"
+    RolesAddEditLink: "Dodaj in uredi vloge"
+    Sort: "Način razvrščanja"
+    has_many_Permissions: Dovoljenja
+    many_many_Members: Uporabniki
+  LoginAttempt:
+    Email: E-naslov
+    IP: IP-naslov
+    Status: Stanje
+  Member:
+    ADDGROUP: "Dodaj skupino"
+    BUTTONCHANGEPASSWORD: "Spremeni geslo"
+    BUTTONLOGIN: Prijava
+    BUTTONLOGINOTHER: "Prijavite se z drugim uporabniškim imenom"
+    BUTTONLOSTPASSWORD: "Pozabil-a sem geslo"
+    CONFIRMNEWPASSWORD: "Potrdi novo geslo"
+    CONFIRMPASSWORD: "Potrdi geslo"
+    DefaultAdminFirstname: "Privzeti administrator"
+    EMAIL: E-naslov
+    EMPTYNEWPASSWORD: "Polje za vpis novega gesla ne sme ostati prazno. Poskusite ponovno."
+    ENTEREMAIL: "Vpišite e-naslov, na katerega vam bomo nato poslali povezavo za ponastavitev gesla."
+    ERRORNEWPASSWORD: "Novo geslo ste drugače zapisali - poskusite ponovno."
+    ERRORPASSWORDNOTMATCH: "Vpisani novi gesli se ne ujemata. Poskusite ponovno."
+    ERRORWRONGCRED: "Izgleda, da podani podatki niso točni. Poskusite ponovno"
+    FIRSTNAME: Ime
+    INTERFACELANG: Jezik
+    LOGGEDINAS: "Vpisan(a) si kot: {name}."
+    NEWPASSWORD: "Novo geslo"
+    NoPassword: "Za tega člana ni gesla"
+    PASSWORD: Geslo
+    SUBJECTPASSWORDCHANGED: "Geslo je bilo spremenjeno"
+    SUBJECTPASSWORDRESET: "Povezava za resetiranje vašega gesla"
+    SURNAME: Priimek
+    WELCOMEBACK: "Ponovno pozdravljeni, {firstname}"
+    YOUROLDPASSWORD: "Staro geslo"
+    belongs_many_many_Groups: Skupine
+    db_Locale: "Lokalizacija vmesnika"
+    db_LockedOutUntil: "Zaklenjeno do"
+    db_Password: Geslo
+    db_PasswordExpiry: "Datum poteka veljavnosti gesla"
+  MemberAuthenticator:
+    TITLE: "Uporabniški račun"
+  MemberDatetimeOptionsetField:
+    Custom: Prilagojeno
+    DATEFORMATBAD: "Zapis datuma je napačen"
+    DAYNOLEADING: "Dan v mesecu brez zapisa sprednje ničle"
+    DIGITSDECFRACTIONSECOND: "Ena ali več decimalk, ki predstavljajo sekunde"
+    FOURDIGITYEAR: "Štirimesten zapis letnice"
+    MINUTENOLEADING: "Minute brez zapisa sprednje ničle"
+    MONTHNOLEADING: "Mesec brez zapisa sprednje ničle"
+    Preview: Predogled
+    TWODIGITDAY: "Dvomestno število za mesec"
+    TWODIGITYEAR: "Dvomestno število za letnico"
+  MoneyField:
+    FIELDLABELAMOUNT: Znesek
+    FIELDLABELCURRENCY: Valuta
+  NullableField:
+    IsNullLabel: "Prazno polje"
+  NumericField:
+    VALIDATION: "'{value}' ni številka. V to polje lahko vnesete samo številke."
+  Pagination:
+    Page: Stran
+    View: Poglej
+  Permission:
+    AdminGroup: Administrator
+    FULLADMINRIGHTS: "Popolne administratorske pravice"
+    FULLADMINRIGHTS_HELP: "Lahko izniči oziroma upravlja z vsemi drugimi dovoljenji."
+  PermissionCheckboxSetField:
+    FromGroup: "Privzeto iz skupine \"{title}\""
+    FromRoleOnGroup: "podedovano iz vloge \"%s\" na skupino \"%s\""
+  PermissionRole:
+    Title: Naslov
+  PhoneNumberField:
+    VALIDATION: "Vpišite veljavno telefonsko številko"
+  Security:
+    ALREADYLOGGEDIN: "Nimate dovoljenja za dostop do te strani. Če imate uporabniško ime z večimi pravicami, se lahko ponovno prijavite."
+    BUTTONSEND: "Pošlji povezavo za ponastavitev gesla"
+    CHANGEPASSWORDBELOW: "Spodaj lahko spremenite svoje geslo."
+    CHANGEPASSWORDHEADER: "Spremenite geslo"
+    ENTERNEWPASSWORD: "Vpišite novo geslo."
+    ERRORPASSWORDPERMISSION: "Da bi lahko zamenjali geslo, se morate prijaviti."
+    LOGIN: Prijava
+    LOSTPASSWORDHEADER: "Izgubljeno geslo"
+    NOTEPAGESECURED: "Stran je zaščitena. Da bi lahko nadaljevali, vpišite svoje podatke."
+    NOTERESETLINKINVALID: "<p>Povezava za ponastavitev gesla je napačna ali pa je njena veljavnost potekla.</p><p><a href=\"{link1}\">Tukaj</a> lahko zaprosite za novo povezavo or pa zamenjate geslo, ko  <a href=\"{link2}\">se prijavite v sistem</a>.</p>"
+    NOTERESETPASSWORD: "Vpišite e-naslov, na katerega vam bomo poslali povezavo za ponastavitev gesla"
+    PASSWORDSENTHEADER: "Povezava za ponastavitev gesla je bila poslana na e-naslov '{email}'."
+    PASSWORDSENTTEXT: "Hvala! Povezava za ponastavitev gesla je bila poslana na e-naslov '{email}', ki je naveden kot e-naslov vašega računa. "
+  SecurityAdmin:
+    GROUPNAME: "Ime skupine"
+    MEMBERS: Člani
+    NEWGROUP: "Nova Skupina"
+    PERMISSIONS: Dovoljenja
+    ROLES: Vloge
+    ROLESDESCRIPTION: "Tukaj lahko skupini dodajate vloge. Vloge so logični sklopi dovoljenj, ki jih urejate v zavihku \"Vloge\"."
+  SiteTree:
+    TABMAIN: Domov
+  TableListField:
+    CSVEXPORT: "Izvozi kot CSV-datoteko"
+    Print: Natisni
+  TableListField_PageControls_ss:
+    OF: od
+  TimeField:
+    VALIDATEFORMAT: "Prosim, vnesite čas v ustrezni obliki ({format})"
+  UploadField:
+    Dimensions: Dimenzije
+    EDIT: Uredi
+    EDITINFO: "Uredi datoteko"
+    FIELDNOTSET: "Pred uvozom počisti bazo podatkov"
+    REMOVE: Odstrani

@@ -1,0 +1,101 @@
+az:
+  BasicAuth:
+    ENTERINFO: "Zəhmət olmasa istifadəçi adı və ya parolu yazın."
+    ERRORNOTADMIN: "İstifadəçi administrator deyil"
+    ERRORNOTREC: "Belə istifadəçi adı və ya parol tanınmadı"
+  Boolean:
+    ANY: İstənilən
+  ChangePasswordEmail_ss:
+    CHANGEPASSWORDTEXT1: "Siz parolu bu url üçün dəyişdiniz"
+    HELLO: Salam
+  ConfirmedPasswordField:
+    SHOWONCLICKTITLE: "Parolu dəyiş"
+  DateField:
+    NOTSET: "təyin edilməyib"
+    TODAY: "bu gün"
+  DropdownField:
+    CHOOSE: (Seçin)
+  Enum:
+    ANY: İxtiyari
+  ForgotPasswordEmail_ss:
+    HELLO: Salam
+    TEXT1: "Burada sizin"
+    TEXT2: "parolu sıfırlma linki"
+    TEXT3: üçün
+  Form:
+    VALIDATIONPASSWORDSDONTMATCH: "Parollar uyğun gəlmir"
+    VALIDATIONPASSWORDSNOTEMPTY: "Parollar boş ola bilməz"
+  FormField:
+    NONE: "heç bir"
+  Group:
+    Code: "Qrup kodu"
+    DefaultGroupTitleAdministrators: Administratorlar
+    DefaultGroupTitleContentAuthors: "Məzmun müəllifləri"
+    Description: "Qısa təsvir"
+    Locked: Bloklanıb?
+    Parent: "Valideyn qrupu"
+    Sort: Sıralama
+    has_many_Permissions: Səlahiyyətlər
+    many_many_Members: Üzvlər
+  LoginAttempt:
+    Email: E-poçt
+    IP: "İP ünvan"
+  Member:
+    BUTTONCHANGEPASSWORD: "Parolu dəyiş"
+    BUTTONLOGIN: "Daxil ol"
+    BUTTONLOGINOTHER: "Başqa adla daxil ol"
+    BUTTONLOSTPASSWORD: "Parol yaddan çıxıb."
+    CONFIRMNEWPASSWORD: "Yeni parolun təsdiqi"
+    CONFIRMPASSWORD: "Parolu təsdiqlə"
+    DefaultAdminFirstname: "Əsas admin"
+    EMAIL: E-poçt
+    EMPTYNEWPASSWORD: "Yeni şifrə boş ola bilməz, təkrar edin. "
+    ENTEREMAIL: "Parolu sıfırlama linkini əldə etmək üçün e-poçtunuzu daxil edin."
+    ERRORNEWPASSWORD: "Yeni parolunuzu başqa cür daxil etdiniz, bir daha cəhd edin"
+    ERRORPASSWORDNOTMATCH: "Parol uyğun gəlmir, yenidən cəhd edin"
+    FIRSTNAME: Ad
+    INTERFACELANG: "İnterfeys dili"
+    NEWPASSWORD: "Yeni parol"
+    PASSWORD: Parol
+    SUBJECTPASSWORDCHANGED: "Sizin parolunuz dəyişildi"
+    SUBJECTPASSWORDRESET: "Parolu sıfırlama linki"
+    SURNAME: Soyad
+    YOUROLDPASSWORD: "Sizin keçmiş parol"
+    belongs_many_many_Groups: Qruplar
+    db_Locale: "İnterfeys dili"
+    db_LockedOutUntil: "Bloklanıb, açılma vaxtı"
+    db_Password: Parol
+    db_PasswordExpiry: "Parolun etibarlılığının bitmə vaxtı"
+  MemberAuthenticator:
+    TITLE: "E-poçt &amp; Parol"
+  MoneyField:
+    FIELDLABELAMOUNT: Miqdar
+    FIELDLABELCURRENCY: Valyuta
+  NullableField:
+    IsNullLabel: Boşdur
+  Permission:
+    FULLADMINRIGHTS: "Tam administrativ hüquqlar"
+    FULLADMINRIGHTS_HELP: "Başqa təyin edilmiş bütün icazələr rədd olunur."
+  PermissionCheckboxSetField:
+    FromRoleOnGroup: "\"%s\" rolundan \"%s\" qrupunda törəyib"
+  PhoneNumberField:
+    VALIDATION: "Düzgün telefon nömrəsi daxil et."
+  Security:
+    ALREADYLOGGEDIN: "Sizin bu səhifəyə icazəniz yoxdur. Əgər bu səhifəyə icazəsi olan başqa profiliniz varsa hesabınıza daxil olun"
+    BUTTONSEND: "Parolu sıfırlama linkini göndər"
+    CHANGEPASSWORDBELOW: "Şifrəni burda deyişə bilərsiniz. "
+    CHANGEPASSWORDHEADER: "Parolu dəyiş"
+    ENTERNEWPASSWORD: "Yeni şifrəni daxil edin."
+    ERRORPASSWORDPERMISSION: "Parolu dəyişmək üçün hesaba daxil olmalısınız!"
+    LOGIN: "Daxil ol"
+    NOTEPAGESECURED: "Səhifə təhlükəsizdir. Məlumatları daxil edin və biz sizə göndərəcəyik. "
+    NOTERESETPASSWORD: "E-poçtunuzu daxil edin və parol sıfırlama linkini göndərəcəyik"
+  SecurityAdmin:
+    GROUPNAME: "Qrupun adı"
+    MEMBERS: Üzvlər
+    PERMISSIONS: Səlahiyyətlər
+    ROLES: Rollar
+  SiteTree:
+    TABMAIN: Əsas
+  TableListField:
+    CSVEXPORT: "CSV-yə ixrac et"

@@ -1,0 +1,32 @@
+@import "../_core/_config.less";
+
+/*-----------------------------------------
+                NAV.LESS
+-----------------------------------------*/
+
+
+//Dark Nav bootstrap override
+.navbar-inverse {
+    background:transparent;
+    border:none;
+
+}
+.nav {
+
+    height:@config-header-height;
+
+    @media @XL, @LG, @MD, @SM {
+
+        li {
+
+            a {
+                line-height: @config-header-height;
+                padding-top: 0;
+                padding-bottom: 0;
+
+            }
+
+        }
+    }
+
+}

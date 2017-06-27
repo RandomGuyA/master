@@ -1,0 +1,24 @@
+cs:
+  CMSMain:
+    LANGUAGEDROPDOWNLABEL: Jazyk
+  CMSMain_left:
+    GO: Jdi
+  Form:
+    LANGAOTHER: 'Jiné jazyky'
+    LANGAVAIL: 'Dostupné jazyky'
+  Translatable:
+    ALLCREATED: 'Všechny povolené překlady byly vytvořeny.'
+    CREATE: 'Vytvořit nový překlad'
+    CREATEBUTTON: Vytvořit
+    EXISTING: 'Existující překlady'
+    NEWLANGUAGE: 'Nový jazyk'
+    NOTICENEWPAGE: 'Před vytvořením překladu uložte tuto stránku prosím'
+    TRANSLATEALLPERMISSION: 'Přeložit do všech dostupných jazyků'
+    TRANSLATEPERMISSION: 'Překlad %s'
+    TRANSLATEVIEWLANGS: 'Zobrazit seznam jazyků'
+    TRANSLATIONS: Překlady
+  Translatable_Transform:
+    CheckboxValueNo: Ne
+    CheckboxValueYes: Ano
+    OriginalCheckboxLabel: 'Původní: {value}'
+    OriginalFieldLabel: 'Původní {title}'

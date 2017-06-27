@@ -1,0 +1,183 @@
+af:
+  AssetTableField:
+    CREATED: "Eerste opgelaai"
+    LASTEDIT: "Laaste verander"
+    SIZE: "Lêer grootte"
+    TYPE: "Lêer tipe"
+  BasicAuth:
+    ENTERINFO: "Tik asseblief 'n verbruikersnaam en wagwoord in"
+    ERRORNOTADMIN: "Daardie verbruiker is nie 'n administreerder nie"
+    ERRORNOTREC: "Daar die verbruikersnaam / wagwoord is nie herken nie"
+  Boolean:
+    ANY: Enige
+  ChangePasswordEmail_ss:
+    CHANGEPASSWORDTEXT1: "U het die wagwoord vir"
+  ConfirmedPasswordField:
+    SHOWONCLICKTITLE: "Verander Wagwoord"
+  CurrencyField:
+    CURRENCYSYMBOL: R
+  Date:
+    TIMEDIFFAGO: "{difference} terug"
+  DateField:
+    NOTSET: "Nie gestel nie"
+    TODAY: vandag
+    VALIDDATEFORMAT2: "Sleutel asseblief 'n geldige datum formaat in ({format})"
+    VALIDDATEMAXDATE: "Jou datum moet gelykstaande of ouer wees as die maksimum toelaatbare datum ({date})"
+    VALIDDATEMINDATE: "Jou datum moet net so out of nuwer wees as die minimum toelaatbare datum ({date})"
+  Director:
+    INVALID_REQUEST: "Ongeldige versoek"
+  DropdownField:
+    CHOOSE: (Kies)
+  EmailField:
+    VALIDATION: "Verskaf asseblief  'n epos adres "
+  Enum:
+    ANY: Enige
+  ForgotPasswordEmail_ss:
+    TEXT1: "Hier is u"
+    TEXT2: "wagwoord herstel skakel"
+    TEXT3: vir
+  Form:
+    VALIDATIONPASSWORDSDONTMATCH: "Wagwoorde pas nie"
+    VALIDATIONPASSWORDSNOTEMPTY: "Wagwoorde kan nie leeg wees nie"
+    VALIDATIONSTRONGPASSWORD: "Wagwoorde moet minstens een nommer en een alfa-numeriese karaketer bevat"
+    VALIDATOR: Vergeldiger
+    VALIDCURRENCY: "Tik asseblief 'n geldige geldeenheid in "
+  FormField:
+    NONE: geen
+  GridAction:
+    DELETE_DESCRIPTION: Verwyder
+    Delete: Verwyder
+    UnlinkRelation: Ontkoppel
+  GridField:
+    Add: "Voeg {name}"
+    Find: Vind
+    LinkExisting: "Koppel bestaande"
+    NewRecord: "Nuwe %s"
+    NoItemsFound: "Geen items gevind nie"
+    PRINTEDAT: "Gedruk te"
+    PRINTEDBY: "Gedruk deur"
+    PlaceHolder: "Vind {type}"
+    PlaceHolderWithLabels: "Vind {type} by {name}"
+    RelationSearch: "Soek vir verwantskap"
+    ResetFilter: Herstel
+  GridFieldAction_Delete:
+    DeletePermissionsFailure: "Geen toestemming om te verwyder nie"
+  GridFieldDetailForm:
+    CancelBtn: "Kanselleer "
+    Create: Skep
+    Delete: Verwyder
+    DeletePermissionsFailure: "Geen toestemming om te verwyder nie"
+    Deleted: "Verwyderde %s %s"
+    Save: Stoor
+  Group:
+    Code: "Groep Kode"
+    DefaultGroupTitleAdministrators: Administrateurs
+    DefaultGroupTitleContentAuthors: "Inhouds Outeurs"
+    Description: Beskrywing
+    GroupReminder: "As jy 'n ouer groep kies sal hierdie groep al daardie rolle aanneem"
+    Locked: Gesluit?
+    NoRoles: "Geen rolle gevind nie"
+    Parent: "Ouer Groep"
+    Sort: "Sorteerings orde"
+    has_many_Permissions: Toestemmings
+    many_many_Members: Lidde
+  LoginAttempt:
+    Email: "Epos Adres"
+    IP: "IP Adres"
+    Status: Posisie
+  Member:
+    ADDGROUP: "Voeg groep by"
+    BUTTONCHANGEPASSWORD: "Verander Wagwoord"
+    BUTTONLOGIN: "Teken in"
+    BUTTONLOGINOTHER: "Teken in as iemand anders"
+    BUTTONLOSTPASSWORD: "Ek het my wagwoord verloor"
+    CONFIRMNEWPASSWORD: "Bevestig Nuwe Wagwoord"
+    CONFIRMPASSWORD: "Bevestig wagwoord"
+    DefaultAdminFirstname: "Verstek Admin"
+    EMAIL: Epos
+    EMPTYNEWPASSWORD: "Die nuwe wagwoord kan nie leeg wees nie. Probeer asseblief weer"
+    ENTEREMAIL: "Verskaf asseblief  'n epos adres sodat ons vir u 'n wagwoord herstel skakel kan epos"
+    ERRORNEWPASSWORD: "Jy het jou nuwe wagwoord anders ingetik. Probeer weer"
+    ERRORPASSWORDNOTMATCH: "U huidige wagwoord pas nie, probeer asseblief weer"
+    FIRSTNAME: Voornaam
+    INTERFACELANG: "Koppelvlak Taal"
+    LOGGEDINAS: "Jy is ingeteken as {name}"
+    NEWPASSWORD: "Nuwe wagwoord"
+    PASSWORD: Wagwoord
+    SUBJECTPASSWORDCHANGED: "U wagwoord het verander."
+    SUBJECTPASSWORDRESET: "U wagwoord herlaai skakel"
+    SURNAME: Van
+    ValidationIdentifierFailed: "Kan nie bestaande lid #{id} met identiese identiteit ({name}={value})) oorskryf nie"
+    WELCOMEBACK: "Welkom terug, {firstname}"
+    YOUROLDPASSWORD: "U ou wagwoord"
+    belongs_many_many_Groups: Groepe
+    db_Locale: "Plaaslike koppelvalk"
+    db_LockedOutUntil: "Utgesluit tot en met"
+    db_Password: Wagwoord
+    db_PasswordExpiry: "Wagwoord Vervaldatum"
+  MemberAuthenticator:
+    TITLE: "Epos &amp; Wagwoord"
+  MemberDatetimeOptionsetField:
+    Custom: "Maak pas"
+    DATEFORMATBAD: "Die datum formaat is ongeldig"
+    DAYNOLEADING: "Dag van die maand sonder 'n zero vooraan"
+    DIGITSDECFRACTIONSECOND: "Een of meer syfers wat 'n desimale fraksie van 'n sekonde aan dui"
+    FOURDIGITYEAR: "View syfer jaar"
+    MINUTENOLEADING: "Minuut sonder die aanvangs nul"
+    MONTHNOLEADING: "Maand syfers sonder aanvangs-zero"
+    Preview: Voorskou
+    TWODIGITDAY: "Twee syfer dag van die maand"
+    TWODIGITYEAR: "Twee syfer jaar"
+  MoneyField:
+    FIELDLABELAMOUNT: Bedrag
+    FIELDLABELCURRENCY: "Geld eenheid"
+  NumericField:
+    VALIDATION: "'{value}'is nie 'n nommer nie, slegs die nommers kan aanvaar word vir hierdie veld"
+  Pagination:
+    Page: Bladsy
+    View: Wys
+  Permission:
+    AdminGroup: Administrateur
+    FULLADMINRIGHTS: "Volle administratiewe regte "
+    FULLADMINRIGHTS_HELP: "Impliseer en oorskryf alle ander toegekende permissies."
+  PermissionCheckboxSetField:
+    AssignedTo: "toegeken aan \"{title}\""
+    FromGroup: "geërf van groep \"{title}\""
+    FromRole: "geërf van rol\"{title}\""
+    FromRoleOnGroup: "oorgeërf van rol \"%s\" op groep \"%s\""
+  PermissionRole:
+    OnlyAdminCanApply: "Slegs administrateur daarvoor aansoek doen"
+    Title: Tietel
+  PhoneNumberField:
+    VALIDATION: "Tik asseblief  'n geldige telefoon nommer in"
+  Security:
+    ALREADYLOGGEDIN: "U het nie toegang tot hierdie bladsy nie. As u n' ander rekening het wat toegang tot hierdie bladsy het, kan u weer inteken."
+    BUTTONSEND: "Stuur vir my die wagwoord herstel skakel"
+    CHANGEPASSWORDBELOW: "Jy kan jou wagwoord onder verander"
+    CHANGEPASSWORDHEADER: "Verander jou wagwoord"
+    ENTERNEWPASSWORD: "Sleutel asseblief 'n nuwe wagwoord in"
+    ERRORPASSWORDPERMISSION: "Jy moet ingeteken wees om jou wagwoord te verander"
+    LOGIN: "Teken in"
+    NOTEPAGESECURED: "Daai bladsy is beveilig. Sleutel jou informasie onder in sodat ons jou op jou pad kan stuur"
+    NOTERESETPASSWORD: "Sleutel you epos adres in sodat ons vir jou 'n herstel skakel kan epos"
+  SecurityAdmin:
+    GROUPNAME: "Groep naam"
+    MEMBERS: Lede
+    PERMISSIONS: Toegangsregte
+    ROLES: Rolle
+    ROLESDESCRIPTION: " "
+  SiteTree:
+    TABMAIN: Hoof
+  TableListField:
+    CSVEXPORT: "Voer uit na CSV lêer"
+    Print: Druk
+  TableListField_PageControls_ss:
+    OF: van
+  TimeField:
+    VALIDATEFORMAT: "Sleutel asseblief 'n geldige tyd formaat ({format})"
+  UploadField:
+    Dimensions: Afmetings
+    EDIT: Verander
+    EDITINFO: "Verander die lêer"
+    FIELDNOTSET: "Die lêer informasie kan nie gevind word nie"
+    REMOVE: Verwyder

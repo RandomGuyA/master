@@ -1,0 +1,219 @@
+sr:
+  AssetTableField:
+    CREATED: "Прво достављено"
+    LASTEDIT: "Последње промењено"
+    SIZE: Величина
+    TYPE: Тип
+    URL: URL
+  BasicAuth:
+    ENTERINFO: "Унесите корисничко име и лозинку."
+    ERRORNOTADMIN: "Овај корисник није администратор."
+    ERRORNOTREC: "То корисничко име / лозинка није препознато"
+  Boolean:
+    ANY: "Било која"
+  ChangePasswordEmail_ss:
+    CHANGEPASSWORDTEXT1: "Променили сте своју лозинку за "
+    HELLO: Здраво
+  ConfirmedPasswordField:
+    ATLEAST: "Лозинка мора садржати најмање {min} знакова."
+    BETWEEN: "Лозинка мора садржати најмање {min}, а највише {max} знакова."
+    MAXIMUM: "Лозинка може садржати највише {max} знакова."
+    SHOWONCLICKTITLE: "Промени лозинку"
+  CurrencyField:
+    CURRENCYSYMBOL: дин.
+  Date:
+    LessThanMinuteAgo: "мање од минуте"
+    TIMEDIFFAGO: "{difference} раније"
+    TIMEDIFFIN: "кроз {difference}"
+  DateField:
+    NOTSET: "није подешено"
+    TODAY: данас
+    VALIDDATEFORMAT2: "Молимо Вас да унесете исправан формат датума ({format})"
+    VALIDDATEMAXDATE: "Датум не сме бити после ({date})"
+    VALIDDATEMINDATE: "Датум не сме бити пре ({date})"
+  Director:
+    INVALID_REQUEST: "Погрешан захтев"
+  DropdownField:
+    CHOOSE: (изаберите)
+  EmailField:
+    VALIDATION: "Унесите адресу е-поште"
+  Enum:
+    ANY: "Било који"
+  ForgotPasswordEmail_ss:
+    HELLO: Здраво
+    TEXT1: "Ево га Ваш"
+    TEXT2: "линк за ресетовање лозинке"
+    TEXT3: за
+  Form:
+    VALIDATIONPASSWORDSDONTMATCH: "Лозинке се не поклапају"
+    VALIDATIONPASSWORDSNOTEMPTY: "Поља за лозинке не смеју да буду празна"
+    VALIDATIONSTRONGPASSWORD: "Лозинке морају ра садрже бар једну цифру и бар један алфанумерички знак"
+    VALIDATOR: "Проверивач исправности"
+    VALIDCURRENCY: "Унесите исправну валуту"
+  FormField:
+    NONE: без
+  GridAction:
+    DELETE_DESCRIPTION: Избриши
+    Delete: Избриши
+    UnlinkRelation: "Раскини линк"
+  GridField:
+    Add: "Додај {name}"
+    Filter: Филтер
+    FilterBy: "Филтрирај по"
+    Find: Пронађи
+    LinkExisting: "Постојање линка"
+    NewRecord: "Нови %s"
+    NoItemsFound: "Ниједна ставка није пронађена"
+    PRINTEDAT: Одштампано
+    PRINTEDBY: Одштампао
+    PlaceHolder: "Пронађи {type}"
+    PlaceHolderWithLabels: "Пронађи {type} по {name}"
+    RelationSearch: "Претраживање релације"
+    ResetFilter: "Врати у пређашње стање"
+  GridFieldAction_Delete:
+    DeletePermissionsFailure: "Немате дозволу за брисање"
+    EditPermissionsFailure: "Немате дозволу да раскинете линк са записом"
+  GridFieldDetailForm:
+    CancelBtn: Одустани
+    Create: Креирај
+    Delete: Избриши
+    DeletePermissionsFailure: "Немате право брисања"
+    Deleted: "Избрисано %s %s"
+    Save: Сачувај
+  GridFieldEditButton_ss:
+    EDIT: Измени
+  Group:
+    AddRole: "Додај улогу за ову групу"
+    Code: "Кôд групе"
+    DefaultGroupTitleAdministrators: Администратори
+    DefaultGroupTitleContentAuthors: "Аутори садржаја"
+    Description: Опис
+    GroupReminder: "Ако изаберете родитељску групу, ова група ће преузети све њене улоге"
+    HierarchyPermsError: "Није могуће доделити родитељску групу \"%s\" са привилегованим дозволама (захтева Администраторски приступ)"
+    Locked: Закључано?
+    NoRoles: "Улоге нису пронађене"
+    Parent: "Родитељска група"
+    RolesAddEditLink: "Управљај улогама"
+    Sort: "Поредак сортирања"
+    has_many_Permissions: Дозволе
+    many_many_Members: Чланови
+  Hierarchy:
+    InfiniteLoopNotAllowed: "Откривена је бесконачна петља у оквиру \"{type}\" хијерархије. Промените родитеља да би сте разрешили ситуацију"
+  LoginAttempt:
+    Email: "Адреса е-поште"
+    IP: "IP адреса"
+    Status: Статус
+  Member:
+    ADDGROUP: "Додај групу"
+    BUTTONCHANGEPASSWORD: "Измени лозинку"
+    BUTTONLOGIN: "Пријави се"
+    BUTTONLOGINOTHER: "Пријавите се као неко други"
+    BUTTONLOSTPASSWORD: "Заборавио сам лозинку"
+    CONFIRMNEWPASSWORD: "Потврдите нову лозинку"
+    CONFIRMPASSWORD: "Потврдите лозинку"
+    DefaultAdminFirstname: "Подразумевани администратор"
+    EMAIL: Е-пошта
+    EMPTYNEWPASSWORD: "Нова лозинка не може бити празна. Покушајте поново."
+    ENTEREMAIL: "Унесите адресу е-поште да би сте добили линк за ресетовање лозинке."
+    ERRORLOCKEDOUT2: "Ваш налог је привремено суспендован због великог броја неуспешних покушаја пријаве. Покушајте поново за {count} минута."
+    ERRORNEWPASSWORD: "Нова лозинка коју сте унели се не поклапа. Покушајте поново."
+    ERRORPASSWORDNOTMATCH: "Ваша тренутна лозинка се не поклапа. Покушајте поново."
+    ERRORWRONGCRED: "Пружени детаљи изгледа нису коректни. Покушајте поново."
+    FIRSTNAME: Име
+    INTERFACELANG: "Језик интерфејса"
+    LOGGEDINAS: "Пријављени сте као {name}."
+    NEWPASSWORD: "Нова лозинка"
+    NoPassword: "Не постоји лозинка за тог члана."
+    PASSWORD: Лозинка
+    SUBJECTPASSWORDCHANGED: "Ваша лозинка је промењена"
+    SUBJECTPASSWORDRESET: "Линк за ресетовање Ваше лозинке"
+    SURNAME: Презиме
+    ValidationIdentifierFailed: "Није могуће преписати преко постојећег члана  #{id} са истим идентификатором ({name} = {value}))"
+    WELCOMEBACK: "Добро дошли поново, {firstname}"
+    YOUROLDPASSWORD: "Ваша стара лозинка"
+    belongs_many_many_Groups: Групе
+    db_Locale: "Локалитет интерфејса"
+    db_LockedOutUntil: "Zaključan do"
+    db_Password: Лозинка
+    db_PasswordExpiry: "Датум истека лозинке"
+  MemberAuthenticator:
+    TITLE: "Пошаљи лозинку"
+  MemberDatetimeOptionsetField:
+    Custom: Прилагођен
+    DATEFORMATBAD: "Неисправан формат датума"
+    DAYNOLEADING: "Дан у месецу без водеће нуле"
+    DIGITSDECFRACTIONSECOND: "Једна или више цифара које предстаљају десети део секунде"
+    FOURDIGITYEAR: "Четвороцифрена година"
+    MINUTENOLEADING: "Минуте без водеће нуле"
+    MONTHNOLEADING: "Месец без водеће нуле"
+    Preview: "Претходни преглед"
+    TWODIGITDAY: "Двоцифрени дан месеца"
+    TWODIGITYEAR: "Двоцифрена година"
+    Toggle: "Прикажи помоћ за форматирање"
+  MoneyField:
+    FIELDLABELAMOUNT: Износ
+    FIELDLABELCURRENCY: Валута
+  NullableField:
+    IsNullLabel: "је Null"
+  NumericField:
+    VALIDATION: "'{value}' није број. Само бројеви могу бити прихваћени за ово поље"
+  Pagination:
+    Page: Страница
+    View: Преглед
+  PasswordValidator:
+    LOWCHARSTRENGTH: "Појачајте лозинку додавањем неких од следећих знакова: %s"
+    PREVPASSWORD: "Већ сте користили наведену лозинку у прошлости. Стога, изаберите другу лозинку"
+    TOOSHORT: "Лозинка је прекратка. Лозинка мора садржати бар %s знакова"
+  Permission:
+    AdminGroup: Администратор
+    FULLADMINRIGHTS: "Пуна административна права"
+    FULLADMINRIGHTS_HELP: "Надјачава све друге додељене дозволе."
+  PermissionCheckboxSetField:
+    AssignedTo: "додељено \"{title}\""
+    FromGroup: "наслеђено од групе \"{title}\""
+    FromRole: "наслеђено од улоге \"{title}\""
+    FromRoleOnGroup: "наслеђено из улоге \"%s\" за групу \"%s\""
+  PermissionRole:
+    OnlyAdminCanApply: "Може примењивати само администратор"
+    Title: Наслов
+  PermissionRoleCode:
+    PermsError: "Није могуће доделити кôд  \"%s\" са привилегованим дозволама (захтева Администраторски приступ)"
+  Permissions:
+    UserPermissionsIntro: "Додавањем овог корисника у групу биће прилагођена и његова права приступа. Подробнија објашњења о правима приступа за појединачне групе можете пронаћи у секцији \"Групе\"."
+  PhoneNumberField:
+    VALIDATION: "Унесите исправан број телефона"
+  Security:
+    ALREADYLOGGEDIN: "Немате дозволу за приступ овој страни. Уколико имате други налог којим можете да приступите овој страни, пријавите се."
+    BUTTONSEND: "Пошаљи ми линк за ресетовање лозинке"
+    CHANGEPASSWORDBELOW: "Овде можете да промените своју лозинку."
+    CHANGEPASSWORDHEADER: "Промени моју лозинку"
+    ENTERNEWPASSWORD: "Унесите нову лозинку."
+    ERRORPASSWORDPERMISSION: "Морате да будете пријављени да бисте променили своју лозинку!"
+    LOGIN: Пријављивање
+    NOTEPAGESECURED: "Ова страна је обезбеђена. Унесите своје податке и ми ћемо вам послати садржај."
+    NOTERESETLINKINVALID: "<p>Линк за ресетовање лозинке је погрешан или је истекло време за његово коришћење.</p><p>Можете да захтевате нови <a href=\"{link1}\">овде</a> или да промените Вашу лозинку након што се <a href=\"{link2}\">пријавите</a>.</p>"
+    NOTERESETPASSWORD: "Унесите своју адресу е-поште и ми ћемо вам послати линк помоћу којег можете да промените своју лозинку"
+    PASSWORDSENTHEADER: "Линк за ресетовање лозинке послат је на адресу е-поште: '{email}'"
+    PASSWORDSENTTEXT: "Хвала Вам! Линк за ресетовање лозинке је послат не адресу е-поште '{email}'. Порука ће стићи примаоцу само ако постоји регистрован налог са том адресом е-поште."
+  SecurityAdmin:
+    GROUPNAME: "Име групе"
+    MEMBERS: Чланови
+    NEWGROUP: "Нова група"
+    PERMISSIONS: Дозволе
+    ROLES: Улоге
+    ROLESDESCRIPTION: "Улоге су предефинисани скупови овлашћења и могу бити додељене групама.<br />Наслеђују се од родитељских група ако је потребно."
+  SiteTree:
+    TABMAIN: Главно
+  TableListField:
+    CSVEXPORT: "Извези у CSV"
+    Print: Штампај
+  TableListField_PageControls_ss:
+    OF: од
+  TimeField:
+    VALIDATEFORMAT: "Унесите исправан формат времена ({format})"
+  UploadField:
+    Dimensions: Димензије
+    EDIT: Измени
+    EDITINFO: "Измени ову датотеку"
+    FIELDNOTSET: "Информације о датотеци нису пронађене"
+    REMOVE: Уклони

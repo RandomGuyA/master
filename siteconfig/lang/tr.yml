@@ -1,0 +1,6 @@
+tr:
+  SiteConfig:
+    SITENAMEDEFAULT: "Site Adınız"
+    SITETITLE: "Site başlığı"
+    TABACCESS: Erişim
+    TABMAIN: Ana
