@@ -14,7 +14,8 @@ class SectionImageBlock extends Section {
     {
         $fields = parent::getCMSFields();
 
-        $uploadField = UploadField::create('Photo');
+        $uploadField = ImageUploadField ::create('Photo');
+
         $uploadField->setFolderName('SectionBlockImages');
         $uploadField->getValidator()->setAllowedExtensions(array(
             'png','gif','jpeg','jpg'
