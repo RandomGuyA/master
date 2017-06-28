@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9c285fbda0a5054513bf86ffe794b739",
-    "content-hash": "24d83bd73e9026625e903f005e0a746e",
+    "hash": "c22fbc082df49e82f498740ce6d6614d",
+    "content-hash": "05a6c2ad1f274f75e3897e5a3b3c21e4",
     "packages": [
         {
             "name": "composer/installers",
@@ -466,6 +466,78 @@
                 "silverstripe"
             ],
             "time": "2017-02-08 22:28:52"
+        },
+        {
+            "name": "tractorcow/silverstripe-colorpicker",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tractorcow/silverstripe-colorpicker.git",
+                "reference": "2d1a1afc580b84dc47a8e708c09a3c7588385174"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tractorcow/silverstripe-colorpicker/zipball/2d1a1afc580b84dc47a8e708c09a3c7588385174",
+                "reference": "2d1a1afc580b84dc47a8e708c09a3c7588385174",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "3.*"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "colorpicker"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Damian Mooyman",
+                    "email": "damian.mooyman@gmail.com"
+                }
+            ],
+            "description": "Color picker field for Silverstripe CMS using the ColorPicker jQuery plugin",
+            "keywords": [
+                "color",
+                "colour",
+                "silverstripe"
+            ],
+            "time": "2015-01-27 20:44:50"
+        },
+        {
+            "name": "unclecheese/betterbuttons",
+            "version": "1.3.14",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/unclecheese/silverstripe-gridfield-betterbuttons.git",
+                "reference": "71f9653f51420ca07a33024bd8fe4396ee532bdb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-gridfield-betterbuttons/zipball/71f9653f51420ca07a33024bd8fe4396ee532bdb",
+                "reference": "71f9653f51420ca07a33024bd8fe4396ee532bdb",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GNU"
+            ],
+            "authors": [
+                {
+                    "name": "Uncle Cheese",
+                    "email": "unclecheese@leftandmain.com"
+                }
+            ],
+            "description": "Adds new form actions and buttons to GridField detail form for usability enhancements.",
+            "keywords": [
+                "buttons",
+                "gridfield",
+                "silverstripe"
+            ],
+            "time": "2017-01-20 08:51:05"
         }
     ],
     "packages-dev": [

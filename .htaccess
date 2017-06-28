@@ -47,3 +47,8 @@ ErrorDocument 500 /assets/error-500.html
 	RewriteRule .* framework/main.php?url=%1 [QSA]
 </IfModule>
 ### SILVERSTRIPE END ###
+
+
+php_flag display_startup_errors On
+php_flag display_errors On
+php_flag html_errors On

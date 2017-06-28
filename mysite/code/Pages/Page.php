@@ -40,6 +40,7 @@ class Page extends SiteTree
             array(
                 'SectionImageBlock' => SectionImageBlock::get_section_type(),
                 'SectionTextBlock'  => SectionTextBlock::get_section_type(),
+                'SectionConversationBlock'  => SectionConversationBlock::get_section_type(),
             )
         );
 
@@ -84,11 +85,14 @@ class Page extends SiteTree
             )
         );
 
-
-
-
-
         return $fields;
+    }
+
+    public function populateDefaults()
+    {
+        $this->Transition_inc = "silde-left";
+        $this->Transition_dec = "slide-right";
+        parent::populateDefaults();
     }
 
 }

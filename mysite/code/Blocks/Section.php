@@ -38,10 +38,10 @@ class Section extends DataObject
     }
 
     public function populateDefaults()
-    {
-        $this->Title = $this->ClassName . " " . $this->RunningTotal();
-        parent::populateDefaults();
-    }
+{
+    $this->Title = $this->ClassName . " " . $this->RunningTotal();
+    parent::populateDefaults();
+}
 
     function forTemplate() {
         $template = str_replace(" ", "", $this->get_section_type());
@@ -51,5 +51,18 @@ class Section extends DataObject
     function RunningTotal(){
         $count = DB::query("SELECT COUNT(*) FROM Section")->value();
         return $count + 1;
+    }
+    protected function removeEmptyTabs(FieldList $fields)
+    {
+        foreach ($fields as $field) {
+            if ($field instanceof TabSet) {
+                $this->removeEmptyTabs($field->Tabs(), $fields);
+            }
+
+            if ($field instanceof Tab && $field->Fields()->count() == 0) {
+                $fields->remove($field);
+            }
+        }
+        return $fields;
     }
 }

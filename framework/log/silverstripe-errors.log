@@ -29,3 +29,114 @@
 [27-Jun-2017 15:18:40] Error at \framework\core\Object.php line 780: Uncaught Exception: Object->__call(): the method 'fortemplate' does not exist on 'SectionTextBlock', or the method is not public. (http://localhost/silverstripe/development/master/)
 [27-Jun-2017 15:18:41] Error at \framework\core\Object.php line 780: Uncaught Exception: Object->__call(): the method 'fortemplate' does not exist on 'SectionTextBlock', or the method is not public. (http://localhost/silverstripe/development/master/)
 [27-Jun-2017 16:17:34] Error at \framework\core\Object.php line 780: Uncaught Exception: Object->__call(): the method 'setratiosize' does not exist on 'UploadField', or the method is not public. (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionImageBlock?Locale=en_GB)
+[28-Jun-2017 10:44:07] Error at \framework\model\connect\DBConnector.php line 55: Uncaught SS_DatabaseException: Couldn't run query:
+
+ALTER TABLE "SectionImageBlock" ADD "Caption" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Alt" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Width" varchar(30) character set utf8 collate utf8_general_ci,
+ADD "Align" varchar(30) character set utf8 collate utf8_general_ci
+
+Duplicate column name 'Caption' (http://localhost/silverstripe/development/master/dev/build?flush=&flushtoken=acdde621604a1994be8a31919efd7c39)
+[28-Jun-2017 10:47:21] Error at \framework\model\connect\DBConnector.php line 55: Uncaught SS_DatabaseException: Couldn't run query:
+
+ALTER TABLE "SectionImageBlock" ADD "Caption" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Alt" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Width" varchar(30) character set utf8 collate utf8_general_ci,
+ADD "Align" varchar(30) character set utf8 collate utf8_general_ci
+
+Duplicate column name 'Caption' (http://localhost/silverstripe/development/master/dev/build?flush=&flushtoken=a9681baa0b844cb9e2fd232071c044a8)
+[28-Jun-2017 10:47:53] Error at \framework\model\connect\DBConnector.php line 55: Uncaught SS_DatabaseException: Couldn't run query:
+
+ALTER TABLE "SectionImageBlock" ADD "Caption" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Alt" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Width" varchar(30) character set utf8 collate utf8_general_ci,
+ADD "Align" varchar(30) character set utf8 collate utf8_general_ci
+
+Duplicate column name 'Caption' (http://localhost/silverstripe/development/master/dev/build?flush=&flushtoken=33a58fd4cdd4cb209f12d807688f79a5)
+[28-Jun-2017 10:48:23] Error at \framework\model\connect\DBConnector.php line 55: Uncaught SS_DatabaseException: Couldn't run query:
+
+ALTER TABLE "SectionImageBlock" ADD "Caption" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Alt" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Width" varchar(30) character set utf8 collate utf8_general_ci,
+ADD "Align" varchar(30) character set utf8 collate utf8_general_ci
+
+Duplicate column name 'Caption' (http://localhost/silverstripe/development/master/dev/build?flush=&flushtoken=1bad431ce06aefa7d43e218e12c6119a)
+[28-Jun-2017 10:50:27] Error at \framework\model\connect\DBConnector.php line 55: Uncaught SS_DatabaseException: Couldn't run query:
+
+ALTER TABLE "SectionImageBlock" ADD "Caption" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Alt" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Width" varchar(30) character set utf8 collate utf8_general_ci,
+ADD "Align" varchar(30) character set utf8 collate utf8_general_ci
+
+Duplicate column name 'Caption' (http://localhost/silverstripe/development/master/dev/build?flush=&flushtoken=0e31e5a0348bb861481ae264e2a12e7a)
+[28-Jun-2017 10:51:52] Error at \framework\model\connect\DBConnector.php line 55: Uncaught SS_DatabaseException: Couldn't run query:
+
+ALTER TABLE "SectionImageBlock" ADD "Caption" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Alt" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Width" varchar(30) character set utf8 collate utf8_general_ci,
+ADD "Align" varchar(30) character set utf8 collate utf8_general_ci
+
+Duplicate column name 'Caption' (http://localhost/silverstripe/development/master/dev/build?flush=&flushtoken=b8e8d3e5138886a658b656448f9fc78f)
+[28-Jun-2017 10:52:55] Error at \framework\model\connect\DBConnector.php line 55: Uncaught SS_DatabaseException: Couldn't run query:
+
+ALTER TABLE "SectionImageBlock" ADD "Caption" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Alt" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Width" varchar(30) character set utf8 collate utf8_general_ci,
+ADD "Align" varchar(30) character set utf8 collate utf8_general_ci
+
+Duplicate column name 'Caption' (http://localhost/silverstripe/development/master/dev/build?flush=&flushtoken=44da7247bb40a027e93ffde157355780)
+[28-Jun-2017 10:53:45] Error at \framework\model\connect\DBConnector.php line 55: Uncaught SS_DatabaseException: Couldn't run query:
+
+ALTER TABLE "SectionImageBlock" ADD "Caption" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Alt" varchar(100) character set utf8 collate utf8_general_ci,
+ADD "Width" varchar(30) character set utf8 collate utf8_general_ci
+
+Duplicate column name 'Caption' (http://localhost/silverstripe/development/master/dev/build?flushtoken=4f0ad7fbc3812af43fa6d0d3403b5dbe&flush=)
+[28-Jun-2017 12:11:12] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'ConversationBubble', the has_many relation from 'SectionConversationBlock' to 'ConversationBubble' requires a has_one on 'ConversationBubble' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock/ItemEditForm?Locale=en_GB)
+[28-Jun-2017 12:11:53] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'ConversationBubble', the has_many relation from 'SectionConversationBlock' to 'ConversationBubble' requires a has_one on 'ConversationBubble' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock/ItemEditForm?Locale=en_GB)
+[28-Jun-2017 12:12:03] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'ConversationBubble', the has_many relation from 'SectionConversationBlock' to 'ConversationBubble' requires a has_one on 'ConversationBubble' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock/ItemEditForm?Locale=en_GB)
+[28-Jun-2017 12:13:29] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'ConversationBubble', the has_many relation from 'SectionConversationBlock' to 'ConversationBubble' requires a has_one on 'ConversationBubble' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock/ItemEditForm?Locale=en_GB)
+[28-Jun-2017 12:22:31] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'ConversationBubble', the has_many relation from 'SectionConversationBlock' to 'ConversationBubble' requires a has_one on 'ConversationBubble' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock/ItemEditForm?Locale=en_GB)
+[28-Jun-2017 12:24:03] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'ConversationBubble', the has_many relation from 'SectionConversationBlock' to 'ConversationBubble' requires a has_one on 'ConversationBubble' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock/ItemEditForm?Locale=en_GB)
+[28-Jun-2017 12:25:43] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'ConversationBubble', the has_many relation from 'SectionConversationBlock' to 'ConversationBubble' requires a has_one on 'ConversationBubble' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock/ItemEditForm?Locale=en_GB)
+[28-Jun-2017 12:26:45] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'ConversationBubble', the has_many relation from 'SectionConversationBlock' to 'ConversationBubble' requires a has_one on 'ConversationBubble' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/item/17/edit?Locale=en_GB)
+[28-Jun-2017 12:27:57] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'ConversationBubble', the has_many relation from 'SectionConversationBlock' to 'ConversationBubble' requires a has_one on 'ConversationBubble' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock/ItemEditForm?Locale=en_GB)
+[28-Jun-2017 12:28:31] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'ConversationBubble', the has_many relation from 'SectionConversationBlock' to 'ConversationBubble' requires a has_one on 'ConversationBubble' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock/ItemEditForm?Locale=en_GB)
+[28-Jun-2017 12:29:02] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'ConversationBubble', the has_many relation from 'SectionConversationBlock' to 'ConversationBubble' requires a has_one on 'ConversationBubble' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/item/20?Locale=en_GB)
+[28-Jun-2017 12:39:55] Error at \framework\core\Object.php line 780: Uncaught Exception: Object->__call(): the method 'conversationbubbles' does not exist on 'SectionConversationBlock', or the method is not public. (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/item/23/edit?Locale=en_GB)
+[28-Jun-2017 12:40:31] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'ConversationBubble', the has_many relation from 'SectionConversationBlock' to 'ConversationBubble' requires a has_one on 'ConversationBubble' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/item/23/edit?Locale=en_GB)
+[28-Jun-2017 12:41:23] Error at \framework\forms\gridfield\GridField.php line 160: Uncaught LogicException: GridField doesn't have a modelClassName, so it doesn't know the columns of this grid. (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock?Locale=en_GB)
+[28-Jun-2017 12:41:46] Error at \framework\forms\gridfield\GridField.php line 160: Uncaught LogicException: GridField doesn't have a modelClassName, so it doesn't know the columns of this grid. (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock?Locale=en_GB)
+[28-Jun-2017 12:42:52] Error at \framework\forms\gridfield\GridField.php line 160: Uncaught LogicException: GridField doesn't have a modelClassName, so it doesn't know the columns of this grid. (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock?Locale=en_GB)
+[28-Jun-2017 12:43:37] Error at \framework\forms\gridfield\GridField.php line 160: Uncaught LogicException: GridField doesn't have a modelClassName, so it doesn't know the columns of this grid. (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock?Locale=en_GB)
+[28-Jun-2017 12:46:32] Error at \framework\forms\gridfield\GridField.php line 160: Uncaught LogicException: GridField doesn't have a modelClassName, so it doesn't know the columns of this grid. (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock?Locale=en_GB)
+[28-Jun-2017 12:53:46] Error at \framework\model\DataObject.php line 1737: Uncaught Exception: No has_one found on class 'TextBlock', the has_many relation from 'SectionConversationBlock' to 'TextBlock' requires a has_one on 'TextBlock' (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock/ItemEditForm?Locale=en_GB)
+[28-Jun-2017 12:54:10] Error at \framework\control\injector\InjectionCreator.php line 14: Uncaught ReflectionException: Class TextBlocksStrip does not exist (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock/ItemEditForm/field/TextBlocks/item/new?Locale=en_GB)
+[28-Jun-2017 12:55:49] Error at \framework\model\connect\DBConnector.php line 55: Uncaught SS_DatabaseException: Couldn't run query:
+
+SELECT DISTINCT "Section"."ClassName", "Section"."LastEdited", "Section"."Created", "Section"."Title", CASE WHEN "Section"."ClassName" IN ('Section', 'SectionImageBlock', 'SectionTextBlock', 'SectionConversationBlock') THEN "Section"."SortOrder" WHEN "Section"."ClassName" IN ('SectionConversationBlock') THEN "SectionConversationBlock"."SortOrder" WHEN "Section"."ClassName" IN ('SectionConversationBlock') THEN "SectionConversationBlock"."SortOrder" ELSE NULL END AS "SortOrder", "Section"."ShowTitle", "Section"."PageID", "Section"."ID", 
+			CASE WHEN "Section"."ClassName" IS NOT NULL THEN "Section"."ClassName"
+			ELSE 'Section' END AS "RecordClassName"
+
+FROM "Section"
+LEFT JOIN "SectionConversationBlock" ON "SectionConversationBlock"."ID" = "Section"."ID"
+
+WHERE ("Section"."ClassName" IN (?))
+
+ORDER BY "Section"."SortOrder" ASC
+
+Expression #1 of ORDER BY clause is not in SELECT list, references column 'ss_master.Section.SortOrder' which is not in SELECT list; this is incompatible with DISTINCT (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/add-multi-class/SectionConversationBlock/ItemEditForm/field/TextBlocks/item/new?Locale=en_GB)
+[28-Jun-2017 12:58:16] Error at \framework\model\connect\DBConnector.php line 55: Uncaught SS_DatabaseException: Couldn't run query:
+
+SELECT DISTINCT "Section"."ClassName", "Section"."LastEdited", "Section"."Created", "Section"."Title", CASE WHEN "Section"."ClassName" IN ('Section', 'SectionImageBlock', 'SectionTextBlock', 'SectionConversationBlock') THEN "Section"."SortOrder" WHEN "Section"."ClassName" IN ('SectionConversationBlock') THEN "SectionConversationBlock"."SortOrder" WHEN "Section"."ClassName" IN ('SectionConversationBlock') THEN "SectionConversationBlock"."SortOrder" ELSE NULL END AS "SortOrder", "Section"."ShowTitle", "Section"."PageID", "Section"."ID", 
+			CASE WHEN "Section"."ClassName" IS NOT NULL THEN "Section"."ClassName"
+			ELSE 'Section' END AS "RecordClassName"
+
+FROM "Section"
+LEFT JOIN "SectionConversationBlock" ON "SectionConversationBlock"."ID" = "Section"."ID"
+
+WHERE ("Section"."ClassName" IN (?))
+
+ORDER BY "Section"."SortOrder" ASC
+
+Expression #1 of ORDER BY clause is not in SELECT list, references column 'ss_master.Section.SortOrder' which is not in SELECT list; this is incompatible with DISTINCT (http://localhost/silverstripe/development/master/admin/pages/edit/EditForm/6/field/Sections/item/25/ItemEditForm/field/TextBlocks/item/new?Locale=en_GB)

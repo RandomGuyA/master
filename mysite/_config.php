@@ -3,6 +3,11 @@
 global $project;
 $project = 'mysite';
 
+
+/**************************
+ *       DATABASE
+ *************************/
+
 global $databaseConfig;
 $databaseConfig = array(
 	'type' => 'MySQLDatabase',
@@ -13,12 +18,28 @@ $databaseConfig = array(
 	'path' => ''
 );
 
-// Set the site locale
-//i18n::set_locale('en_US');
+
+/**************************
+ *       LOCALE
+ *************************/
+
 i18n::set_locale('en_GB');
+Translatable::set_default_locale('en_GB');
+Translatable::set_allowed_locales(array(
+        'cy_GB',  //Welsh
+        'en_GB',
+    )
+);
 
 
+/**************************
+ *     ERROR HANDLING
+ *************************/
 
+
+error_reporting(E_ALL);
+
+ini_set("log_errors", "On");
 ini_set("display_errors", 1);
 //Debug::log_errors_to("log/silverstripe.log");
 ini_set("log_errors", "On");
@@ -37,15 +58,10 @@ if(!Director::isDev()) {
 }
 
 
-Translatable::set_default_locale('en_GB');
 
-Translatable::set_allowed_locales(array(
-
-        'cy_GB',  //Welsh
-        'en_GB',
-    )
-);
+/**************************
+ *      EXTENSIONS
+ *************************/
 
 Object::add_extension('SiteTree', 'Translatable');
 Object::add_extension('SiteConfig', 'Translatable'); // 2.4 or newer only
-

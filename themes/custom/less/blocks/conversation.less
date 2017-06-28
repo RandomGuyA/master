@@ -1,0 +1,46 @@
+@import "../_core/_config.less";
+
+/*-----------------------------------------
+          CONVERSATION.LESS
+-----------------------------------------*/
+
+.conversation-block {
+
+    overflow: hidden;
+
+    .conversation-bubble {
+
+        clear:both;
+        max-width:70%;
+        margin-bottom:20px;
+
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+        border:1px solid #aaa;
+
+        .bubble-author {
+            padding:10px 10px 0px 10px;
+            float:left;
+            width:100%;
+            color:#000;
+            text-align: left;
+            font-weight:600;
+
+        }
+
+        p {
+            margin:0;
+            padding:10px;
+        }
+
+        &.left {
+            float:left;
+        }
+        &.right {
+            float:right;
+        }
+
+    }
+
+}

@@ -16,7 +16,6 @@
                     $Me
                 <% end_control %>
 
-
                 <!-- Sudo Menu -->
 
                 <% if $Children %>

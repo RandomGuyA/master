@@ -680,6 +680,61 @@ th {
 ::-webkit-scrollbar {
   display: none;
 }
+/****************
+    IMAGES
+ ****************/
+.image-block {
+  width: 100%;
+  clear: both;
+}
+img {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+img.small {
+  width: 20%;
+}
+img.small.center {
+  margin-left: 40%;
+  margin-right: 40%;
+}
+img.medium {
+  width: 40%;
+}
+img.medium.center {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+img.large {
+  width: 60%;
+}
+img.large.center {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+img.full-width {
+  width: 100%;
+}
+img.full-width.center {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+img.left {
+  float: left;
+}
+img.right {
+  float: right;
+}
+.border {
+  border: 1px solid #444;
+}
+.caption {
+  color: #444;
+  font-style: italic;
+  font-size: 12px;
+  text-align: center;
+}
 
 /*--------------------TRANSITIONS.CSS------------------*/
 /* BASE STYLES
@@ -1379,7 +1434,6 @@ body a:link {
 /* IMAGES 
 -------------------------------------------- */
 .typography img {
-  border: 5px solid #d7d7d7;
   height: auto;
   /* resets the image height so that it maintains its aspect ratio when width is set */
   background: transparent url(../assets/images/ajax-loader.gif) no-repeat center center;
@@ -1491,6 +1545,78 @@ body a:link {
 address {
   display: block;
   margin-bottom: 20px;
+}
+
+/*--------------------------- FONTS.LESS --------------------------------*/
+@font-face {
+  font-family: 'esphimerebold';
+  src: url('../assets/fonts/esphimere/esphimere_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereextra_light';
+  src: url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerelight';
+  src: url('../assets/fonts/esphimere/esphimere_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimeresemi_bold';
+  src: url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerethin';
+  src: url('../assets/fonts/esphimere/esphimere_thin-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_thin-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereregular';
+  src: url('../assets/fonts/esphimere/esphimere-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*--------------------------- CONFIG.LESS --------------------------------*/
+/*-----------------------------------------
+          CONVERSATION.LESS
+-----------------------------------------*/
+.conversation-block {
+  overflow: hidden;
+}
+.conversation-block .conversation-bubble {
+  clear: both;
+  max-width: 70%;
+  margin-bottom: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+}
+.conversation-block .conversation-bubble .bubble-author {
+  padding: 10px 10px 0px 10px;
+  float: left;
+  width: 100%;
+  color: #000;
+  text-align: left;
+  font-weight: 600;
+}
+.conversation-block .conversation-bubble p {
+  margin: 0;
+  padding: 10px;
+}
+.conversation-block .conversation-bubble.left {
+  float: left;
+}
+.conversation-block .conversation-bubble.right {
+  float: right;
 }
 
 /*--------------------------- FONTS.LESS --------------------------------*/
