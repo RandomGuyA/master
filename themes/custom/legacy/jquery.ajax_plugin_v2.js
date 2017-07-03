@@ -145,11 +145,6 @@
         var current_page;
         var nested_page_url;
 
-        var url_object;
-
-        var transition_spool = [];
-        var previous_page;
-        var destination_page;
 
         //--------------------------------------//
         //       CUSTOM SETTING SETUP
@@ -214,136 +209,16 @@
 
         var init_ajax_call = function () {
 
-            if (internal_call) {
-                previous_page = destination_page;
-            }
-            destination_page = get_destination_page();
-            if (internal_call) {
-                destination_page.previous_page = destination_page;
-            }
+            setup_urls();
 
-            evaluate_page(destination_page);
-            update_and_check_transition_spool();
-        };
+            //console.log("url origin: " + url_origin);
+            //console.log("url destination: " + url_destination);
 
+            url_manipulation();
 
-        var update_and_check_transition_spool = function () {
+            //console.log("url destination: " + url_destination);
+            load_url(url_destination, animate_transition, $container);
 
-            if (transition_spool.length > 0) {
-                var index = transition_spool.length - 1;
-                load_url(transition_spool[index]);
-                transition_spool.pop();
-            }
-        };
-
-        var evaluate_page = function (page) {
-
-
-            if(page.nest == 1){
-
-                evaluate_page(get_first_child(page));
-
-                var containerID = page.urlSegment +"-"+page.id;
-                console.log(containerID);
-
-                transition_spool.push(create_transition_object(page, containerID, true));
-            }else {
-                transition_spool.push(create_transition_object(page, $container.attr('id'), true));
-            }
-
-        };
-
-        var get_destination_page = function () {
-
-            var destination_page;
-
-            var url = internal_call ? url_destination : window.location.href;
-            url_object = create_url_object(url);
-
-            for (var a = 0; a < page_list.length; a++) {
-
-                var page = page_list[a];
-                if (url_object.path_url == page.url_object.path_url) {
-
-                    destination_page = page;
-                    console.log("Page Found");
-                    break;
-                }
-            }
-            return destination_page;
-        };
-
-        var get_http_url = function (url_object) {
-
-            var http = window.location.href;
-            var baseURL = "";
-            var root = plugin.settings.root;
-            var components = get_url_components(http);
-
-            for (var a = 0; a < components.length; a++) {
-
-                baseURL += components[a] + "/";
-                if (components[a] == root) {
-                    break;
-                }
-            }
-            return clean_url(baseURL) + url_object.hash_url;
-        };
-
-        var get_path_url = function (url_object, hashtag) {
-
-            var pathURL = "";
-            var root = plugin.settings.root;
-            var components = url_object.components;
-            var passed_root = false;
-            for (var a = 0; a < components.length; a++) {
-
-                if (passed_root) {
-                    pathURL += components[a] + "/";
-                }
-                if (components[a] == root) {
-                    passed_root = true;
-                }
-            }
-            var tag = (hashtag) ? "#" : "/";
-            return tag + clean_url(pathURL);
-
-        };
-
-        var get_base_url = function (url_object) {
-
-            var baseURL = "";
-            var root = plugin.settings.root;
-            var components = url_object.components;
-
-            for (var a = 0; a < components.length; a++) {
-
-                baseURL += components[a] + "/";
-                if (components[a] == root) {
-                    break;
-                }
-            }
-            return clean_url(baseURL);
-
-        };
-
-        var get_url_components = function (url) {
-            url = url.replace("#", "");
-            return url.split('/');
-        };
-
-        var get_level_above_root_count = function (url_object) {
-
-            var root = plugin.settings.root;
-            var url_components = url_object.tempURL.split('/');
-            var count = -1;
-            for (var a = url_components.length - 1; a >= 0; a--) {
-                count++;
-                if (url_components[a] == root) {
-                    break;
-                }
-            }
-            return count;
         };
 
         var url_manipulation = function () {
@@ -354,10 +229,12 @@
                 //animate_transition = (!is_root());
                 animate_transition = false;
             }
+
             check_for_ajax_page_holder();
             create_http_url();
             //console.log("root: " + plugin.settings.root);
             url_destination = url_destination.replace("#", "");
+
         };
 
         var create_http_url = function () {
@@ -386,6 +263,7 @@
             } else {
                 url_http = url_destination;
             }
+
             set_current_page_ID(url_http);
         };
 
@@ -513,14 +391,10 @@
          * @param url
          * @param animate boolean true if you want the animation to take place, false is instant
          */
-        var load_url = function (transition_object) {
+        var load_url = function (url, animate, $container) {
 
-            var url = transition_object.page.link;
-            var animate = transition_object.animate;
-            var $container = $('#'+transition_object.containerID);
-
-            console.log("load url:- " + url);
-            console.log("container:- " + $container.attr('class'));
+            //console.log("load url:- " + url);
+            //console.log("container:- " + $container.attr('class'));
             //console.log("animate: " + animate);
 
             internal_call = false; //reset switch
@@ -822,9 +696,9 @@
 
         var end_animation_static_callback = function () {
             console.log(name + ' - animation finished');
-
-            update_and_check_transition_spool();
-
+            if (nested_ajax_call) {
+                check_for_nested_transitions();
+            }
             container_size_adjustments();
 
         };
@@ -849,10 +723,9 @@
             add_ajax_links();
             check_function_and_call(plugin.settings.initialise_javascript_dependencies);
             transition($previous_page, animate, $container);
-            window.history.pushState("string", "Title", destination_page.url_object.http_url);
+            window.history.pushState("string", "Title", url_http);
             page_loading = false;
             allow_parent_transition = true;
-
 
 
         };
@@ -875,8 +748,12 @@
 
         var check_for_nested_transitions = function () {
 
-            //console.log(current_page.name);
-            //console.log(nested_page_url);
+
+
+            console.log(current_page.name);
+
+            console.log(nested_page_url);
+
 
             if ($element.find("." + plugin.settings.birds_nest_class).length != 0) {
 
@@ -888,19 +765,6 @@
                 load_url(nested_page_url, false, $ajax_box);
             }
 
-        };
-
-        var get_first_child = function (page) {
-
-            var child_page;
-            for (var a = 0; a < page_list.length; a++) {
-                var parentID = page_list[a].parentID;
-                if (parentID == page.id && page_list[a].sort == 1) {
-                    //console.log(page_list[a].name);
-                    child_page = page_list[a];
-                }
-            }
-            return child_page;
         };
 
         var get_child_page = function (num) {
@@ -1052,43 +916,9 @@
             page.link = link;
             page.nest = nest;
             page.urlSegment = urlSegment;
-            page.url_object = create_url_object(link);
 
             return page;
         };
-
-        var create_url_object = function (url) {
-
-            var url_object = {};
-
-            url_object.tempURL = clean_url(url);
-            url_object.name = extract_path_name(url_object.tempURL);
-            url_object.components = get_url_components(url_object.tempURL);
-            url_object.levelsAboveRoot = get_level_above_root_count(url_object);
-            url_object.base_url = get_base_url(url_object);
-            url_object.path_url = get_path_url(url_object, false);
-            url_object.hash_url = get_path_url(url_object, true);
-            url_object.http_url = get_http_url(url_object);
-            //console.log("base_url " + url_object.base_url);
-            //console.log("path_url " + url_object.path_url);
-            //console.log("hash_url " + url_object.hash_url);
-            //console.log("http_url " + url_object.http_url);
-
-            return url_object;
-        };
-
-        var create_transition_object = function (page, containerID, animate) {
-
-            var trans = {};
-
-            trans.animate = animate;
-            trans.page = page;
-            trans.containerID = containerID;
-
-            return trans;
-
-        };
-
 
         //-----------------------------------------
         //				INITIALISATION

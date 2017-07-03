@@ -31,5 +31,5 @@
             $CommentsForm
         </div>
     </div>
-    <% include Footer %>
+
 </div>

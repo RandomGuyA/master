@@ -17,7 +17,7 @@
 <!-- Recursive Site tree - use for mapping the site -->
 <ul style="display:none;" id="ajax-child-list">
     <% loop $Menu(1) %>
-        <li link="$Link" title="$MenuTitle" parentID="$ParentID" pageID="$ID" className="$ClassName">$MenuTitle
+        <li link="$Link" title="$MenuTitle" parentID="$ParentID" pageID="$ID" className="$ClassName" nest="$Nest" segment="$URLSegment">$MenuTitle
             <% include Menu %>
         </li>
     <% end_loop %>

@@ -9,6 +9,7 @@ class Page extends SiteTree
     private static $db = array(
         'Transition_inc'=>'Varchar(100)',
         'Transition_dec'=>'Varchar(100)',
+        'Nest'=>'Boolean'
     );
 
     private static $has_one = array(
@@ -84,6 +85,7 @@ class Page extends SiteTree
                 $transitions
             )
         );
+        $fields->addFieldToTab('Root.Animation', CheckboxField::create('Nest', 'Nest'));
 
         return $fields;
     }

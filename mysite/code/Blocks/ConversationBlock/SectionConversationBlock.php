@@ -3,7 +3,7 @@
 class SectionConversationBlock extends Section {
 
     private static $db = array(
-        //'SortOrder' => 'Int'
+        'Dialog' => 'VarChar(50)'
     );
 
     private static $has_many = array(
@@ -16,21 +16,31 @@ class SectionConversationBlock extends Section {
 
         $fields = parent::getCMSFields();
 
+        $dataColumns = new GridFieldDataColumns();
+        $dataColumns->setDisplayFields(
+            array(
+                'ID' => 'ID',
+                'ClassName' => 'Class Name'
+            )
+        );
+
         //---------------------- Main Tab
 
         $saveWarning = LiteralField::create("Warning","<p class='cms-warning-label'>You must first save the Conversation block before adding conversation bubbles</p>");
 
         $bubbles = GridField::create('ConversationBubbles', 'Bubbles', $this->ConversationBubbles(),
             GridFieldConfig::create()->addComponents(
+                $dataColumns,
                 new GridFieldToolbarHeader(),
                 new GridFieldAddNewButton('toolbar-header-right'),
                 new GridFieldDetailForm(),
-                new GridFieldDataColumns(),
                 new GridFieldEditButton(),
                 new GridFieldDeleteAction('unlinkrelation'),
                 new GridFieldDeleteAction(),
                 new GridFieldTitleHeader(),
                 new GridFieldAddExistingAutocompleter('before', array('Title'))
+
+
             )
         );
 
@@ -39,10 +49,16 @@ class SectionConversationBlock extends Section {
             $fields->addFieldToTab('Root.Main',$saveWarning);
         }
 
+        $fields->addFieldToTab('Root.Main',TextField::create('Dialog', 'Dialog'));
         $fields->addFieldToTab('Root.Main',$bubbles);
         $this->removeEmptyTabs($fields);
 
         return $fields;
+    }
+
+    public function populateDefaults(){
+        $this->Dialog = "Says";
+        parent::populateDefaults();
     }
 
 }

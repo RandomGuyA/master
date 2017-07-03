@@ -10,37 +10,65 @@
 
     .conversation-bubble {
 
+        position:relative;
         clear:both;
         max-width:70%;
-        margin-bottom:20px;
+        margin:10px 10px 20px 10px ;
 
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
         border:1px solid #aaa;
 
+        -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.75);
+
+        .glyphicon-triangle-bottom {
+            position:absolute;
+            right:10px;
+            bottom:-20px;
+            font-size:26px;
+            display:block;
+            top:auto;
+
+            text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.75);
+
+            &.right {
+                right:10px;
+                left:auto;
+            }
+            &.left {
+                right:auto;
+                left:10px;
+            }
+
+        }
+
+
         .bubble-author {
-            padding:10px 10px 0px 10px;
+            padding:10px 10px 10px 10px;
             float:left;
             width:100%;
             color:#000;
             text-align: left;
             font-weight:600;
-
+            font-size:20px;
         }
-
         p {
             margin:0;
             padding:10px;
+            font-size:18px;
         }
-
         &.left {
             float:left;
         }
         &.right {
             float:right;
         }
-
     }
+
+
+
 
 }

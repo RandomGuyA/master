@@ -8,7 +8,7 @@
 
     <script type="text/javascript" src="$ThemeDir/vendors/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="$ThemeDir/vendors/bootstrap/js/bootstrap.min.js"></script>
-
+    <script type="text/javascript" src="$ThemeDir/vendors/hammer/hammer.js"></script>
 
     <script type="text/javascript" src="$ThemeDir/js/main.js"></script>
 

@@ -38,20 +38,23 @@ class Section extends DataObject
     }
 
     public function populateDefaults()
-{
-    $this->Title = $this->ClassName . " " . $this->RunningTotal();
-    parent::populateDefaults();
-}
-
-    function forTemplate() {
-        $template = str_replace(" ", "", $this->get_section_type());
-        return $this->renderWith('Blocks/'.$template);
+    {
+        $this->Title = $this->ClassName . " " . $this->RunningTotal();
+        parent::populateDefaults();
     }
 
-    function RunningTotal(){
+    function forTemplate()
+    {
+        $template = str_replace(" ", "", $this->get_section_type());
+        return $this->renderWith('Blocks/' . $template);
+    }
+
+    function RunningTotal()
+    {
         $count = DB::query("SELECT COUNT(*) FROM Section")->value();
         return $count + 1;
     }
+
     protected function removeEmptyTabs(FieldList $fields)
     {
         foreach ($fields as $field) {

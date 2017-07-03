@@ -1,7 +1,7 @@
 <% if $Children %>
     <ul>
         <% control $Children %>
-            <li link="$Link" title="$MenuTitle" pageID="$ID" parentID="$ParentID" className="$ClassName">$MenuTitle
+            <li link="$Link" title="$MenuTitle" parentID="$ParentID" pageID="$ID" className="$ClassName" nest="$Nest" segment="$URLSegment">$MenuTitle
                 <% include Menu %>
             </li>
         <% end_control %>
