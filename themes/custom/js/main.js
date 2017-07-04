@@ -73,7 +73,7 @@
     //              GLOBALS
     //--------------------------------------//
 
-    var name = 'ajax_plugin_version_2.0';
+    var name = 'ajax_plugin_version_3.0';
 
     $.ajax_plugin = function (element, options) {
 
@@ -133,23 +133,17 @@
         var page_loading = false;
         var animate_transition = false;
         var internal_call = false;
-        var nested_ajax_call = false;
-        var allow_parent_transition = true;
 
-        var url_origin;
         var url_destination;
-        var url_http;
-        var url_array = [];
         var page_list;
 
         var current_page;
-        var nested_page_url;
-
         var url_object;
 
         var transition_spool = [];
         var previous_page;
         var destination_page;
+
 
         //--------------------------------------//
         //       CUSTOM SETTING SETUP
@@ -222,10 +216,65 @@
                 destination_page.previous_page = destination_page;
             }
 
-            evaluate_page(destination_page);
+            var page = (internal_call) ? destination_page : get_root_nest_page(destination_page);
+
+            console.log(page.nest);
+
+            evaluate_page(page);
+            transition_spool.reverse();
             update_and_check_transition_spool();
         };
 
+        var evaluate_page = function (page) {
+
+            var child_page;
+            if (page.navigate_to_child != undefined) {
+                child_page = page.navigate_to_child;
+                page.navigate_to_child = undefined;
+            } else {
+                child_page = get_first_child(page);
+            }
+
+            if (page.nest == 0 || page.nest == undefined) {
+                transition_spool.push(create_transition_object(page, $container.attr('id'), true));
+            } else if (page.nest == 1) {
+
+                var parent_page = get_parent_page(page);
+                var containerID = parent_page.urlSegment + "-" + parent_page.id;
+                transition_spool.push(create_transition_object(page, containerID, true));
+            }
+            if (child_page != undefined) {
+                if (child_page.nest == 1) {
+                    evaluate_page(child_page);
+                }
+            }
+        };
+
+        var get_parent_page = function (page) {
+            var parent_page;
+            for (var a = 0; a < page_list.length; a++) {
+                var id = page_list[a].id;
+                if (id == page.parentID) {
+                    parent_page = page_list[a];
+                }
+            }
+            return parent_page;
+        };
+
+        var get_root_nest_page = function (page) {
+
+            if (page.parentID != 0) {
+                if (page.nest == 1) {
+                    var parent_page = get_parent_page(page);
+                    parent_page.navigate_to_child = page;
+                    return get_root_nest_page(parent_page);
+                } else {
+                    return page;
+                }
+            } else {
+                return page;
+            }
+        };
 
         var update_and_check_transition_spool = function () {
 
@@ -234,23 +283,6 @@
                 load_url(transition_spool[index]);
                 transition_spool.pop();
             }
-        };
-
-        var evaluate_page = function (page) {
-
-
-            if(page.nest == 1){
-
-                evaluate_page(get_first_child(page));
-
-                var containerID = page.urlSegment +"-"+page.id;
-                console.log(containerID);
-
-                transition_spool.push(create_transition_object(page, containerID, true));
-            }else {
-                transition_spool.push(create_transition_object(page, $container.attr('id'), true));
-            }
-
         };
 
         var get_destination_page = function () {
@@ -346,156 +378,6 @@
             return count;
         };
 
-        var url_manipulation = function () {
-
-            fill_url_array(url_destination); //setup path array
-
-            if (!internal_call) { //external
-                //animate_transition = (!is_root());
-                animate_transition = false;
-            }
-            check_for_ajax_page_holder();
-            create_http_url();
-            //console.log("root: " + plugin.settings.root);
-            url_destination = url_destination.replace("#", "");
-        };
-
-        var create_http_url = function () {
-
-            url_http = create_hash_url(url_http);
-            //console.log("url http: " + url_http);
-
-        };
-
-        /**
-         * Set the origin, destination and http urls
-         */
-        var setup_urls = function () {
-
-            url_origin = window.location.href;
-
-            if (!internal_call) { //external Call / HTTP bar
-                url_destination = url_origin;
-
-                if (contains_hash(url_destination)) { //AJAX addresses all have hashes in them apart from root
-                    url_http = url_destination.replace("#", "/");
-                    set_current_page_number_by_url(url_destination);
-                } else {
-                    url_http = url_destination;
-                }
-            } else {
-                url_http = url_destination;
-            }
-            set_current_page_ID(url_http);
-        };
-
-        var transform_url_to_link_format = function (url_dest, url) {
-
-            url_dest = url;
-            var temp_url;
-            if (contains_hash(url_dest)) { //AJAX addresses all have hashes in them apart from root
-                temp_url = url_dest.replace("#", "/");
-                set_current_page_number_by_url(url_dest);
-            } else {
-                temp_url = url_dest;
-            }
-            return temp_url;
-        };
-
-        /**
-         * reverse search through the url to find any nested ajax holders
-         *
-         */
-        var check_for_ajax_page_holder = function () {
-
-            for (var i = url_array.length; i-- > 0;) {
-
-                var page = get_page_object_by_name(url_array[i]);
-
-                if (page != null) {
-
-                    console.log("page id " + page.id);
-                    console.log("page id " + page.name);
-                    console.log("page class " + page.className);
-                    console.log("nest " + page.nest);
-
-                    if (page.nest) { //If nest is found
-
-                        var url_string = (internal_call) ? "/" : "http://";
-                        nested_page_url = (internal_call) ? "/" : "http://";
-
-                        for (var a = 0; a < url_array.length; a++) {
-                            if (a <= i) {
-                                url_string += url_array[a] + "/";
-                            }
-                            nested_page_url += url_array[a] + "/";
-                        }
-
-                        url_destination = url_string; //set the destination link to the nest
-
-                        set_link_and_container();
-                        break;
-
-                    } else {  //normal page transition
-
-                        $container = $('.' + plugin.settings.ajax_container);
-                        if (internal_call) {
-                            animate_transition = true;
-                        } else {
-                            animate_transition = false;
-                        }
-                    }
-                } else {
-                    console.log("page null");
-                }
-            }
-        };
-
-        var set_link_and_container = function () {
-
-            var page = get_child_page(1);
-
-            if (internal_call) {
-                if (nested_page_url == url_destination) {//page is the root of the nest
-
-                    //switch for additional transition
-                    nested_ajax_call = true;
-                    animate_transition = true;
-                    nested_page_url = page.link;
-
-
-                } else {  //page is a child of the nest
-
-                    //change container and link
-                    nested_ajax_call = false;
-                    animate_transition = true;
-                    $container = $('.ajax-box');
-                    url_destination = nested_page_url;
-                    //nested_page_url stays the same
-
-                }
-            } else { //external
-                if (nested_page_url == url_destination) {//page is the root of the nest
-
-                    //switch for additional transition
-                    //navigate to page 1
-                    nested_ajax_call = true;
-                    animate_transition = false;
-                    $container = $('.' + plugin.settings.ajax_container);
-                    nested_page_url = page.link;
-
-
-                } else {  //page is a child of the nest
-
-                    //switch for additional transition
-                    //navigate to link
-                    nested_ajax_call = true;
-                    $container = $('.' + plugin.settings.ajax_container);
-                    animate_transition = false;
-                }
-            }
-        };
-
         var get_page_object_by_name = function (name) {
 
             var page = null;
@@ -517,7 +399,7 @@
 
             var url = transition_object.page.link;
             var animate = transition_object.animate;
-            var $container = $('#'+transition_object.containerID);
+            var $container = $('#' + transition_object.containerID);
 
             console.log("load url:- " + url);
             console.log("container:- " + $container.attr('class'));
@@ -535,7 +417,7 @@
 
                     //console.log(response);
                     check_function_and_call(plugin.settings.page_loaded_callback);
-                    page_loaded_static_callback($container, $previous_page, response, animate, url);
+                    page_loaded_static_callback($container, $previous_page, response, animate, url, transition_object.page);
 
                 })
                 .fail(function (xhr) {
@@ -592,7 +474,9 @@
             //end animation listener
             $ng_leave.css_animation_event_listener($animation_layer);
 
+
         };
+
 
         var setup_child_list = function () {
 
@@ -616,9 +500,7 @@
                     $page.attr('segment')
                 ))
             });
-
             add_nest_container_IDs();
-
         };
 
         var add_nest_container_IDs = function () {
@@ -682,52 +564,6 @@
 
         };
 
-        var fill_url_array = function (url) {
-
-            url = url.replace("#", "/");
-            var url_components = url.split('/');
-            url_array = [];
-
-            for (var a = 0; a < url_components.length; a++) {
-
-                if (url_components[a].indexOf("http") === -1) {
-                    if (url_components[a] != "") {
-                        url_array.push(url_components[a]);
-                    }
-                }
-            }
-            //console.log(url_array);
-        };
-
-        /**
-         * checks if the root name eg. something.com is the last value in the url
-         * this would mean you are on the home page
-         * @param url
-         * @returns {boolean}
-         */
-        var is_root = function () {
-
-            var root_name = plugin.settings.root.split("/");
-
-            return root_name[root_name.length - 1] == url_array[url_array.length - 1];
-
-        };
-
-        /**
-         * sets the current page internally for use with navigation buttons
-         * @param url
-         */
-        var set_current_page_number_by_url = function (url) {
-
-            var path = url.substr(url.indexOf("#") + 1);
-            $child_list.each(function () {
-
-                if (path == extract_path_name($(this).attr('link'))) {
-                    current_page = $(this).index();
-                }
-            });
-        };
-
         /**
          * gets the the last folder/page name in the url
          * @param url
@@ -739,55 +575,6 @@
             url = clean_url(url);
 
             return url.substr(url.lastIndexOf('/') + 1);
-        };
-
-        /**
-         * Creates the correct url for the http bar
-         * @param url
-         * @returns {string}
-         */
-        var create_hash_url = function (url) {
-
-            url = clean_url(url);
-            var url_string = "";
-
-            if (!is_root()) {
-                url_string = create_correct_url_string(url);
-            }
-
-            return url_string;
-        };
-
-        /**
-         * Re-arranges the url, adds the hash and slashes in the correct place
-         * @param url
-         * @returns {string}
-         */
-        var create_correct_url_string = function (url) {
-
-            var url_string = "";
-            var url_components = url.split('/');
-            var append_seperator = "/";
-
-            for (var a = 0; a < url_components.length; a++) {
-
-                var seperator = "/";
-
-                if (url_components[a] == plugin.settings.root) { // set # after the root
-                    seperator = "#";
-                }
-                if (a == url_components.length - 1) {   //remove the last "/"
-                    seperator = "";
-                }
-                if (url_components[a].indexOf("http") !== -1) { //check for the http, deal with the "://" and relative links
-                    url_components[a] = "http:/";
-                    append_seperator = "";
-                }
-                if (url_components[a] != "") { // don't add slash on the 1st index
-                    url_string += url_components[a] + seperator;
-                }
-            }
-            return append_seperator + url_string;
         };
 
         /**
@@ -809,9 +596,6 @@
 
         };
 
-        var contains_hash = function (url) {
-            return url.indexOf('#') != -1;
-        };
 
         //--------------------------------------//
         //      STATIC CALLBACKS
@@ -822,17 +606,12 @@
 
         var end_animation_static_callback = function () {
             console.log(name + ' - animation finished');
-
             update_and_check_transition_spool();
-
             container_size_adjustments();
-
         };
 
         var start_animation_static_callback = function () {
             console.log(name + ' - start animation');
-
-
         };
 
         var load_page_static_callback = function () {
@@ -840,7 +619,7 @@
             page_loading = true;
         };
 
-        var page_loaded_static_callback = function ($container, $previous_page, response, animate, url) {
+        var page_loaded_static_callback = function ($container, $previous_page, response, animate, url, page) {
 
             console.log(name + ' - page loaded');
             //console.log(response);
@@ -849,19 +628,8 @@
             add_ajax_links();
             check_function_and_call(plugin.settings.initialise_javascript_dependencies);
             transition($previous_page, animate, $container);
-            window.history.pushState("string", "Title", destination_page.url_object.http_url);
+            window.history.pushState("string", "Title", page.url_object.http_url);
             page_loading = false;
-            allow_parent_transition = true;
-
-
-
-        };
-
-        var set_current_page_ID = function (url) {
-
-            var path = extract_path_name(url);
-            current_page = get_page_object_by_name(path);
-
         };
 
         var get_page_ID_from_url = function (url) {
@@ -871,23 +639,6 @@
             var page = get_page_object_by_name(path);
 
             return page.id;
-        };
-
-        var check_for_nested_transitions = function () {
-
-            //console.log(current_page.name);
-            //console.log(nested_page_url);
-
-            if ($element.find("." + plugin.settings.birds_nest_class).length != 0) {
-
-                var $ajax_box = $element.find("." + plugin.settings.birds_nest_class);
-                //console.log("found nested ajax");
-                nested_ajax_call = false;
-
-
-                load_url(nested_page_url, false, $ajax_box);
-            }
-
         };
 
         var get_first_child = function (page) {
@@ -901,31 +652,6 @@
                 }
             }
             return child_page;
-        };
-
-        var get_child_page = function (num) {
-
-            var page;
-            for (var a = 0; a < page_list.length; a++) {
-                var parentID = page_list[a].parentID;
-                if (parentID == current_page.id && page_list[a].sort == num) {
-                    //console.log(page_list[a].name);
-                    page = page_list[a];
-                }
-            }
-            return page;
-        };
-
-        var get_child_page_by_name = function (name) {
-
-            var page;
-            for (var a = 0; a < page_list.length; a++) {
-                var parentID = page_list[a].parentID;
-                if (parentID == current_page.id && page_list[a].name == name) {
-                    page = page_list[a];
-                }
-            }
-            return page;
         };
 
         var check_function_and_call = function (function_name) {
@@ -1089,7 +815,6 @@
 
         };
 
-
         //-----------------------------------------
         //				INITIALISATION
         //-----------------------------------------
@@ -1098,7 +823,7 @@
     };
     String.prototype.replaceAt = function (index, character) {
         return this.substr(0, index) + character + this.substr(index + character.length);
-    }
+    };
 
     //-----------------------------------------
     //				INVOCATION
