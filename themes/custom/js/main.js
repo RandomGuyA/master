@@ -218,8 +218,6 @@
 
             var page = (internal_call) ? destination_page : get_root_nest_page(destination_page);
 
-            console.log(page.nest);
-
             evaluate_page(page);
             transition_spool.reverse();
             update_and_check_transition_spool();

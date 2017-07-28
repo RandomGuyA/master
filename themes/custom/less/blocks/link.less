@@ -1,0 +1,86 @@
+@import "../_core/_config.less";
+
+/*-----------------------------------------
+                LINK.LESS
+-----------------------------------------*/
+
+.link-block {
+
+    height:40px;
+    background-color: rgba(135,0,0,1);
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    padding:5px;
+    margin-bottom:20px;
+
+    .link-section {
+        float:left;
+        height:30px;
+        line-height:30px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+        span {
+            line-height:30px;
+        }
+        @media @XS {
+            font-size: 20px;
+        }
+        @media @XXS {
+            font-size: 16px;
+        }
+
+
+
+    }
+    .link-left {
+        background-color: #B15959;
+        width:20%;
+        text-align: center;
+        border-radius: 10px 0px 0px 10px;
+        -moz-border-radius: 10px 0px 0px 10px;
+        -webkit-border-radius: 10px 0px 0px 10px;
+
+
+        @media @XXS {
+            width:30%;
+        }
+
+
+
+    }
+    .link-center {
+        width:60%;
+        background-color: #E0BEBE;
+        transition: ease all 0.5s;
+        color:#000;
+
+        @media @XXS {
+            width:60%;
+        }
+
+
+        &:hover {
+            background-color: rgba(135,0,0,1);
+            color:#fff;
+        }
+
+    }
+    .link-right {
+        width:20%;
+        background-color: #B15959;
+
+        border-radius: 0px 10px 10px 0px;
+        -moz-border-radius: 0px 10px 10px 0px;
+        -webkit-border-radius: 0px 10px 10px 0px;
+
+
+        @media @XXS {
+            width:10%;
+        }
+
+    }
+
+
+}

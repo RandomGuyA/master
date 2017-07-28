@@ -1680,6 +1680,375 @@ address {
 }
 /*--------------------------- CONFIG.LESS --------------------------------*/
 /*-----------------------------------------
+            IMAGE.LESS
+-----------------------------------------*/
+.image-block {
+  width: 100%;
+  clear: both;
+}
+img {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+img.small {
+  width: 20%;
+}
+img.small.center {
+  margin-left: 40%;
+  margin-right: 40%;
+}
+img.medium {
+  width: 40%;
+}
+img.medium.center {
+  margin-left: 30%;
+  margin-right: 30%;
+}
+img.large {
+  width: 60%;
+}
+img.large.center {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+img.full-width {
+  width: 100%;
+}
+img.full-width.center {
+  margin-left: 0%;
+  margin-right: 0%;
+}
+img.left {
+  float: left;
+}
+img.right {
+  float: right;
+}
+.border {
+  border: 1px solid #444;
+}
+.caption {
+  color: #444;
+  font-style: italic;
+  font-size: 12px;
+  text-align: center;
+}
+
+/*--------------------------- FONTS.LESS --------------------------------*/
+@font-face {
+  font-family: 'esphimerebold';
+  src: url('../assets/fonts/esphimere/esphimere_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereextra_light';
+  src: url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerelight';
+  src: url('../assets/fonts/esphimere/esphimere_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimeresemi_bold';
+  src: url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerethin';
+  src: url('../assets/fonts/esphimere/esphimere_thin-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_thin-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereregular';
+  src: url('../assets/fonts/esphimere/esphimere-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*--------------------------- CONFIG.LESS --------------------------------*/
+/*-----------------------------------------
+                LINK.LESS
+-----------------------------------------*/
+.link-block {
+  height: 40px;
+  background-color: #870000;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.link-block .link-section {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+.link-block .link-section span {
+  line-height: 30px;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .link-block .link-section {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .link-block .link-section {
+    font-size: 16px;
+  }
+}
+.link-block .link-left {
+  background-color: #B15959;
+  width: 20%;
+  text-align: center;
+  border-radius: 10px 0px 0px 10px;
+  -moz-border-radius: 10px 0px 0px 10px;
+  -webkit-border-radius: 10px 0px 0px 10px;
+}
+@media only screen and (max-width: 479px) {
+  .link-block .link-left {
+    width: 30%;
+  }
+}
+.link-block .link-center {
+  width: 60%;
+  background-color: #E0BEBE;
+  transition: ease all 0.5s;
+  color: #000;
+}
+@media only screen and (max-width: 479px) {
+  .link-block .link-center {
+    width: 60%;
+  }
+}
+.link-block .link-center:hover {
+  background-color: #870000;
+  color: #fff;
+}
+.link-block .link-right {
+  width: 20%;
+  background-color: #B15959;
+  border-radius: 0px 10px 10px 0px;
+  -moz-border-radius: 0px 10px 10px 0px;
+  -webkit-border-radius: 0px 10px 10px 0px;
+}
+@media only screen and (max-width: 479px) {
+  .link-block .link-right {
+    width: 10%;
+  }
+}
+
+/*--------------------------- FONTS.LESS --------------------------------*/
+@font-face {
+  font-family: 'esphimerebold';
+  src: url('../assets/fonts/esphimere/esphimere_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereextra_light';
+  src: url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerelight';
+  src: url('../assets/fonts/esphimere/esphimere_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimeresemi_bold';
+  src: url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerethin';
+  src: url('../assets/fonts/esphimere/esphimere_thin-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_thin-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereregular';
+  src: url('../assets/fonts/esphimere/esphimere-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*--------------------------- CONFIG.LESS --------------------------------*/
+/*-----------------------------------------
+          REVEAL ANSWER.LESS
+-----------------------------------------*/
+.reveal-answer-block {
+  margin-bottom: 20px;
+}
+
+/*--------------------------- FONTS.LESS --------------------------------*/
+@font-face {
+  font-family: 'esphimerebold';
+  src: url('../assets/fonts/esphimere/esphimere_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereextra_light';
+  src: url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerelight';
+  src: url('../assets/fonts/esphimere/esphimere_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimeresemi_bold';
+  src: url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerethin';
+  src: url('../assets/fonts/esphimere/esphimere_thin-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_thin-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereregular';
+  src: url('../assets/fonts/esphimere/esphimere-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*--------------------------- CONFIG.LESS --------------------------------*/
+/*-----------------------------------------
+         YOU TUBE VIDEOS.LESS
+-----------------------------------------*/
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.you-tube-block.small {
+  width: 30%;
+  margin-left: 35%;
+  margin-right: 35%;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .you-tube-block.small {
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .you-tube-block.small {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px), only screen and (max-width: 479px) {
+  .you-tube-block.small {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.you-tube-block.medium {
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+@media only screen and (min-width: 769px) and (max-width: 991px) {
+  .you-tube-block.medium {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px), only screen and (max-width: 479px) {
+  .you-tube-block.medium {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+.you-tube-block.large {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px), only screen and (max-width: 479px) {
+  .you-tube-block.large {
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+.you-tube-block.full-width {
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+}
+
+/*--------------------------- FONTS.LESS --------------------------------*/
+@font-face {
+  font-family: 'esphimerebold';
+  src: url('../assets/fonts/esphimere/esphimere_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereextra_light';
+  src: url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerelight';
+  src: url('../assets/fonts/esphimere/esphimere_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimeresemi_bold';
+  src: url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerethin';
+  src: url('../assets/fonts/esphimere/esphimere_thin-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_thin-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereregular';
+  src: url('../assets/fonts/esphimere/esphimere-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*--------------------------- CONFIG.LESS --------------------------------*/
+/*-----------------------------------------
                 BANNER.LESS
 -----------------------------------------*/
 
@@ -1935,6 +2304,131 @@ header {
     padding-top: 0;
     padding-bottom: 0;
   }
+}
+
+/*--------------------------- FONTS.LESS --------------------------------*/
+@font-face {
+  font-family: 'esphimerebold';
+  src: url('../assets/fonts/esphimere/esphimere_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereextra_light';
+  src: url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerelight';
+  src: url('../assets/fonts/esphimere/esphimere_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimeresemi_bold';
+  src: url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerethin';
+  src: url('../assets/fonts/esphimere/esphimere_thin-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_thin-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereregular';
+  src: url('../assets/fonts/esphimere/esphimere-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*--------------------------- CONFIG.LESS --------------------------------*/
+/*-----------------------------------------
+            PANEL.LESS
+-----------------------------------------*/
+.panel {
+  width: 100%;
+  background-color: rgba(135, 0, 0, 0.65);
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+.panel.rounded {
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+.panel.rounded.top {
+  border-radius: 10px 10px 0px 0px;
+  -moz-border-radius: 10px 10px 0px 0px;
+  -webkit-border-radius: 10px 10px 0px 0px;
+}
+.panel.rounded.bottom {
+  border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  -webkit-border-radius: 0px 0px 10px 10px;
+}
+.panel.rounded.left {
+  border-radius: 10px 0px 0px 10px;
+  -moz-border-radius: 10px 0px 0px 10px;
+  -webkit-border-radius: 10px 0px 0px 10px;
+}
+.panel.rounded.right {
+  border-radius: 0px 10px 10px 0px;
+  -moz-border-radius: 0px 10px 10px 0px;
+  -webkit-border-radius: 0px 10px 10px 0px;
+}
+.panel.header {
+  background-color: #870000;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.panel.footer {
+  padding: 5px;
+  text-align: center;
+  transition: ease all 0.5s;
+  cursor: pointer;
+  border: 4px solid #870000;
+  border-top: none;
+}
+.panel.footer:hover {
+  background-color: #870000;
+}
+.panel.wrapper {
+  background-color: #fff;
+  border: 4px solid #870000;
+}
+.custom-panel-list .panel.header {
+  margin-bottom: 0;
+}
+.custom-panel-list .panel.wrapper {
+  border-radius: 0px;
+  margin: 0;
+}
+.custom-panel-list .panel.wrapper ul {
+  margin: 0;
+}
+.custom-panel-list .glyphicon.glyphicon-arrow-down {
+  display: none;
+}
+.custom-panel-list .glyphicon.glyphicon-arrow-up {
+  display: block;
+}
+.custom-panel-list.closed .glyphicon.glyphicon-arrow-down {
+  display: block;
+}
+.custom-panel-list.closed .glyphicon.glyphicon-arrow-up {
+  display: none;
+}
+.closed .reveal-answers {
+  height: 0px;
+  overflow: hidden;
+  padding: 0;
+}
+.closed .reveal-answers .panel {
+  padding: 0;
 }
 
 /*--------------------------- FONTS.LESS --------------------------------*/

@@ -42,6 +42,10 @@ class Page extends SiteTree
                 'SectionImageBlock' => SectionImageBlock::get_section_type(),
                 'SectionTextBlock'  => SectionTextBlock::get_section_type(),
                 'SectionConversationBlock'  => SectionConversationBlock::get_section_type(),
+                'SectionGalleryBlock'  => SectionGalleryBlock::get_section_type(),
+                'SectionYouTubeVideoBlock'  => SectionYouTubeVideoBlock::get_section_type(),
+                'SectionLinkBlock'  => SectionLinkBlock::get_section_type(),
+                'SectionRevealAnswerBlock'  => SectionRevealAnswerBlock::get_section_type(),
             )
         );
 

@@ -141,3 +141,14 @@
 [28-Jun-2017 15:17:32 Europe/London] PHP Fatal error:  Object::add_extension() - Can't find extension class for "AdminCSSOverride" in C:\Apache24\htdocs\silverstripe\development\master\framework\core\Object.php on line 552
 [28-Jun-2017 15:37:30 Europe/London] PHP Fatal error:  Call to a member function exists() on integer in C:\Apache24\htdocs\silverstripe\development\master\mysite\code\Blocks\ConversationBlock\SectionConversationBlock.php on line 36
 [29-Jun-2017 10:43:32 Europe/London] PHP Parse error:  syntax error, unexpected ')' in C:\Apache24\htdocs\silverstripe\development\master\mysite\code\Blocks\ConversationBlock\SectionConversationBlock.php on line 46
+[18-Jul-2017 15:49:20 Europe/London] PHP Fatal error:  Call to undefined function parent() in C:\Apache24\htdocs\silverstripe\development\master\mysite\code\Blocks\SectionGalleryBlock.php on line 24
+[18-Jul-2017 15:49:28 Europe/London] PHP Fatal error:  Call to undefined function removeEmptyTabs() in C:\Apache24\htdocs\silverstripe\development\master\mysite\code\Blocks\SectionGalleryBlock.php on line 24
+[18-Jul-2017 15:50:28 Europe/London] PHP Fatal error:  Call to a member function removeEmptyTabs() on null in C:\Apache24\htdocs\silverstripe\development\master\mysite\code\Blocks\SectionGalleryBlock.php on line 24
+[18-Jul-2017 16:28:20 Europe/London] PHP Fatal error:  Class 'ImageDataObjectManager' not found in C:\Apache24\htdocs\silverstripe\development\master\mysite\code\Blocks\SectionGalleryBlock.php on line 15
+[18-Jul-2017 16:28:28 Europe/London] PHP Fatal error:  Class 'ImageDataObjectManager' not found in C:\Apache24\htdocs\silverstripe\development\master\mysite\code\Blocks\SectionGalleryBlock.php on line 15
+[18-Jul-2017 16:40:52 Europe/London] PHP Parse error:  syntax error, unexpected ')' in C:\Apache24\htdocs\silverstripe\development\master\mysite\code\DataObject\ImageResource.php on line 22
+[19-Jul-2017 10:35:47 Europe/London] PHP Warning:  None of the following templates could be found in theme "custom": Blocks/YouTubeVideoBlock.ss in C:\Apache24\htdocs\silverstripe\development\master\framework\view\SSViewer.php on line 918
+[19-Jul-2017 10:35:47 Europe/London] PHP Notice:  Undefined offset: 0 in C:\Apache24\htdocs\silverstripe\development\master\framework\view\SSViewer.php on line 1194
+[19-Jul-2017 10:35:47 Europe/London] PHP Warning:  file_get_contents(): Filename cannot be empty in C:\Apache24\htdocs\silverstripe\development\master\framework\view\SSViewer.php on line 1202
+[19-Jul-2017 10:36:11 Europe/London] PHP Warning:  None of the following templates could be found in theme "custom": Blocks/YouTubeVideoBlock.ss in C:\Apache24\htdocs\silverstripe\development\master\framework\view\SSViewer.php on line 918
+[19-Jul-2017 10:36:11 Europe/London] PHP Notice:  Undefined offset: 0 in C:\Apache24\htdocs\silverstripe\development\master\framework\view\SSViewer.php on line 1194

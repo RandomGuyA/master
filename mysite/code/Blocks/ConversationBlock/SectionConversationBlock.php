@@ -39,8 +39,6 @@ class SectionConversationBlock extends Section {
                 new GridFieldDeleteAction(),
                 new GridFieldTitleHeader(),
                 new GridFieldAddExistingAutocompleter('before', array('Title'))
-
-
             )
         );
 

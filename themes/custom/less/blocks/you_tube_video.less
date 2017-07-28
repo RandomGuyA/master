@@ -1,0 +1,81 @@
+@import "../_core/_config.less";
+
+/*-----------------------------------------
+         YOU TUBE VIDEOS.LESS
+-----------------------------------------*/
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.you-tube-block {
+
+    &.small {
+        width: 30%;
+        margin-left: 35%;
+        margin-right: 35%;
+
+        @media @MD {
+            width: 40%;
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+        @media @SM {
+            width: 60%;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        @media @XS, @XXS{
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+    &.medium {
+        width: 40%;
+        margin-left: 30%;
+        margin-right: 30%;
+
+        @media @SM {
+            width: 60%;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        @media @XS, @XXS{
+            width: 100%;
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+
+    }
+    &.large {
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+
+        @media @XS, @XXS{
+            width: 100%;
+            margin-left: 0%;
+            margin-right: 0%;
+        }
+
+    }
+    &.full-width {
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+
+    }
+}

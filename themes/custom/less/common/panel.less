@@ -1,0 +1,120 @@
+@import "../_core/_config.less";
+
+/*-----------------------------------------
+            PANEL.LESS
+-----------------------------------------*/
+
+@panel-background-color: rgba(135, 0, 0, 0.65);
+@panel-background-color-header: rgba(135, 0, 0, 1);
+@panel-background-color-hover: rgba(135, 0, 0, 1);
+
+@panel-border-radius: 10px;
+@panel-color: #fff;
+@backdrop-color: #fff;
+
+.panel {
+    width: 100%;
+    background-color: @panel-background-color;
+    color: @panel-color;
+    padding: 20px;
+    margin-bottom: 10px;
+
+    &.rounded {
+        border-radius: @panel-border-radius;
+        -moz-border-radius: @panel-border-radius;
+        -webkit-border-radius: @panel-border-radius;
+
+        &.top {
+            border-radius: @panel-border-radius @panel-border-radius 0px 0px;
+            -moz-border-radius: @panel-border-radius @panel-border-radius 0px 0px;
+            -webkit-border-radius: @panel-border-radius @panel-border-radius 0px 0px;
+        }
+        &.bottom {
+            border-radius: 0px 0px @panel-border-radius @panel-border-radius;
+            -moz-border-radius: 0px 0px @panel-border-radius @panel-border-radius;
+            -webkit-border-radius: 0px 0px @panel-border-radius @panel-border-radius;
+        }
+        &.left {
+            border-radius: @panel-border-radius 0px 0px @panel-border-radius;
+            -moz-border-radius: @panel-border-radius 0px 0px @panel-border-radius;
+            -webkit-border-radius: @panel-border-radius 0px 0px @panel-border-radius;
+        }
+        &.right {
+            border-radius: 0px @panel-border-radius @panel-border-radius 0px;
+            -moz-border-radius: 0px @panel-border-radius @panel-border-radius 0px;
+            -webkit-border-radius: 0px @panel-border-radius @panel-border-radius 0px;
+        }
+    }
+
+    &.header {
+        background-color: @panel-background-color-header;
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    &.footer {
+        padding: 5px;
+        text-align: center;
+        transition: ease all 0.5s;
+        cursor: pointer;
+        border: 4px solid @panel-background-color-header;
+        border-top: none;
+        &:hover {
+            background-color: @panel-background-color-hover;
+        }
+    }
+
+    &.wrapper {
+        background-color: @backdrop-color;
+        border: 4px solid @panel-background-color-header;
+    }
+}
+
+.custom-panel-list {
+
+    .panel {
+        &.header {
+            margin-bottom: 0;
+        }
+        &.wrapper {
+
+            border-radius: 0px;
+            margin: 0;
+            ul {
+                margin: 0;
+            }
+        }
+    }
+
+    .glyphicon {
+        &.glyphicon-arrow-down {
+            display: none;
+        }
+        &.glyphicon-arrow-up {
+            display: block;
+        }
+    }
+
+    &.closed {
+        .glyphicon {
+            &.glyphicon-arrow-down {
+                display: block;
+            }
+            &.glyphicon-arrow-up {
+                display: none;
+            }
+        }
+    }
+}
+
+.closed {
+    .reveal-answers {
+        height: 0px;
+        overflow: hidden;
+        padding: 0;
+        .panel {
+            padding: 0;
+        }
+    }
+}
