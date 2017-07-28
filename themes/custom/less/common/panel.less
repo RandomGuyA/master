@@ -13,6 +13,7 @@
 @backdrop-color: #fff;
 
 .panel {
+    overflow: hidden;
     width: 100%;
     background-color: @panel-background-color;
     color: @panel-color;
@@ -69,6 +70,13 @@
         background-color: @backdrop-color;
         border: 4px solid @panel-background-color-header;
     }
+    &.no-padding {
+        padding:10px;
+    }
+    &.no-margin {
+        margin:0;
+    }
+
 }
 
 .custom-panel-list {

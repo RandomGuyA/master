@@ -50,7 +50,7 @@
   left: 0;
   top: 0;
   border-top: 0;
-  background: #2F2F2F;
+  background: rgba(135, 0, 0, 0.65);
   background-image: -webkit-linear-gradient(left, #22AFE6, #22AFE6 20%, #F7A823 20%, #F7A823 40%, #E94190 40%, #E94190 60%, #FFE140 60%, #FFE140 80%, #A2C614 80%, #A2C614);
   background-image: -o-linear-gradient(left, #22AFE6, #22AFE6 20%, #F7A823 20%, #F7A823 40%, #E94190 40%, #E94190 60%, #FFE140 60%, #FFE140 80%, #A2C614 80%, #A2C614);
   background-image: linear-gradient(to right, #22AFE6, #22AFE6 20%, #F7A823 20%, #F7A823 40%, #E94190 40%, #E94190 60%, #FFE140 60%, #FFE140 80%, #A2C614 80%, #A2C614);
@@ -83,7 +83,7 @@
   padding: 0;
 }
 .anim-colorgraph > li:nth-child(1) {
-  background-color: #2F2F2F;
+  background-color: rgba(135, 0, 0, 0.65);
 }
 .anim-colorgraph > li:nth-child(2) {
   background-color: #22AFE6;
@@ -102,15 +102,15 @@
 }
 .button {
   color: #FFFFFF !important;
-  background-color: #2F2F2F;
+  background-color: rgba(135, 0, 0, 0.65);
   padding: 10px 20px;
-  border: 1px solid #2F2F2F;
+  border: 1px solid rgba(135, 0, 0, 0.65);
   transition: 0.5s ease all;
 }
 .button:hover {
-  border: 1px solid #2F2F2F !important;
+  border: 1px solid rgba(135, 0, 0, 0.65) !important;
   background-color: #FFFFFF;
-  color: #2F2F2F !important;
+  color: rgba(135, 0, 0, 0.65) !important;
 }
 .box-shadow {
   -webkit-box-shadow: 0px 14px 101px -58px #000000;
@@ -1585,6 +1585,136 @@ address {
 }
 /*--------------------------- CONFIG.LESS --------------------------------*/
 /*-----------------------------------------
+            AUDIO.LESS
+-----------------------------------------*/
+.audio-block .main-wrapper {
+  overflow: hidden;
+}
+.audio-block .main-wrapper .question-wrapper .question {
+  text-align: center;
+  color: #fff;
+}
+.audio-block .main-wrapper .bottom-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 500px;
+}
+.audio-block .main-wrapper .bottom-wrapper .avatar {
+  height: 100%;
+}
+.audio-block .main-wrapper .bottom-wrapper .avatar img {
+  height: 100%;
+  width: auto;
+}
+.audio-block .main-wrapper .bottom-wrapper .audio-section {
+  position: relative;
+  height: 100%;
+}
+.audio-block .volume-meter-wrapper {
+  position: relative;
+}
+.audio-player {
+  position: absolute;
+  height: 90px;
+  width: 100%;
+  bottom: 0;
+}
+.audio-player .audio-panel {
+  background-color: rgba(135, 0, 0, 0.65);
+  padding: 10px;
+  position: relative;
+  overflow: visible;
+  height: 90px;
+}
+.audio-player .audio-panel .controls {
+  height: 100%;
+}
+.audio-player .audio-panel .controls .nav-controls {
+  height: 40px;
+}
+.audio-player .audio-panel .controls .track {
+  margin-top: 10px;
+  height: 10px;
+  background-color: #fff;
+  width: 100%;
+}
+.audio-player .audio-panel .volume-hover-pad {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0px;
+  cursor: pointer;
+  z-index: 100;
+}
+.audio-player .audio-panel .volume-button {
+  position: relative;
+  z-index: 101;
+}
+.audio-player .audio-panel .volume-meter {
+  right: 0;
+  margin-right: 25px;
+  top: -101px;
+  position: absolute;
+  width: 60px;
+  height: 100px;
+  background-color: rgba(135, 0, 0, 0.65);
+  padding: 20px 10px 5px 10px;
+  display: none;
+  cursor: pointer;
+}
+.audio-player .audio-panel .volume-meter .volume-track {
+  background-color: #fff;
+  height: 100%;
+  width: 50%;
+  margin: 0 25%;
+}
+.audio-player .audio-panel .glyphicon {
+  width: 100%;
+  line-height: 60px;
+  font-size: 60px;
+  cursor: pointer;
+  transition: ease all 0.5s ;
+}
+
+/*--------------------------- FONTS.LESS --------------------------------*/
+@font-face {
+  font-family: 'esphimerebold';
+  src: url('../assets/fonts/esphimere/esphimere_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereextra_light';
+  src: url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_extra_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerelight';
+  src: url('../assets/fonts/esphimere/esphimere_light-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_light-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_light-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimeresemi_bold';
+  src: url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_semi_bold-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimerethin';
+  src: url('../assets/fonts/esphimere/esphimere_thin-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere_thin-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere_thin-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'esphimereregular';
+  src: url('../assets/fonts/esphimere/esphimere-webfont.woff2') format('woff2'), url('../assets/fonts/esphimere/esphimere-webfont.woff') format('woff'), url('../assets/fonts/esphimere/esphimere-webfont.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/*--------------------------- CONFIG.LESS --------------------------------*/
+/*-----------------------------------------
           CONVERSATION.LESS
 -----------------------------------------*/
 .conversation-block {
@@ -2137,8 +2267,8 @@ img.right {
 -----------------------------------------*/
 footer {
   height: 200px;
-  background-color: #2F2F2F;
-  box-shadow: 0px 500px 0px 500px #2F2F2F;
+  background-color: rgba(135, 0, 0, 0.65);
+  box-shadow: 0px 500px 0px 500px rgba(135, 0, 0, 0.65);
   padding-top: 20px;
   /*
     width:100%;
@@ -2197,7 +2327,7 @@ footer * {
 -----------------------------------------*/
 header {
   height: 40px;
-  background-color: #2F2F2F;
+  background-color: rgba(135, 0, 0, 0.65);
   margin-bottom: 0px;
   z-index: 100;
   position: relative;
@@ -2348,6 +2478,7 @@ header {
             PANEL.LESS
 -----------------------------------------*/
 .panel {
+  overflow: hidden;
   width: 100%;
   background-color: rgba(135, 0, 0, 0.65);
   color: #fff;
@@ -2399,6 +2530,12 @@ header {
 .panel.wrapper {
   background-color: #fff;
   border: 4px solid #870000;
+}
+.panel.no-padding {
+  padding: 10px;
+}
+.panel.no-margin {
+  margin: 0;
 }
 .custom-panel-list .panel.header {
   margin-bottom: 0;
@@ -2638,8 +2775,8 @@ ul.square-tab-menu > li .tab-item .menu-button {
   z-index: 101;
   right: 0;
   bottom: 0;
-  background-color: #2F2F2F;
-  border: 1px solid #2F2F2F;
+  background-color: rgba(135, 0, 0, 0.65);
+  border: 1px solid rgba(135, 0, 0, 0.65);
   color: #FFFFFF;
   padding: 10px 20px;
   transition: ease all 1s;

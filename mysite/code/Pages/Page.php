@@ -46,6 +46,7 @@ class Page extends SiteTree
                 'SectionYouTubeVideoBlock'  => SectionYouTubeVideoBlock::get_section_type(),
                 'SectionLinkBlock'  => SectionLinkBlock::get_section_type(),
                 'SectionRevealAnswerBlock'  => SectionRevealAnswerBlock::get_section_type(),
+                'SectionAudioBlock'  => SectionAudioBlock::get_section_type(),
             )
         );
 
