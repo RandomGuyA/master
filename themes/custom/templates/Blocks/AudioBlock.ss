@@ -4,13 +4,13 @@
     <% end_if %>
     <div class="main-wrapper panel wrapper rounded">
         <div class="panel question-wrapper">
-            <h4 class="question">This is a question</h4>
+            <div class="question">$Text</div>
         </div>
         <div class="bottom-wrapper">
-            <div class="avatar col-sm-6">
+            <div class="avatar col-md-6 col-xs-12">
                 $Avatar
             </div>
-            <div class="audio-section nopadding col-sm-6">
+            <div class="audio-section nopadding col-md-6 col-xs-12">
                 <div class="audio-player">
                     <audio>
                         <source src="$Audio.URL" type="audio/mpeg"/>
@@ -26,7 +26,7 @@
 
                         <!-- TRACK AND CONTROLS -->
 
-                        <div class="controls col-xs-8">
+                        <div class="controls middle col-xs-8">
 
                             <div class="nav-controls">
 

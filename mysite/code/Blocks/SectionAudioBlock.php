@@ -3,7 +3,7 @@
 class SectionAudioBlock extends Section
 {
     private static $db = array(
-
+        'Text' => 'HTMLText'
     );
 
     private static $has_one = array(
@@ -15,6 +15,11 @@ class SectionAudioBlock extends Section
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
+
+
+        /*------------- QUESTION -------------*/
+
+        $fields->addFieldToTab("Root.Main", HtmlEditorField::create('Text'));
 
 
         /*------------- AVATAR -------------*/
@@ -40,6 +45,4 @@ class SectionAudioBlock extends Section
 
         return $fields;
     }
-
-
 }

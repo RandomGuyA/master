@@ -15,8 +15,10 @@
 
         .question-wrapper {
             .question {
-                text-align: center;
-                color: #fff;
+                *{
+                    text-align: center;
+                    color: #fff;
+                }
             }
         }
 
@@ -24,11 +26,25 @@
             overflow: hidden;
             position: relative;
             height: @bottom-section-height;
+
+
+            @media @SM, @XS, @XXS {
+                height:auto;
+            }
+
             .avatar {
                 height: 100%;
                 img {
                     height: 100%;
                     width: auto;
+                }
+
+                @media @SM, @XS, @XXS {
+                    height:auto;
+                    img {
+                        height: auto;
+                        width: 100%;
+                    }
                 }
             }
             .audio-section {
@@ -50,25 +66,42 @@
     width: 100%;
     bottom: 0;
 
+    @media @XXS {
+        height: 60px;
+    }
+
     .audio-panel {
         background-color: @audio-player_color;
         padding: 10px;
         position: relative;
         overflow: visible;
-        height: 90px;
+        height:100%;
 
         .controls {
 
             height: 100%;
 
+            @media @XXS {
+                padding:0 0px;
+
+                &.middle {
+                    padding:0 10px;
+                }
+            }
+
             .nav-controls {
                 height: 40px;
+                @media @XXS {
+                    height: 20px;
+                }
+
             }
             .audio-block-track {
                 margin-top: 10px;
                 height: 10px;
                 background-color: #fff;
                 width: 100%;
+
 
             }
         }
@@ -98,6 +131,10 @@
             padding: 20px 10px 5px 10px;
             display: none;
             cursor: pointer;
+            @media @XXS {
+                width: 40px;
+                margin-right: 15px;
+            }
 
             .audio-block-volume-track {
                 background-color: #fff;
@@ -114,6 +151,12 @@
             font-size: 60px;
             cursor: pointer;
             transition: ease all 0.5s;
+
+            @media @XXS {
+                width: 40px;
+                line-height: 40px;
+                font-size: 40px;
+            }
 
             &:hover {
                 //   color:rgba(135,0,0,1);

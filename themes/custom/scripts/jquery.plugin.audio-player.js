@@ -123,8 +123,12 @@
         };
 
         var _update = function () {
-            _update_track_line(track.currentTime);
 
+            if(track.currentTime>=track.duration) {
+                _reset_track();
+            }else{
+                _update_track_line(track.currentTime);
+            }
         };
 
         var _bind_events = function () {
@@ -166,10 +170,17 @@
             if (position > 100) {
                 $track_line.css('width', "100%");
             } else {
-                $track_line.css('width', position + "%");
+               $track_line.css('width', position + "%");
             }
         };
 
+        var _reset_track = function(){
+
+            track.currentTime = 0;
+            _update_track_line(0);
+            _pause();
+            swap_glyphs($play_pause_button.find('.glyphicon'), 'glyphicon-pause', 'glyphicon-play');
+        };
 
         var _toggle_volume_on_and_off = function ($button) {
 
