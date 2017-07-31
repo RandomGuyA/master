@@ -4,8 +4,9 @@
             AUDIO.LESS
 -----------------------------------------*/
 
-@bottom-section-height:500px;
-@audio-player_color:@alpha-color;
+@bottom-section-height: 500px;
+@audio-player_color: @alpha-color;
+@track-line-color: #069;
 
 .audio-block {
 
@@ -15,115 +16,134 @@
         .question-wrapper {
             .question {
                 text-align: center;
-                color:#fff;
+                color: #fff;
             }
         }
 
         .bottom-wrapper {
             overflow: hidden;
             position: relative;
-            height:@bottom-section-height;
+            height: @bottom-section-height;
             .avatar {
-                height:100%;
-                img{
-                    height:100%;
-                    width:auto;
+                height: 100%;
+                img {
+                    height: 100%;
+                    width: auto;
                 }
             }
             .audio-section {
-                position:relative;
-                height:100%;
-
+                position: relative;
+                height: 100%;
             }
         }
     }
 
-
-
     .volume-meter-wrapper {
-
         position: relative;
-
-
     }
 }
 
 .audio-player {
 
     position: absolute;
-    height:90px;
-    width:100%;
-    bottom:0;
+    height: 90px;
+    width: 100%;
+    bottom: 0;
 
     .audio-panel {
         background-color: @audio-player_color;
-        padding:10px;
-        position:relative;
+        padding: 10px;
+        position: relative;
         overflow: visible;
-        height:90px;
+        height: 90px;
 
         .controls {
 
-            height:100%;
+            height: 100%;
 
             .nav-controls {
-                height:40px;
+                height: 40px;
             }
-            .track {
-                margin-top:10px;
-                height:10px;
-                background-color:#fff;
-                width:100%;
+            .audio-block-track {
+                margin-top: 10px;
+                height: 10px;
+                background-color: #fff;
+                width: 100%;
+
             }
         }
 
-
-        .volume-hover-pad {
-            position:absolute;
-            right:0;
-            bottom:0;
-            top:0px;
-            cursor:pointer;
-            z-index:100;
-
+        .audio-block-volume-hover-pad {
+            position: absolute;
+            right: -2px;
+            bottom: -2px;
+            top: -2px;
+            cursor: pointer;
+            z-index: 100;
         }
 
-        .volume-button {
-            position:relative;
-            z-index:101;
+        .audio-block-volume-button {
+            position: relative;
+            z-index: 101;
         }
 
-        .volume-meter {
-            right:0;
-            margin-right:25px;
-            top:-101px;
-            position:absolute;
-            width:60px;
-            height:100px;
-            background-color:@alpha-color;
-            padding:20px 10px 5px 10px;
-            display:none;
-            cursor:pointer;
+        .audio-block-volume-meter {
+            right: 0;
+            margin-right: 25px;
+            top: -101px;
+            position: absolute;
+            width: 60px;
+            height: 100px;
+            background-color: @alpha-color;
+            padding: 20px 10px 5px 10px;
+            display: none;
+            cursor: pointer;
 
-            .volume-track {
-                background-color:#fff;
-                height:100%;
-                width:50%;
-                margin:0 25%;
+            .audio-block-volume-track {
+                background-color: #fff;
+                height: 100%;
+                width: 50%;
+                margin: 0 25%;
             }
         }
 
         .glyphicon {
 
-            width:100%;
-            line-height:60px;
-            font-size:60px;
-            cursor:pointer;
-            transition: ease all 0.5s ;
+            width: 100%;
+            line-height: 60px;
+            font-size: 60px;
+            cursor: pointer;
+            transition: ease all 0.5s;
 
             &:hover {
-             //   color:rgba(135,0,0,1);
+                //   color:rgba(135,0,0,1);
             }
+        }
+    }
+}
+
+.track {
+
+    position: relative;
+    cursor:pointer;
+
+    .track-line {
+        position: absolute;
+        left: 0;
+        background-color: @track-line-color;
+    }
+    &.vertical {
+        .track-line {
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &.horizontal {
+        .track-line {
+            top: 0;
+            height: 100%;
+            width: 0;
         }
     }
 }

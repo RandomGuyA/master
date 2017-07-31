@@ -12,10 +12,15 @@
             </div>
             <div class="audio-section nopadding col-sm-6">
                 <div class="audio-player">
+                    <audio>
+                        <source src="$Audio.URL" type="audio/mpeg"/>
+                        Your browser does not support the audio element.
+                    </audio>
+
                     <div class="audio-panel panel rounded no-margin">
                         <!-- PLAY BUTTON -->
 
-                        <div class="controls col-xs-2 ">
+                        <div class="controls col-xs-2 audio-block-play" action="play_pause">
                             <span class="glyphicon glyphicon-play"></span>
                         </div>
 
@@ -27,22 +32,24 @@
 
 
                             </div>
-                            <div class="track">
-
+                            <div class="track horizontal audio-block-track">
+                                <div class="track-line audio-block-track-line"></div>
                             </div>
                         </div>
 
                         <!-- VOLUME SECTION -->
 
-                        <div class="controls volume-button col-xs-2">
+                        <div class="controls audio-block-volume-button col-xs-2" action="volume">
                             <span class="glyphicon glyphicon-volume-up"></span>
                         </div>
-                        <div class="volume-hover-pad col-xs-2">
+                        <div class="audio-block-volume-hover-pad col-xs-2">
                         </div>
 
 
-                        <div class="volume-meter panel rounded top">
-                            <div class="volume-track"></div>
+                        <div class="audio-block-volume-meter panel rounded top">
+                            <div class="track vertical audio-block-volume-track">
+                                <div class="track-line audio-block-volume-track-line"></div>
+                            </div>
                         </div>
 
                     </div>

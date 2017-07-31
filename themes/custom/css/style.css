@@ -1632,25 +1632,25 @@ address {
 .audio-player .audio-panel .controls .nav-controls {
   height: 40px;
 }
-.audio-player .audio-panel .controls .track {
+.audio-player .audio-panel .controls .audio-block-track {
   margin-top: 10px;
   height: 10px;
   background-color: #fff;
   width: 100%;
 }
-.audio-player .audio-panel .volume-hover-pad {
+.audio-player .audio-panel .audio-block-volume-hover-pad {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0px;
+  right: -2px;
+  bottom: -2px;
+  top: -2px;
   cursor: pointer;
   z-index: 100;
 }
-.audio-player .audio-panel .volume-button {
+.audio-player .audio-panel .audio-block-volume-button {
   position: relative;
   z-index: 101;
 }
-.audio-player .audio-panel .volume-meter {
+.audio-player .audio-panel .audio-block-volume-meter {
   right: 0;
   margin-right: 25px;
   top: -101px;
@@ -1662,7 +1662,7 @@ address {
   display: none;
   cursor: pointer;
 }
-.audio-player .audio-panel .volume-meter .volume-track {
+.audio-player .audio-panel .audio-block-volume-meter .audio-block-volume-track {
   background-color: #fff;
   height: 100%;
   width: 50%;
@@ -1673,7 +1673,26 @@ address {
   line-height: 60px;
   font-size: 60px;
   cursor: pointer;
-  transition: ease all 0.5s ;
+  transition: ease all 0.5s;
+}
+.track {
+  position: relative;
+  cursor: pointer;
+}
+.track .track-line {
+  position: absolute;
+  left: 0;
+  background-color: #069;
+}
+.track.vertical .track-line {
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+.track.horizontal .track-line {
+  top: 0;
+  height: 100%;
+  width: 0;
 }
 
 /*--------------------------- FONTS.LESS --------------------------------*/
