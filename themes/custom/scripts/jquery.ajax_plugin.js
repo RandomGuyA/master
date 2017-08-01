@@ -259,6 +259,13 @@
             return parent_page;
         };
 
+        /**
+         * Recursively searches back through the heiracrhy of nests to find
+         * the top most nest page
+         *
+         * @param page
+         * @returns {*}
+         */
         var get_root_nest_page = function (page) {
 
             if (page.parentID != 0) {
@@ -471,8 +478,6 @@
 
             //end animation listener
             $ng_leave.css_animation_event_listener($animation_layer);
-
-
         };
 
 
@@ -531,6 +536,33 @@
                 })
             }, 100);
         };
+
+        var update_navigation = function (page) {
+
+            var root_page = (page.parentID != 0) ? get_top_most_parent_page(page) : page;
+            var id = '#menu-' + root_page.urlSegment + "-" + root_page.id;
+            var $li = $(id);
+            if ($li.length > 0) {
+
+                $('.nav').find('li, a').removeClass('current');
+                $('.nav').find('li, a').removeClass('section');
+                $li.addClass('current');
+                $li.find('a').addClass('current');
+            }
+
+        };
+
+        var get_top_most_parent_page = function (page) {
+
+            if (page.parentID != 0) {
+                var parent_page = get_parent_page(page);
+                parent_page.navigate_to_child = page;
+                return get_root_nest_page(parent_page);
+            } else {
+                return page;
+            }
+        };
+
 
         var setup_navigation = function ($container) {
 
@@ -622,6 +654,7 @@
             console.log(name + ' - page loaded');
             //console.log(response);
             $container.html(response);
+            update_navigation(page);
             setup_navigation($container);
             add_ajax_links();
             check_function_and_call(plugin.settings.initialise_javascript_dependencies);
@@ -661,9 +694,7 @@
         var add_ajax_links = function () {
 
             $('a').each(function () {
-
                 var $link = $(this);
-
                 if ($link.hasClass('ajax-link')) {
                     if (!$link.hasClass('ajax-active')) {
                         $link.addClass('ajax-active');
@@ -691,6 +722,29 @@
 
         var link_is_current_page = function (origin, destination) {
             return (get_page_ID_from_url(origin) == get_page_ID_from_url(destination));
+        };
+
+
+        //--------------------------------------//
+        //      HELPER FUNCTIONS
+        //--------------------------------------//
+
+        var iterate_and_call = function (fn, array) {
+            for (var i = 0; i < array.length; i++) fn(array[i]);
+        };
+
+        var iterate_and_compare = function (array, object) {
+            for (var i = 0; i < array.length; i++) {
+                var item = compare(object, array[i]);
+                if (item != undefined) {
+                    return item;
+                }
+            }
+        };
+
+        var compare = function (object, item) {
+            var var_name = Object.keys(object)[0];
+            return (object[var_name] == item[var_name]) ? item : null;
         };
 
 

@@ -2485,12 +2485,44 @@ header {
 /*-----------------------------------------
                 NAV.LESS
 -----------------------------------------*/
+.nav a {
+  background-color: transparent !important;
+  color: #FFFFFF !important;
+  display: block !important;
+  padding: 0px 12px !important;
+  text-decoration: none !important;
+}
+.nav a.current {
+  background-color: rgba(135, 0, 0, 0.65) !important;
+  color: #FFFFFF !important;
+}
+.nav a:hover {
+  background-color: #22AFE6 !important;
+  color: #FFFFFF !important;
+}
+.nav a:hover.current {
+  background-color: rgba(135, 0, 0, 0.65) !important;
+  color: #FFFFFF !important;
+}
+.nav ul {
+  overflow: hidden;
+  padding: 0;
+}
 .navbar-inverse {
   background: transparent;
   border: none;
 }
 .nav {
   height: 40px;
+}
+.nav > li > a {
+  color: #000;
+}
+.nav > li > a.current {
+  color: #000;
+}
+.nav > li > a:hover {
+  color: #000;
 }
 @media only screen and (min-width: 1400px), only screen and (min-width: 1200px) and (max-width: 1399px), only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 769px) and (max-width: 991px) {
   .nav li a {

@@ -5,15 +5,62 @@
 -----------------------------------------*/
 
 
-//Dark Nav bootstrap override
-.navbar-inverse {
-    background:transparent;
-    border:none;
 
-}
 .nav {
 
-    height:@config-header-height;
+    a {
+        background-color:transparent !important;
+        color:@light-color !important;
+        display:block !important;
+        padding:0px 12px !important;
+        text-decoration: none !important;
+
+        &.current {
+            background-color:@alpha-color !important;
+            color:@light-color !important;
+        }
+        &:hover {
+            background-color:@beta-color !important;
+            color:@light-color !important;
+
+            &.current {
+                background-color:@alpha-color !important;
+                color:@light-color !important;
+            }
+        }
+    }
+
+    ul {
+        overflow: hidden;
+        padding:0;
+    }
+}
+
+//Dark Nav bootstrap override
+.navbar-inverse {
+    background: transparent;
+    border: none;
+
+}
+
+.nav {
+
+    height: @config-header-height;
+
+    & > li {
+        & > a {
+
+            color: #000;
+
+            &.current {
+                color: #000;
+            }
+            &:hover {
+                color: #000;
+            }
+
+        }
+    }
 
     @media @XL, @LG, @MD, @SM {
 
