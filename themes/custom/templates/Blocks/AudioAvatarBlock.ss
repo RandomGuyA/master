@@ -2,22 +2,39 @@
     <% if $ShowTitle %>
         <h2>$Title</h2>
     <% end_if %>
+
     <div class="main-wrapper panel wrapper rounded">
+
         <div class="panel question-wrapper">
-            <div class="question">$Text</div>
+            <div class="col-xs-1 nopadding">
+                <span class="glyphicon glyphicon-step-backward"></span>
+            </div>
+            <div class="question col-xs-10">
+
+                <% if $AudioTexts %>
+                    <% loop $AudioTexts %>
+                        <div class="audio-text <% if $First %>current<% end_if %>"
+                             avatar="<% if $Avatar %>$Avatar.Filename<% end_if %>">
+                            <% if $Text %>
+                                $Text
+                            <% end_if %>
+                            <audio>
+                                <source src="$Audio.URL" type="audio/mpeg"/>
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    <% end_loop %>
+                <% end_if %>
+            </div>
+            <div class="col-xs-1 nopadding">
+                <span class="glyphicon glyphicon-step-forward"></span>
+            </div>
         </div>
         <div class="bottom-wrapper">
-            <div class="avatar col-md-6 col-xs-12">
-                $Avatar
-            </div>
-            <div class="audio-section nopadding col-md-6 col-xs-12">
+            <div class="audio-section nopadding col-md-12 col-xs-12">
                 <div class="audio-player">
-                    <audio>
-                        <source src="$Audio.URL" type="audio/mpeg"/>
-                        Your browser does not support the audio element.
-                    </audio>
 
-                    <div class="audio-panel panel rounded no-margin">
+                    <div class="audio-panel panel no-margin">
                         <!-- PLAY BUTTON -->
 
                         <div class="controls col-xs-2 audio-block-play" action="play_pause">
@@ -27,11 +44,6 @@
                         <!-- TRACK AND CONTROLS -->
 
                         <div class="controls middle col-xs-8">
-
-                            <div class="nav-controls">
-
-
-                            </div>
                             <div class="track horizontal audio-block-track">
                                 <div class="track-line audio-block-track-line"></div>
                             </div>
@@ -44,8 +56,6 @@
                         </div>
                         <div class="audio-block-volume-hover-pad col-xs-2">
                         </div>
-
-
                         <div class="audio-block-volume-meter panel rounded top">
                             <div class="track vertical audio-block-volume-track">
                                 <div class="track-line audio-block-volume-track-line"></div>
@@ -53,17 +63,15 @@
                         </div>
 
                     </div>
-
-
                 </div>
             </div>
-
-
         </div>
+
     </div>
+
 </div>
 <script>
-    $(document).ready(function(){
-       $('.audio-player').hades_audio_player();
+    $(document).ready(function () {
+        $('.audio-block').hades_audio_player();
     });
 </script>

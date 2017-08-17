@@ -1590,13 +1590,53 @@ address {
 .audio-block .main-wrapper {
   overflow: hidden;
 }
+.audio-block .main-wrapper.remove {
+  border: none;
+}
+@media only screen and (min-width: 769px) and (max-width: 991px), only screen and (min-width: 480px) and (max-width: 768px), only screen and (max-width: 479px) {
+  .audio-block .main-wrapper {
+    padding: 10px;
+  }
+}
+.audio-block .main-wrapper .question-wrapper {
+  padding: 20px;
+}
+@media only screen and (min-width: 769px) and (max-width: 991px), only screen and (min-width: 480px) and (max-width: 768px), only screen and (max-width: 479px) {
+  .audio-block .main-wrapper .question-wrapper {
+    padding: 10px;
+  }
+}
+.audio-block .main-wrapper .question-wrapper .glyphicon {
+  text-align: center;
+  width: 100%;
+  height: auto;
+}
+@media only screen and (min-width: 769px) and (max-width: 991px), only screen and (min-width: 480px) and (max-width: 768px), only screen and (max-width: 479px) {
+  .audio-block .main-wrapper .question-wrapper .glyphicon {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .audio-block .main-wrapper .question-wrapper .glyphicon {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+.audio-block .main-wrapper .question-wrapper .glyphicon:hover {
+  color: #000;
+}
 .audio-block .main-wrapper .question-wrapper .question * {
   text-align: center;
   color: #fff;
+  margin: 0;
 }
 .audio-block .main-wrapper .bottom-wrapper {
   overflow: hidden;
   position: relative;
+  height: auto;
+}
+.audio-block .main-wrapper .bottom-wrapper.avatar {
   height: 500px;
 }
 @media only screen and (min-width: 769px) and (max-width: 991px), only screen and (min-width: 480px) and (max-width: 768px), only screen and (max-width: 479px) {
@@ -1620,6 +1660,9 @@ address {
     width: 100%;
   }
 }
+.audio-block .main-wrapper .bottom-wrapper .avatar.right {
+  float: right;
+}
 .audio-block .main-wrapper .bottom-wrapper .audio-section {
   position: relative;
   height: 100%;
@@ -1627,8 +1670,26 @@ address {
 .audio-block .volume-meter-wrapper {
   position: relative;
 }
-.audio-player {
+.audio-block .glyphicon {
+  color: #fff;
+  width: 100%;
+  line-height: 60px;
+  font-size: 60px;
+  cursor: pointer;
+  transition: ease all 0.5s;
+}
+@media only screen and (max-width: 479px) {
+  .audio-block .glyphicon {
+    width: 40px;
+    line-height: 40px;
+    font-size: 40px;
+  }
+}
+.avatar .audio-player {
   position: absolute;
+}
+.audio-player {
+  position: relative;
   height: 90px;
   width: 100%;
   bottom: 0;
@@ -1644,8 +1705,10 @@ address {
   position: relative;
   overflow: visible;
   height: 100%;
+  text-align: center;
 }
 .audio-player .audio-panel .controls {
+  position: relative;
   height: 100%;
 }
 @media only screen and (max-width: 479px) {
@@ -1665,8 +1728,10 @@ address {
   }
 }
 .audio-player .audio-panel .controls .audio-block-track {
-  margin-top: 10px;
-  height: 10px;
+  top: 50%;
+  margin-top: -10px;
+  left: 0;
+  height: 20px;
   background-color: #fff;
   width: 100%;
 }
@@ -1706,20 +1771,6 @@ address {
   width: 50%;
   margin: 0 25%;
 }
-.audio-player .audio-panel .glyphicon {
-  width: 100%;
-  line-height: 60px;
-  font-size: 60px;
-  cursor: pointer;
-  transition: ease all 0.5s;
-}
-@media only screen and (max-width: 479px) {
-  .audio-player .audio-panel .glyphicon {
-    width: 40px;
-    line-height: 40px;
-    font-size: 40px;
-  }
-}
 .track {
   position: relative;
   cursor: pointer;
@@ -1738,6 +1789,12 @@ address {
   top: 0;
   height: 100%;
   width: 0;
+}
+.audio-text {
+  display: none;
+}
+.audio-text.current {
+  display: block;
 }
 
 /*--------------------------- FONTS.LESS --------------------------------*/
@@ -2347,6 +2404,21 @@ footer {
 footer * {
   color: #fff;
 }
+.footer.main {
+  height: 40px;
+  width: 100%;
+  bottom: -40px;
+  left: 0;
+  background-color: rgba(135, 0, 0, 0.65);
+  position: fixed;
+  z-index: 1000;
+}
+.footer.hide {
+  display: none;
+}
+.footer.show {
+  display: block;
+}
 
 /*--------------------------- FONTS.LESS --------------------------------*/
 @font-face {
@@ -2438,6 +2510,9 @@ header {
 /*-----------------------------------------
                 MAIN.LESS
 -----------------------------------------*/
+body {
+  margin-bottom: 80px;
+}
 .unit-banner {
   height: 40px;
   width: 100%;

@@ -133,6 +133,7 @@
         var page_loading = false;
         var animate_transition = false;
         var internal_call = false;
+        var add_to_history = true;
 
         var url_destination;
         var page_list;
@@ -218,6 +219,7 @@
 
             var page = (internal_call) ? destination_page : get_root_nest_page(destination_page);
 
+            console.log(page);
             evaluate_page(page);
             transition_spool.reverse();
             update_and_check_transition_spool();
@@ -406,10 +408,16 @@
             var animate = transition_object.animate;
             var $container = $('#' + transition_object.containerID);
 
-            console.log("load url:- " + url);
-            console.log("container:- " + $container.attr('class'));
+            //console.log("load url:- " + url);
+            //console.log("container:- " + $container.attr('class'));
             //console.log("animate: " + animate);
-
+            if ($('.audio-block').length != 0) {
+                $('.audio-block').each(function () {
+                    if($(this).data('hades_audio_player') != undefined){
+                        $(this).data('hades_audio_player').stop();
+                    }
+                });
+            }
             internal_call = false; //reset switch
             load_page_static_callback();
             check_function_and_call(plugin.settings.load_page_callback);
@@ -461,8 +469,8 @@
                 //console.log("incremental_animation " + incremental_animation);
                 //console.log("decremental_animation " + decremental_animation);
 
-                console.log("previous_sort_value: " + previous_sort_value);
-                console.log("current_sort_value: " + current_sort_value);
+                //console.log("previous_sort_value: " + previous_sort_value);
+                //console.log("current_sort_value: " + current_sort_value);
 
                 var transition_animation = (previous_sort_value < current_sort_value) ? incremental_animation : decremental_animation;
                 //console.log("transition_animation " + transition_animation);
@@ -621,9 +629,7 @@
         };
 
         var initialise_dependencies = function () {
-
             console.log("add dependencies");
-
         };
 
 
@@ -659,7 +665,11 @@
             add_ajax_links();
             check_function_and_call(plugin.settings.initialise_javascript_dependencies);
             transition($previous_page, animate, $container);
-            window.history.pushState("string", "Title", page.url_object.http_url);
+
+            if(add_to_history){
+                window.history.pushState("string", "Title", page.url_object.http_url);
+            }
+            add_to_history = true;
             page_loading = false;
         };
 
@@ -792,6 +802,8 @@
                     //console.log("click");
                     e.preventDefault();
                     adjust_page_position($(this).attr('direction'));
+                    console.log($(this).attr('href'));
+
                     set_internal_call($(this).attr('href'));
                     init_ajax_call();
                 });
@@ -812,6 +824,16 @@
                 });
             });
         };
+
+        $(window).on('popstate', function() {
+            console.log('Back button was pressed.');
+            internal_call = true;
+            var url = window.location.href;
+            url = url.replace("#", "/");
+            add_to_history = false;
+            set_internal_call(url);
+            init_ajax_call();
+        });
 
 
         //--------------------------------------//
@@ -864,7 +886,6 @@
             trans.containerID = containerID;
 
             return trans;
-
         };
 
         //-----------------------------------------
@@ -905,10 +926,10 @@
     //--------------------------------------//
 
     var name = 'hades_audio_player';
-    var ID = 477171;
+    var SERIAL = 477171;
 
 
-    $.hades_audio_player = function (element, options) {
+    $.hades_audio_player = function (element, options, serial) {
 
 
         //--------------------------------------//
@@ -916,7 +937,8 @@
         //--------------------------------------//
 
         var defaults = {
-            update_speed: 1000
+            update_speed: 1000,
+            solo: false
         };
 
         //--------------------------------------//
@@ -924,9 +946,9 @@
         //--------------------------------------//
 
         var plugin = this; //use plugin instead of "this"
-        var id = ID;  //set unique ID for plugin instance
+        //set unique ID for plugin instance
         var config;
-
+        var id = "hades-audio-player-" + serial;
 
         var playing = false;
 
@@ -953,8 +975,12 @@
         var $track_line;
         var $volume_track;
         var $volume_track_line;
+        var $prev_track;
+        var $next_track;
         var track;
-
+        var tracks = [];
+        var current_track;
+        var audio_available = false;
 
         //--------------------------------------//
         //       CUSTOM SETTING SETUP
@@ -980,7 +1006,8 @@
             // the plugin's final properties are the merged default and user-provided options (if any)
             plugin.settings = $.extend({}, defaults, options, meta);
             config = plugin.settings;
-            console.log("initialised plugin " + name + " -- " + id);
+            console.log("initialised plugin " + name + " -- " + serial);
+            $element.attr('id', id);
             _create();
 
         };
@@ -997,13 +1024,33 @@
          *  is the element the plugin is attached to;
          */
 
+        plugin.stop_all = function () {
+            if ($('.audio-block').length != 0) {
+                $('.audio-block').each(function () {
+                    if ($(this).data('hades_audio_player') != undefined) {
+                        $(this).data('hades_audio_player').stop();
+                    }
+                });
+            }
+        };
+
+        plugin.stop = function () {
+            var $glyph = $play_pause_button.find('.glyphicon');
+            swap_glyphs($glyph, 'glyphicon-pause', 'glyphicon-play');
+            _pause();
+
+        };
 
         plugin.play_pause = function ($button) {
-            _play_pause_toggle($button);
+            if (audio_available) {
+                _play_pause_toggle($button);
+            }
         };
 
         plugin.volume = function ($button) {
-            _toggle_volume_on_and_off($button);
+            if (audio_available) {
+                _toggle_volume_on_and_off($button);
+            }
         };
 
 
@@ -1017,14 +1064,17 @@
 
         var _create = function () {
             _setup_variables();
-            _bind_events();
+            if (audio_available) {
+                _bind_events();
+                _setup_layout();
+            }
         };
 
         var _update = function () {
 
-            if(track.currentTime>=track.duration) {
+            if (track.currentTime >= track.duration) {
                 _reset_track();
-            }else{
+            } else {
                 _update_track_line(track.currentTime);
             }
         };
@@ -1037,13 +1087,18 @@
             $volume_button.button_click();
             $volume_track.vertical_track();
             $audio_block_track.horizontal_track();
+            $prev_track.change_track();
+            $next_track.change_track();
+        };
+
+        var _setup_layout = function () {
+            hide_and_show_arrows();
+            set_volume_meter_position();
         };
 
         var _setup_variables = function () {
 
-            $audio = $element.find('audio');
-            $source = $element.find('source');
-            track = new Audio($source.attr('src'));
+            load_tracks();
 
             $volume_hover_pad = $element.find('.audio-block-volume-hover-pad');
             $volume_meter = $element.find('.audio-block-volume-meter');
@@ -1055,6 +1110,74 @@
             $volume_track = $element.find('.audio-block-volume-track');
             $volume_track_line = $element.find('.audio-block-volume-track-line');
 
+            $prev_track = $element.find('.glyphicon-step-backward');
+            $next_track = $element.find('.glyphicon-step-forward');
+
+        };
+
+        var load_tracks = function () {
+
+            if (plugin.settings.solo) {
+                audio_available = true;
+                set_current_track(Track(0, $element.find('source').attr('src'), false, false));
+            } else {
+
+                var $audio_blocks = $element.find('.audio-text');
+                $audio_blocks.each(function (index) {
+
+                    var $a_block = $(this);
+                    var source = $a_block.find('source').attr('src');
+                    var avatar = $a_block.attr('avatar');
+                    tracks.push(Track(index, $a_block.find('source').attr('src'), false, (avatar.length == 0) ? false : avatar));
+                });
+
+                if (tracks.length > 0) {
+                    console.log((tracks.length + 1) + ' audio files found');
+                    audio_available = true;
+                    set_current_track(tracks[0])
+                } else {
+                    console.log('no audio found');
+                    audio_available = false;
+                }
+            }
+        };
+
+        var hide_and_show_arrows = function () {
+
+            $next_track.show();
+            $prev_track.show();
+            if (current_track.id == 0) {
+                $prev_track.hide();
+            }
+            if (current_track.id == tracks.length - 1) {
+                $next_track.hide();
+            }
+        };
+
+        var set_current_track = function (a_track) {
+
+            current_track = a_track;
+
+            for (var a = 0; a < tracks.length; a++) {
+                tracks[a].current = false;
+                console.log(tracks[a].avatar);
+            }
+            a_track.current = true;
+            if (a_track.avatar != false) {
+                set_avatar(a_track);
+            }
+            track = new Audio(a_track.src);
+        };
+
+
+        var set_avatar = function (a_track) {
+
+            var $av_wrapper = $element.find('.bottom-wrapper');
+            $av_wrapper.find('.avatar').remove();
+            $av_wrapper.prepend(
+                $('<div>').addClass('avatar col-md-6 col-xs-12 ' + a_track.alignment).append(
+                    $('<img>').attr('src', a_track.avatar)
+                ));
         };
 
         var _update_track_line = function (time) {
@@ -1068,11 +1191,11 @@
             if (position > 100) {
                 $track_line.css('width', "100%");
             } else {
-               $track_line.css('width', position + "%");
+                $track_line.css('width', position + "%");
             }
         };
 
-        var _reset_track = function(){
+        var _reset_track = function () {
 
             track.currentTime = 0;
             _update_track_line(0);
@@ -1103,6 +1226,7 @@
                 swap_glyphs($glyph, 'glyphicon-pause', 'glyphicon-play');
                 _pause();
             } else {
+                plugin.stop_all();
                 swap_glyphs($glyph, 'glyphicon-play', 'glyphicon-pause');
                 _play();
             }
@@ -1128,6 +1252,19 @@
             }, config.update_speed);
         };
 
+        var go_to_track = function (id) {
+
+            var $glyph = $play_pause_button.find('.glyphicon');
+            swap_glyphs($glyph, 'glyphicon-pause', 'glyphicon-play');
+            _pause();
+            set_current_track(tracks[id]);
+            hide_and_show_arrows();
+            var $audio_text = $element.find('.audio-text');
+            $audio_text.removeClass('current');
+            $audio_text.eq(id).addClass('current');
+            swap_glyphs($glyph, 'glyphicon-play', 'glyphicon-pause');
+            _play();
+        };
 
         //--------------------------------------//
         //    BASIC CONTROLS
@@ -1165,10 +1302,36 @@
 
         };
 
+
+        //--------------------------------------//
+        //    OBJECTS
+        //--------------------------------------//
+
+
+        var Track = function (id, src, current, avatar) {
+            id = parseInt(id);
+            var alignment = (id % 2) ? "right" : "left";
+            return {
+                id: id,
+                src: src,
+                current: current,
+                avatar: avatar,
+                alignment: alignment
+            }
+
+        };
+
+
         //--------------------------------------//
         //    HELPER FUNCTIONS
         //--------------------------------------//
 
+
+        var set_volume_meter_position = function () {
+
+            var offset = (($volume_button.width() / 2) + 15) - ($volume_meter.width() / 2);
+            $volume_meter.css('margin-right', offset + 'px');
+        };
 
         var swap_glyphs = function ($glyph, old_glyph, new_glyph) {
             $glyph.removeClass(old_glyph);
@@ -1186,16 +1349,36 @@
          *    eg: $('.element).bind_event(args);
          */
 
+        $.fn.change_track = function () {
+            $(this).each(function () {
+                $(this).on('click', function () {
+                    var new_id;
+                    plugin.stop_all();
+                    if ($(this).hasClass('glyphicon-step-backward')) {
+
+                        console.log('back');
+                        new_id = current_track.id - 1;
+                        go_to_track(new_id);
+                    }
+                    if ($(this).hasClass('glyphicon-step-forward')) {
+
+                        console.log('forward');
+                        new_id = current_track.id + 1;
+                        go_to_track(new_id);
+                    }
+                });
+            });
+        };
 
         $.fn.volume_hover = function () {
 
             $(this).each(function () {
                 $(this)
                     .on('mouseover', function () {
-                        $('.audio-block-volume-meter').show();
+                        $element.find('.audio-block-volume-meter').show();
                     })
                     .on('mouseleave', function () {
-                        $('.audio-block-volume-meter').hide();
+                        $element.find('.audio-block-volume-meter').hide();
                     });
             });
         };
@@ -1204,7 +1387,7 @@
 
             $(this).on('click', function () {
                 var call = $(this).attr('action');
-                $('.audio-player').data('hades_audio_player')[call]($(this));
+                $('#' + id).data('hades_audio_player')[call]($(this));
             });
         };
 
@@ -1235,12 +1418,16 @@
 
         };
 
+
+        $(window).on('resize', function () {
+            set_volume_meter_position();
+        });
+
         //-----------------------------------------
         //				INITIALISATION
         //-----------------------------------------
 
         plugin.init();
-
 
     };
 
@@ -1258,7 +1445,7 @@
     $.fn.hades_audio_player = function (options) {
         return this.each(function () {
             if (undefined == $(this).data(name)) {
-                var plugin = new $.hades_audio_player(this, options);
+                var plugin = new $.hades_audio_player(this, options, SERIAL++);
                 $(this).data(name, plugin);
             }
         });
@@ -1641,3 +1828,29 @@
 
 
 
+;$(window).scroll(function(){
+
+    var $footer = $('.js-footer');
+    var height = $footer.outerHeight();
+    var scroll_height = $(document).height() - $(window).height();
+    if ($(window).scrollTop() == scroll_height ) {
+        $footer.animate({
+            bottom:'0px'
+        }, 500, function() {
+            $footer.addClass('active');
+        });
+    }
+    if($footer.hasClass('active')){
+        if ($(window).scrollTop() != scroll_height) {
+            $footer.removeClass('active');
+            $footer.animate({
+                bottom:'-'+height+'px'
+            }, 500, function() {
+
+            });
+        }
+    }
+
+
+
+});

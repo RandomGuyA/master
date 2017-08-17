@@ -13,6 +13,11 @@
     </div>
 </div>
 
+
+
+    <% include Footer %>
+
+
 <!-- Ajax Setup -->
 <!-- Recursive Site tree - use for mapping the site -->
 <ul style="display:none;" id="ajax-child-list">

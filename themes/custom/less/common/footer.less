@@ -28,3 +28,27 @@ footer {
     margin-top:10px;
     box-shadow: 0px 500px 0px 500px @footer-color; /* deals with huge white space on small pages */
 }
+
+.footer {
+
+    &.main {
+
+        height:@footer-height;
+        width:100%;
+        bottom:-@footer-height;
+        left:0;
+        background-color: @footer-color;
+        position:fixed;
+        z-index:1000;
+
+    }
+
+
+    &.hide {
+        display:none;
+    }
+    &.show {
+        display:block;
+    }
+
+}

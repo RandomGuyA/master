@@ -133,6 +133,7 @@
         var page_loading = false;
         var animate_transition = false;
         var internal_call = false;
+        var add_to_history = true;
 
         var url_destination;
         var page_list;
@@ -218,6 +219,7 @@
 
             var page = (internal_call) ? destination_page : get_root_nest_page(destination_page);
 
+            console.log(page);
             evaluate_page(page);
             transition_spool.reverse();
             update_and_check_transition_spool();
@@ -406,10 +408,16 @@
             var animate = transition_object.animate;
             var $container = $('#' + transition_object.containerID);
 
-            console.log("load url:- " + url);
-            console.log("container:- " + $container.attr('class'));
+            //console.log("load url:- " + url);
+            //console.log("container:- " + $container.attr('class'));
             //console.log("animate: " + animate);
-
+            if ($('.audio-block').length != 0) {
+                $('.audio-block').each(function () {
+                    if($(this).data('hades_audio_player') != undefined){
+                        $(this).data('hades_audio_player').stop();
+                    }
+                });
+            }
             internal_call = false; //reset switch
             load_page_static_callback();
             check_function_and_call(plugin.settings.load_page_callback);
@@ -461,8 +469,8 @@
                 //console.log("incremental_animation " + incremental_animation);
                 //console.log("decremental_animation " + decremental_animation);
 
-                console.log("previous_sort_value: " + previous_sort_value);
-                console.log("current_sort_value: " + current_sort_value);
+                //console.log("previous_sort_value: " + previous_sort_value);
+                //console.log("current_sort_value: " + current_sort_value);
 
                 var transition_animation = (previous_sort_value < current_sort_value) ? incremental_animation : decremental_animation;
                 //console.log("transition_animation " + transition_animation);
@@ -621,9 +629,7 @@
         };
 
         var initialise_dependencies = function () {
-
             console.log("add dependencies");
-
         };
 
 
@@ -659,7 +665,11 @@
             add_ajax_links();
             check_function_and_call(plugin.settings.initialise_javascript_dependencies);
             transition($previous_page, animate, $container);
-            window.history.pushState("string", "Title", page.url_object.http_url);
+
+            if(add_to_history){
+                window.history.pushState("string", "Title", page.url_object.http_url);
+            }
+            add_to_history = true;
             page_loading = false;
         };
 
@@ -792,6 +802,8 @@
                     //console.log("click");
                     e.preventDefault();
                     adjust_page_position($(this).attr('direction'));
+                    console.log($(this).attr('href'));
+
                     set_internal_call($(this).attr('href'));
                     init_ajax_call();
                 });
@@ -812,6 +824,16 @@
                 });
             });
         };
+
+        $(window).on('popstate', function() {
+            console.log('Back button was pressed.');
+            internal_call = true;
+            var url = window.location.href;
+            url = url.replace("#", "/");
+            add_to_history = false;
+            set_internal_call(url);
+            init_ajax_call();
+        });
 
 
         //--------------------------------------//
@@ -864,7 +886,6 @@
             trans.containerID = containerID;
 
             return trans;
-
         };
 
         //-----------------------------------------
