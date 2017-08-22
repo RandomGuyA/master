@@ -20,7 +20,4 @@ $(window).scroll(function(){
             });
         }
     }
-
-
-
 });

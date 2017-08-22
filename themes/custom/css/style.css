@@ -2142,6 +2142,84 @@ img.right {
 .reveal-answer-block {
   margin-bottom: 20px;
 }
+.reveal-answer-block ul {
+  padding: 0;
+}
+.reveal-answer-block .text {
+  width: 80%;
+  float: left;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .reveal-answer-block .text {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .reveal-answer-block .text {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .reveal-answer-block .panel {
+    padding: 15px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .reveal-answer-block .panel {
+    padding: 10px;
+  }
+}
+.reveal-answer-block .audio-block {
+  height: auto;
+  width: 10%;
+}
+.reveal-answer-block .audio-player {
+  float: right;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .reveal-answer-block .audio-player {
+    width: 20%;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .reveal-answer-block .audio-player {
+    width: 30%;
+  }
+}
+.reveal-answer-block .audio-player .audio-panel {
+  overflow: hidden;
+}
+.reveal-answer-block .audio-player .controls {
+  padding: 0;
+}
+.reveal-answer-block .audio-player .controls.audio-block-play {
+  width: 100%;
+}
+.reveal-answer-block .audio-player .controls.audio-block-volume-button {
+  width: 50%;
+  display: none;
+}
+.reveal-answer-block .audio-player .controls.middle {
+  display: none;
+}
+.reveal-answer-block .audio-player .glyphicon {
+  line-height: 40px;
+  font-size: 40px;
+}
+@media only screen and (min-width: 480px) and (max-width: 768px) {
+  .reveal-answer-block .audio-player .glyphicon {
+    width: 30px;
+    line-height: 30px;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .reveal-answer-block .audio-player .glyphicon {
+    width: 20px;
+    line-height: 20px;
+    font-size: 20px;
+  }
+}
 
 /*--------------------------- FONTS.LESS --------------------------------*/
 @font-face {

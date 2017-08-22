@@ -2,26 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ebc37562-348e-4ad2-9a44-5d0a455f5478" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysite/code/Blocks/AudioBlock/AudioText.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mysite/code/Blocks/AudioBlock/SectionAudioAvatarBlock.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/custom/scripts/zzz_init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/themes/custom/templates/Blocks/AudioAvatarBlock.ss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mysite/code/Blocks/SectionAudioBlock.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/themes/custom/templates/Blocks/AudioBlock.ss" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/framework/log/silverstripe.log" afterPath="$PROJECT_DIR$/framework/log/silverstripe.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/code/Pages/Page.php" afterPath="$PROJECT_DIR$/mysite/code/Pages/Page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mysite/code/Blocks/RevealAnswerBlock/Answer.php" afterPath="$PROJECT_DIR$/mysite/code/Blocks/RevealAnswerBlock/Answer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/css/style.css" afterPath="$PROJECT_DIR$/themes/custom/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/js/main.js" afterPath="$PROJECT_DIR$/themes/custom/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/js/main.min.js" afterPath="$PROJECT_DIR$/themes/custom/js/main.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/less/blocks/audio.less" afterPath="$PROJECT_DIR$/themes/custom/less/blocks/audio.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/less/common/footer.less" afterPath="$PROJECT_DIR$/themes/custom/less/common/footer.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/less/common/main.less" afterPath="$PROJECT_DIR$/themes/custom/less/common/main.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/scripts/jquery.ajax_plugin.js" afterPath="$PROJECT_DIR$/themes/custom/scripts/jquery.ajax_plugin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/scripts/jquery.plugin.audio-player.js" afterPath="$PROJECT_DIR$/themes/custom/scripts/jquery.plugin.audio-player.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/templates/Ajax/Page.ss" afterPath="$PROJECT_DIR$/themes/custom/templates/Ajax/Page.ss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/templates/Includes/Footer.ss" afterPath="$PROJECT_DIR$/themes/custom/templates/Includes/Footer.ss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/templates/Page.ss" afterPath="$PROJECT_DIR$/themes/custom/templates/Page.ss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/less/blocks/reveal_answer.less" afterPath="$PROJECT_DIR$/themes/custom/less/blocks/reveal_answer.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/scripts/zzz_init.js" afterPath="$PROJECT_DIR$/themes/custom/scripts/zzz_init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/themes/custom/templates/Blocks/RevealAnswerBlock.ss" afterPath="$PROJECT_DIR$/themes/custom/templates/Blocks/RevealAnswerBlock.ss" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,23 +26,53 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="zzz_init.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/themes/custom/scripts/zzz_init.js">
+          <file leaf-file-name="SectionRevealAnswerBlock.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/mysite/code/Blocks/RevealAnswerBlock/SectionRevealAnswerBlock.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+                <state relative-caret-position="119">
+                  <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Answer.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/mysite/code/Blocks/RevealAnswerBlock/Answer.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AudioAvatarBlock.ss" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/themes/custom/templates/Blocks/AudioAvatarBlock.ss">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="329">
+                  <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="55" />
                   <folding>
-                    <marker date="1502968640656" expanded="true" signature="27:633" ph="{...}" />
+                    <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="jquery.ajax_plugin.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/themes/custom/scripts/jquery.ajax_plugin.js">
+          <file leaf-file-name="reveal_answer.less" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/themes/custom/less/blocks/reveal_answer.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="313">
-                  <caret line="832" column="35" lean-forward="true" selection-start-line="832" selection-start-column="35" selection-end-line="832" selection-end-column="35" />
+                <state relative-caret-position="476">
+                  <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_config.less" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/themes/custom/less/_core/_config.less">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="170">
+                  <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
                   <folding />
                 </state>
               </provider>
@@ -64,11 +82,21 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="jquery.ajax_plugin.js" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/themes/custom/scripts/jquery.ajax_plugin.js">
+          <file leaf-file-name="RevealAnswerBlock.ss" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/themes/custom/templates/Blocks/RevealAnswerBlock.ss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="274">
-                  <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+                <state relative-caret-position="213">
+                  <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="47" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="jquery.plugin.audio-player.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/themes/custom/scripts/jquery.plugin.audio-player.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="662">
+                  <caret line="197" column="0" lean-forward="true" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -115,8 +143,8 @@
       <find>load_url</find>
       <find>previo</find>
       <find>push</find>
-      <find>console</find>
       <find>add_to_history</find>
+      <find>console</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Apache24\htdocs\silverstripe\development\master\themes\custom\scripts</dir>
@@ -152,11 +180,8 @@
         <option value="$PROJECT_DIR$/themes/custom/templates/Includes/Head.ss" />
         <option value="$PROJECT_DIR$/mysite/css/admin.css" />
         <option value="$PROJECT_DIR$/mysite/code/Blocks/SectionRevealAnswerBlock.php" />
-        <option value="$PROJECT_DIR$/mysite/code/Blocks/RevealAnswerBlock/Answer.php" />
         <option value="$PROJECT_DIR$/mysite/code/Blocks/SectionGalleryBlock.php" />
         <option value="$PROJECT_DIR$/mysite/code/Blocks/RevealAnswerBlock/SectionRevealAnswerBlock.php" />
-        <option value="$PROJECT_DIR$/themes/custom/less/blocks/reveal_answer.less" />
-        <option value="$PROJECT_DIR$/themes/custom/templates/Blocks/RevealAnswerBlock.ss" />
         <option value="$PROJECT_DIR$/themes/custom/less/common/panel.less" />
         <option value="$PROJECT_DIR$/themes/custom/less/_core/_config.less" />
         <option value="$PROJECT_DIR$/mysite/code/Blocks/SectionAudioBlock.php" />
@@ -176,9 +201,12 @@
         <option value="$PROJECT_DIR$/mysite/code/Blocks/AudioBlock/SectionAudioAvatarBlock.php" />
         <option value="$PROJECT_DIR$/themes/custom/scripts/jquery.plugin.audio-player.js" />
         <option value="$PROJECT_DIR$/themes/custom/templates/Blocks/AudioAvatarBlock.ss" />
-        <option value="$PROJECT_DIR$/themes/custom/less/blocks/audio.less" />
-        <option value="$PROJECT_DIR$/themes/custom/scripts/zzz_init.js" />
         <option value="$PROJECT_DIR$/themes/custom/scripts/jquery.ajax_plugin.js" />
+        <option value="$PROJECT_DIR$/themes/custom/scripts/zzz_init.js" />
+        <option value="$PROJECT_DIR$/mysite/code/Blocks/RevealAnswerBlock/Answer.php" />
+        <option value="$PROJECT_DIR$/themes/custom/less/blocks/audio.less" />
+        <option value="$PROJECT_DIR$/themes/custom/templates/Blocks/RevealAnswerBlock.ss" />
+        <option value="$PROJECT_DIR$/themes/custom/less/blocks/reveal_answer.less" />
       </list>
     </option>
   </component>
@@ -232,6 +260,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -244,64 +274,8 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="master" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="master" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="custom" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="master" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="custom" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -441,26 +415,27 @@
       <workItem from="1502792665250" duration="13941000" />
       <workItem from="1502870140556" duration="731000" />
       <workItem from="1502878127461" duration="14278000" />
-      <workItem from="1502960511314" duration="4953000" />
+      <workItem from="1502960511314" duration="6972000" />
+      <workItem from="1503325995696" duration="3957000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219964000" />
+    <option name="totallyTimeSpent" value="225940000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17803837" sideWeight="0.7111756" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17963752" sideWeight="0.7052519" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17803837" sideWeight="0.28882438" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17963752" sideWeight="0.29474813" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26152197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26152197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33547696" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24758843" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -505,13 +480,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mysite/code/Pages/HomePage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/code/Pages/Nest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -596,31 +564,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/code/Blocks/RevealAnswerBlock/Answer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/code/Blocks/RevealAnswerBlock/SectionRevealAnswerBlock.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/_config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="40" lean-forward="true" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/custom/templates/Blocks/RevealAnswerBlock.ss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -666,13 +613,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/custom/less/_core/_config.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/themes/custom/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -705,13 +645,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/custom/less/blocks/reveal_answer.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -807,19 +740,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/custom/less/blocks/audio.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/code/Blocks/AudioBlock/AudioText.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="5" column="31" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,40 +751,94 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="593">
           <caret line="49" column="81" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/custom/scripts/jquery.ajax_plugin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="837" column="0" lean-forward="true" selection-start-line="837" selection-start-column="0" selection-end-line="837" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/custom/scripts/zzz_init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/custom/gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/code/Blocks/RevealAnswerBlock/SectionRevealAnswerBlock.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="36" lean-forward="true" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/custom/less/blocks/audio.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/custom/scripts/jquery.plugin.audio-player.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="452" column="0" lean-forward="false" selection-start-line="452" selection-start-column="0" selection-end-line="452" selection-end-column="0" />
+        <state relative-caret-position="662">
+          <caret line="197" column="0" lean-forward="true" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/themes/custom/templates/Blocks/AudioAvatarBlock.ss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="43" column="41" lean-forward="false" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/custom/scripts/zzz_init.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="329">
+          <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="55" />
           <folding>
-            <marker date="1502968640656" expanded="true" signature="27:633" ph="{...}" />
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/themes/custom/scripts/jquery.ajax_plugin.js">
+    <entry file="file://$PROJECT_DIR$/themes/custom/less/_core/_config.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="10" column="68" lean-forward="false" selection-start-line="10" selection-start-column="68" selection-end-line="10" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/code/Blocks/RevealAnswerBlock/Answer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/custom/templates/Blocks/RevealAnswerBlock.ss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/themes/custom/less/blocks/reveal_answer.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
           <folding />
         </state>
       </provider>

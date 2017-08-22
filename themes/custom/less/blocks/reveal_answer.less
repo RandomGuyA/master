@@ -8,5 +8,80 @@
 .reveal-answer-block {
 
     margin-bottom:20px;
+    ul {
+        padding:0;
+    }
+    .text {
+        width:80%;
+        float:left;
+        @media @XS {
+            width:70%;
+        }
+        @media  @XXS {
+            width:60%;
+        }
+    }
+
+    .panel{
+        @media  @XS {
+            padding:15px;
+        }
+        @media  @XXS {
+            padding:10px;
+        }
+    }
+    .audio-block {
+        height:auto;
+        width:10%;
+    }
+    .audio-player {
+
+        @media @XS {
+            width:20%;
+        }
+        @media @XXS {
+            width:30%;
+        }
+        float:right;
+
+        .audio-panel {
+            overflow:hidden;
+        }
+        .controls {
+
+            &.audio-block-play {
+                width:100%;
+            }
+            &.audio-block-volume-button{
+                width:50%;
+                display:none;
+            }
+
+
+            padding:0;
+            &.middle {
+                display:none;
+            }
+        }
+
+
+
+        .glyphicon {
+            line-height:40px;
+            font-size:40px;
+            @media  @XS {
+                width:30px;
+                line-height:30px;
+                font-size:30px;
+            }
+            @media  @XXS {
+                width:20px;
+                line-height:20px;
+                font-size:20px;
+            }
+        }
+
+    }
+
 }
 
